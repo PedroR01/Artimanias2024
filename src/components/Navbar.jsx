@@ -4,7 +4,7 @@ import folder from "../assets/img/folder.png";
 
 const Navbar = () => {
   return (
-    <nav className="sticky mt-20 mx-auto bottom-0 w-5/6 p-2 text-white z-10 bg-[#CBDF00] ">
+    <nav className="sticky mt-20 mx-auto bottom-0 w-5/6 p-2 text-white z-10 bg-[#CBDF00] rounded-lg">
       <ul className="justify-between items-center flex container mx-auto">
         <li className="h-full">
           <div className="">
