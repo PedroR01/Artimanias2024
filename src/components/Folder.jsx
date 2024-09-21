@@ -16,16 +16,16 @@ export default function Folder({ title }) {
   return (
     <>
       <button>
-        <div className="relative w-48 h-28 mt-10">
+        <div className="pl-4 relative w-48 h-28 mt-10">
           <img className="absolute w-32 h-24" src={folder} alt="" />
           <img
-            className="absolute w-12 h-16 left-8 top-5"
+            className="absolute w-1/2 h-16 left-8 top-5"
             src={folderMap[title.replace(/\s+/g, "").toLowerCase()]}
             alt=""
           />
         </div>
       </button>
-      <h4 className="font-bold">{title.toUpperCase()}</h4>
+      <h3 className="pl-4 font-bold">{title.toUpperCase()}</h3>
     </>
   );
 }
