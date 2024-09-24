@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from "./components/Navbar";
 import Desktop from "./components/Desktop";
 import Logo from "./components/Logo";
 
@@ -8,7 +7,6 @@ function App() {
     <div>
       <Logo />
       <Desktop />
-      <Navbar />
     </div>
   );
 }
