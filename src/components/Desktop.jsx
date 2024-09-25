@@ -2,6 +2,10 @@ import React, { useState } from "react";
 import Navbar from "./Navbar";
 import Folder from "./Folder";
 import Window from "./Window";
+import logoArti from "../assets/img/logo_arti.svg";
+import pjRa from "../assets/img/ra_icon.svg";
+import pjVj from "../assets/img/vj_icon.svg";
+import cubo from "../assets/img/cubo_icon.svg";
 
 export default function Desktop() {
   const [whichOpen, setWhichOpen] = useState(null);
@@ -45,7 +49,33 @@ export default function Desktop() {
         />
       )}
 
-      <section>
+    <div className="relative flex">
+
+      {/* Logo y personajes */}
+      <div className="-z-10 h-screen flex items-center justify-center">
+        <div className="absolute inset-0 m-auto size-1/4">
+          <img src={logoArti} alt=""/>
+        </div>
+        <div className="absolute bottom-[24%] right-[64%]">
+          <div className="w-32 h-32 object-cover">
+            <img src={cubo} alt="" className="" />
+          </div>
+        </div>
+
+        <div className="absolute bottom-[20%] right-[12%]">
+          <div className="w-32 h-32 object-cover">
+            <img src={pjRa} alt="" className="scale-x-[-1] size-3/4" />
+          </div>
+        </div>
+
+        <div className="absolute bottom-[12%] right-[20%]">
+          <div className="w-32 h-32 object-cover">
+            <img src={pjVj} alt="" className="size-3/4" />
+          </div>
+        </div>
+      </div>
+      
+      <section className="relative z-10">
         <ul>
           <li>
             <Folder
@@ -73,6 +103,7 @@ export default function Desktop() {
           </li>
         </ul>
       </section>
+    </div>
 
       <Navbar
         minimized={foldersMinimized}

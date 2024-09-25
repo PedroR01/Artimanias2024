@@ -1,5 +1,5 @@
 import React from "react";
-import logoNav from "../assets/img/logo_nav.png";
+import logoNav from "../assets/img/logo_nav.svg";
 import Folder from "./Folder";
 
 // Se pasa el arreglo de carpetas minimizadas a la navbar para que las muestre
@@ -11,7 +11,7 @@ export default function Navbar({ minimized, navToDesk }) {
       <ul className="justify-between items-center flex container mx-auto">
         <li className="h-full">
           <div className="">
-            <img src={logoNav} alt="" />
+            <img src={logoNav} alt="" className="size-1/4" />
           </div>
         </li>
         <li>
