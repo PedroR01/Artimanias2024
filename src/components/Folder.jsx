@@ -2,10 +2,10 @@ import React from "react";
 
 /* Images */
 import folder from "../assets/img/folder.png";
-import ra_folder from "../assets/img/ra_icon.png";
-import ae_folder from "../assets/img/ae_icon.png";
-import mp_folder from "../assets/img/mp_icon.png";
-import vj_folder from "../assets/img/vj_icon.png";
+import ra_folder from "../assets/img/ra_icon.svg";
+import ae_folder from "../assets/img/ae_icon.svg";
+import mp_folder from "../assets/img/mp_icon.svg";
+import vj_folder from "../assets/img/vj_icon.svg";
 
 export default function Folder({ title, onFolderClick }) {
   const folderMap = {
