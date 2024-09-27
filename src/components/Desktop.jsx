@@ -74,7 +74,7 @@ export default function Desktop() {
           </div>
         </div>
       </div>
-      
+
       <section className="relative z-10">
         <ul>
           <li>

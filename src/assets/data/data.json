@@ -1,0 +1,34 @@
+[
+    {
+        "id": 0,
+        "obra": "Resampleados",
+        "nombreApellido": "Ramiro Nicolás Gil",
+        "parrafo1": "Esto es una obra",
+        "parrafo2": "Que bueno",
+        "categoria": "Arte Electronico"
+    },
+    {
+        "id": 1,
+        "obra": "Sin nombrar",
+        "nombreApellido": "Manuel Martinez",
+        "parrafo1": "Esto es una obra",
+        "parrafo2": "Que bueno",
+        "categoria": "Videojuegos"
+    },
+    {
+        "id": 2,
+        "obra": "Sin nombrar",
+        "nombreApellido": "Pedro Robinet",
+        "parrafo1": "Esto es una obra",
+        "parrafo2": "Que bueno",
+        "categoria": "Videojuegos"
+    },
+    {
+        "id": 3,
+        "obra": "Sin nombrar",
+        "nombreApellido": "Barack Obama",
+        "parrafo1": "Esto es una obra",
+        "parrafo2": "Que bueno",
+        "categoria": "Realidad Aumentada"
+    }
+]
