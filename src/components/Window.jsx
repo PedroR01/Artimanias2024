@@ -3,6 +3,7 @@ import ArrowLeftIcon from "@heroicons/react/24/outline/ArrowLeftIcon";
 import XIcon from "@heroicons/react/24/outline/XCircleIcon";
 import MinusIcon from "@heroicons/react/24/outline/MinusIcon";
 import Folder from "./Folder";
+import jsonData from "../assets/data/data.json";
 
 // Recibe el nombre de la carpeta que se abrio (folderName) y en base a eso muestra el contenido acorde
 // onAction es la funcion pasada por parametro y que se ejecuta al apretar algun boton de la ventaba abierta, además al hacer click
@@ -10,10 +11,17 @@ import Folder from "./Folder";
 export default function Window({ folderName, isThesis, onAction }) {
   /* SIN IMPLEMENTAR */
   const [thesisList, setThesisList] = useState([]);
+
   useEffect(() => {
-    if (!isThesis) {
+    if (isThesis) {
       // Si se abre una carpeta que no es una tesis, aquí se debe hacer un request a las diferentes tesis que deben mostrarse para poder abrir
       setThesisList(["Realidad Aumentada"]);
+    } else {
+      // Filter jsonData to match category to folder name
+      const filteredItems = jsonData.filter(thesis => thesis.categoria.toLowerCase() === folderName.toLowerCase());
+
+      console.log("Fetched data: ", jsonData); // Debug
+      setThesisList(filteredItems);
     }
   }, []);
   /* ------ */
@@ -65,9 +73,9 @@ export default function Window({ folderName, isThesis, onAction }) {
           ) : (
             <ul>
               {thesisList.map((thesis) => (
-                <li key={thesis}>
+                <li key={thesis.id}>
                   <Folder
-                    title={thesis}
+                    title={thesis.obra}
                     onFolderClick={() => {
                       //Codigo para abrir la otra carpeta, todavía hay que revisar si debería hacerlo así
                     }}
