@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Navbar from "./Navbar";
 import Folder from "./Folder";
 import Window from "./Window";
+import Info from "./Info";
 import logoArti from "../assets/img/logo_arti.svg";
 import pjRa from "../assets/img/ra_icon.svg";
 import pjVj from "../assets/img/vj_icon.svg";
@@ -10,6 +11,7 @@ import cubo from "../assets/img/cubo_icon.svg";
 export default function Desktop() {
   const [whichOpen, setWhichOpen] = useState(null);
   const [foldersMinimized, setFoldersMinimized] = useState([]);
+  const [infoOpen, setInfoOpen] = useState(false);
 
   const folders = {
     RA: "Realidad Aumentada",
@@ -24,6 +26,14 @@ export default function Desktop() {
 
   const handleNavToDesk = (folderName) => {
     openFolder(folderName); // Abre la carpeta desde el Navbar
+  };
+
+  const handleNavToInfo = () => {
+    if (infoOpen){
+      setInfoOpen(false); // Cierra la info desde el Navbar
+    } else {
+      setInfoOpen(true); // Abre la info desde el Navbar
+    }
   };
 
   return (
@@ -45,6 +55,17 @@ export default function Desktop() {
               setFoldersMinimized((prevFolders) => [...prevFolders, whichOpen]);
             }
             setWhichOpen(null);
+          }}
+        />
+      )}
+
+      {infoOpen && ( //Abrir pestaña info
+        <Info
+          isKnowMore={true}
+          onAction={(action) => {
+            if (action === "close") {
+            setInfoOpen(false);
+            }
           }}
         />
       )}
@@ -108,6 +129,7 @@ export default function Desktop() {
       <Navbar
         minimized={foldersMinimized}
         navToDesk={handleNavToDesk} // Pasa el nombre de la carpeta clickeada
+        navToInfo={handleNavToInfo} // Pasa el estado del booleano del boton
       />
     </>
   );
