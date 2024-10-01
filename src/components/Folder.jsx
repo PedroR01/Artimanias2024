@@ -7,7 +7,7 @@ import ae_folder from "../assets/img/ae_icon.svg";
 import mp_folder from "../assets/img/mp_icon.svg";
 import vj_folder from "../assets/img/vj_icon.svg";
 
-export default function Folder({ title, onFolderClick }) {
+export default function Folder({ title, fitIn, onFolderClick }) {
   const folderMap = {
     realidadaumentada: ra_folder,
     arteelectronico: ae_folder,
@@ -15,19 +15,32 @@ export default function Folder({ title, onFolderClick }) {
     videojuegos: vj_folder,
   };
 
+  let dimensions = "w-28 h-24 mt-10";
+
+  if (fitIn === "nav") {
+    dimensions = "w-16 h-24 ";
+  }
+
   return (
-    <>
-      <button onClick={() => onFolderClick()}>
-        <div className="pl-4 relative w-48 h-28 mt-10">
-          <img className="absolute w-32 h-24" src={folder} alt="" />
+    <div className="hover:bg-blue-300 hover:bg-opacity-30 hover:shadow-lg cursor-pointer transition">
+      <button
+        className={"relative ml-4 text-wb-center " + dimensions}
+        onClick={() => onFolderClick()}
+      >
+        <div className="">
+          <img className="w-fit h-fit" src={folder} alt="" />
           <img
-            className="absolute w-1/2 h-16 left-8 top-5"
+            className="absolute w-1/2 h-16 left-1/4 top-[20%]"
             src={folderMap[title.replace(/\s+/g, "").toLowerCase()]}
             alt=""
           />
         </div>
       </button>
-      <h3 className="pl-4 font-bold">{title.toUpperCase()}</h3>
-    </>
+      {!fitIn && (
+        <h3 className="pl-5 font-bold tracking-wider font-mono w-min text-center">
+          {title.toUpperCase()}
+        </h3>
+      )}
+    </div>
   );
 }

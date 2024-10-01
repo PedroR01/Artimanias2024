@@ -14,3 +14,9 @@ body {
 h4 {
   font-size: 5vw;
 }
+
+@layer utilities {
+  .text-wb-center {
+    text-align: -webkit-center;
+  }
+}

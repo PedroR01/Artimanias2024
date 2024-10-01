@@ -8,14 +8,11 @@ import Folder from "./Folder";
 export default function Navbar({ minimized, navToDesk, navToInfo }) {
   return (
     <nav className="sticky mt-20 mx-auto bottom-4 w-5/6 p-2 text-white z-10 bg-[#CBDF00] rounded-lg">
-      <ul className="justify-between items-center flex container mx-auto">
-        <li className="h-full">
+      <ul className="items-center flex container mx-auto">
+        <li className="h-full w-1/6">
           <div className="">
-          <button 
-            className="size-1/4"
-            onClick={() => navToInfo(true)}
-            >
-              <img src={logoNav} alt="" className="size-3/4" />
+            <button onClick={() => navToInfo(true)}>
+              <img src={logoNav} alt="" className="w-full h-3/4" />
             </button>
           </div>
         </li>
@@ -25,6 +22,7 @@ export default function Navbar({ minimized, navToDesk, navToInfo }) {
               <li key={folder}>
                 <Folder
                   title={folder}
+                  fitIn={"nav"}
                   onFolderClick={() => navToDesk(folder)} // Pasa el nombre de la carpeta clickeada
                 />
               </li>

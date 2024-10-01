@@ -18,7 +18,9 @@ export default function Window({ folderName, isThesis, onAction }) {
       setThesisList(["Realidad Aumentada"]);
     } else {
       // Filter jsonData to match category to folder name
-      const filteredItems = jsonData.filter(thesis => thesis.categoria.toLowerCase() === folderName.toLowerCase());
+      const filteredItems = jsonData.filter(
+        (thesis) => thesis.categoria.toLowerCase() === folderName.toLowerCase(),
+      );
 
       console.log("Fetched data: ", jsonData); // Debug
       setThesisList(filteredItems);

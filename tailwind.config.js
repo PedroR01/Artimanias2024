@@ -2,11 +2,7 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    extend: {
-      backgroundImage: {
-      'polka-dots': "url('img/polka.png')",
-      }
-    },
+    extend: {},
   },
   plugins: [],
 };
