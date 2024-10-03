@@ -7,6 +7,7 @@ import ae_folder from "../assets/img/ae_icon.svg";
 import mp_folder from "../assets/img/mp_icon.svg";
 import vj_folder from "../assets/img/vj_icon.svg";
 
+// El parametro fitIn solo se usa cuando se necesita mostrar la carpeta con otras dimensiones en otro lugar de la pantalla que no sea el escritorio
 export default function Folder({ title, fitIn, onFolderClick }) {
   const folderMap = {
     realidadaumentada: ra_folder,

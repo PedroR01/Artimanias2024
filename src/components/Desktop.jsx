@@ -32,6 +32,9 @@ export default function Desktop() {
     };
   }, []);
 
+  // Si se abre una tesis minimizada, tiene que volver a tomar los datos de la misma
+  useEffect(() => {}, [whichOpen]);
+
   const folders = {
     RA: "Realidad Aumentada",
     AE: "Arte Electronico",
@@ -51,10 +54,11 @@ export default function Desktop() {
     if (foldersMinimized.includes(folderName)) return;
 
     setFoldersMinimized((prevFolders) => {
-      // Si es móvil y ya hay 3 carpetas minimizadas, aplica LIFO (Last In First Out)
-      if (isMobile && prevFolders.length >= 3) {
+      // Si es móvil y ya hay 3 carpetas minimizadas, aplica LIFO (Last In First Out). Max 6 carpetas minimizadas si es ver. desktop
+      if ((isMobile && prevFolders.length >= 3) || prevFolders.length >= 6) {
         return [...prevFolders.slice(1), folderName]; // Elimina la primera y agrega la nueva
       }
+
       // Si no, simplemente agrega la nueva carpeta minimizada
       return [...prevFolders, folderName];
     });
@@ -69,16 +73,19 @@ export default function Desktop() {
       {whichOpen && (
         <Window
           folderName={whichOpen}
-          isThesis={false}
-          onAction={(action) => {
+          onAction={(action, whichFolder) => {
+            // Si se recibio el parametro whichFolder, quiere decir que se abrio otra capa más de navegación
+            // por ende se minimiza o cierra dicha carpeta.
+            let folderName = whichOpen;
+            if (whichFolder) folderName = whichFolder;
             if (action === "close") {
-              if (foldersMinimized.includes(whichOpen)) {
+              if (foldersMinimized.includes(folderName)) {
                 setFoldersMinimized((prevFolders) =>
-                  prevFolders.filter((folder) => folder !== whichOpen),
+                  prevFolders.filter((folder) => folder !== folderName),
                 );
               }
             } else if (action === "minimize") {
-              handleMinimized(whichOpen); // Minimiza la ventana
+              handleMinimized(folderName); // Minimiza la ventana
             }
             setWhichOpen(null);
           }}
