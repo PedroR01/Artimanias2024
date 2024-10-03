@@ -32,9 +32,6 @@ export default function Desktop() {
     };
   }, []);
 
-  // Si se abre una tesis minimizada, tiene que volver a tomar los datos de la misma
-  useEffect(() => {}, [whichOpen]);
-
   const folders = {
     RA: "Realidad Aumentada",
     AE: "Arte Electronico",
