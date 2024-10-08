@@ -4,12 +4,19 @@
 
 body {
   background-color: #4097f6;
-  background-image: url("./assets/img/logo_bg.png");
+  background-image: url("./assets/img/polka_144.png");
   background-size: contain;
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
+  background-size: 16%;
 }
 
 h4 {
   font-size: 5vw;
+}
+
+@layer utilities {
+  .text-wb-center {
+    text-align: -webkit-center;
+  }
 }
