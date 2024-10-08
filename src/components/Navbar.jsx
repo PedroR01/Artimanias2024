@@ -7,12 +7,12 @@ import Folder from "./Folder";
 // a la cual se le envía por parametro el nombre de la carpeta que fue clickeada para abrir o cerra la que corresponda.
 export default function Navbar({ minimized, navToDesk, navToInfo }) {
   return (
-    <nav className="sticky mt-20 mx-auto bottom-4 w-5/6 p-2 text-white z-10 bg-[#CBDF00] rounded-lg">
+    <nav className="sticky mx-auto bottom-4 w-5/6 p-2 text-white z-10 bg-[#CBDF00] rounded-lg">
       <ul className="items-center flex container mx-auto">
         <li className="h-full w-1/6">
           <div className="">
             <button onClick={() => navToInfo(true)}>
-              <img src={logoNav} alt="" className="w-full h-3/4" />
+              <img src={logoNav} alt="" className="w-full sm:w-1/2 h-3/4" />
             </button>
           </div>
         </li>
