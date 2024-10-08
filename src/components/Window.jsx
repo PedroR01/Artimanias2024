@@ -123,7 +123,7 @@ export default function Window({ folderName, onAction }) {
               <iframe
                 width="350"
                 height="400"
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                src={"http://www.youtube.com/embed/" + thesis.video.split("?v=")[1] + "?modestbranding=1"}
                 title={thesis.obra}
                 referrerpolicy="strict-origin-when-cross-origin"
               ></iframe>
