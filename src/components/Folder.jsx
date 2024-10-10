@@ -16,7 +16,7 @@ export default function Folder({ title, fitIn, onFolderClick }) {
     videojuegos: vj_folder,
   };
 
-  let dimensions = "w-28 h-24 mt-10";
+  let dimensions = "w-28 h-24";
 
   if (fitIn === "nav") {
     dimensions =
@@ -24,9 +24,9 @@ export default function Folder({ title, fitIn, onFolderClick }) {
   }
 
   return (
-    <div className="hover:bg-blue-300 hover:bg-opacity-30 hover:shadow-lg cursor-pointer transition">
+    <div className="text-wb-center hover:bg-blue-300 hover:bg-opacity-30 hover:shadow-lg cursor-pointer transition">
       <button
-        className={"relative ml-4 text-wb-center " + dimensions}
+        className={"relative text-wb-center " + dimensions}
         onClick={() => onFolderClick()}
       >
         <div className="md:w-20">
@@ -39,7 +39,7 @@ export default function Folder({ title, fitIn, onFolderClick }) {
         </div>
       </button>
       {!fitIn && (
-        <h3 className="pl-5 tracking-wider w-min text-center bebas-neue-regular md:text-xl">
+        <h3 className="tracking-wider w-min text-center bebas-neue-regular md:text-xl">
           {title.toUpperCase()}
         </h3>
       )}

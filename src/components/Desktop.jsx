@@ -129,7 +129,7 @@ export default function Desktop() {
         </div>
 
         <section className="relative z-10">
-          <ul className="md:ml-20">
+          <ul className="grid gap-4 ml-5 mt-24 md:ml-12">
             <li>
               <Folder
                 title={folders.RA}

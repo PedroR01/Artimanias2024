@@ -9,20 +9,20 @@ export default function Navbar({ minimized, navToDesk, navToInfo }) {
   //xl:bottom-7
 
   return (
-    <nav className="sticky mx-auto bottom-4 w-5/6 p-2 text-white z-10 bg-[#cddf00c5] shadow  rounded-lg  xl:h-24 ">
-      <ul className="items-center flex container mx-auto xl:h-fit">
-        <li className="h-full w-1/6 xl:w-24 ">
-          <div className="relative right-2 bottom-2 h-2 w-28 rounded-lg bg-[#ff73ffc5] xl:h-full menu">
+    <nav className="sticky mx-auto bottom-4 w-5/6 text-white z-10 bg-[#cddf00c5] shadow  rounded-lg lg:h-20  xl:h-24 ">
+      <ul className="items-center flex container mx-auto h-16 lg:h-wb-fill nav-list">
+        <li className="h-full w-1/5 xl:w-24 ">
+          <div className="h-wb-fill w-wb-fill text-center rounded-lg bg-[#ff73ffc5] md:w-32  menu">
             <button
               className={
-                "transition ease-in-out delay-150 hover:-translate-y-8 hover:scale-110 duration-300 xl:h-wb-fill xl:w-wb-fill "
+                "h-wb-fill w-3/4 transition ease-in-out delay-150 hover:-translate-y-8 hover:scale-110 duration-300 xl:h-auto "
               }
               onClick={() => navToInfo(true)}
             >
               <img
                 src={logoNav}
                 alt=""
-                className="w-full sm:w-1/2 h-3/4 xl:relative xl:w-24 xl:left-2 xl:p-3"
+                className="w-full h-3/4  xl:w-24 xl:p-3"
               />
             </button>
           </div>

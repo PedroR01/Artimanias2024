@@ -59,16 +59,26 @@ export default function Window({ folderName, onAction }) {
   }, [thesis]);
   /* ------ */
 
+  const downloadImage = () => {
+    const link = document.createElement("a");
+    link.href =
+      "https://drive.google.com/uc?export=download&id=1h77DQMMhs5GJeayOrQZGal-RF0M60Y9b";
+    link.setAttribute("download", "image.jpg"); // Puedes cambiar el nombre del archivo
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-gray-900 bg-opacity-50">
       <section
         role="dialog"
         aria-labelledby="modal-title"
         aria-modal="true"
-        className="bg-white w-full max-w-lg rounded-md folder-window-shadow overflow-hidden border-2 border-black"
+        className="bg-white h-1/2 ml-4 mr-4 w-full max-w-lg rounded-md folder-window-shadow overflow-hidden border-2 border-black"
       >
         {/* Barra superior */}
-        <header className="flex items-center justify-between bg-[#FF73FF] text-black p-4 ">
+        <header className="flex sticky top-0 z-10 items-center justify-between bg-[#FF73FF] text-black p-4 ">
           <button
             aria-label="Go Back"
             className="hover:text-gray-400"
@@ -86,7 +96,7 @@ export default function Window({ folderName, onAction }) {
           </button>
           <h2
             id="modal-title"
-            className="text-lg font-medium bebas-neue-regular md:text-xl md:spa md:tracking-wider"
+            className="text-xl font-medium bebas-neue-regular md:text-xl md:spa md:tracking-wider"
           >
             {actualFolder}
           </h2>
@@ -122,7 +132,9 @@ export default function Window({ folderName, onAction }) {
         <main className="p-4 bg-[#FFFBF2] md:mx-8 md:max-h-[36rem] overflow-y-scroll">
           {thesis ? (
             <article>
-              <h1 className="bebas-neue-regular md:text-4xl">{thesis.obra}</h1>
+              <h1 className="bebas-neue-regular text-2xl md:text-4xl">
+                {thesis.obra}
+              </h1>
               <h2 className="bebas-neue-regular md:text-lg">
                 {thesis.nombreApellido}
               </h2>
@@ -140,11 +152,17 @@ export default function Window({ folderName, onAction }) {
               <p className="baloo-2-regular md:text-base mb-8">
                 {thesis.parrafo2}
               </p>
+              <button
+                className="bg-[#FF73FF] w-2/6 p-2 mb-5 rounded-md"
+                onClick={downloadImage}
+              >
+                PDF
+              </button>
               <div>
                 <h2 className="bebas-neue-regular md:text-xl">
                   Más de {thesis.categoria}
                 </h2>
-                <ul className="md:flex">
+                <ul className="flex flex-wrap justify-evenly gap-9">
                   {thesisList.map((thisThesis) => (
                     <li
                       className="md:ml-8 md:text-wb-center md:flex-wrap"
@@ -163,7 +181,7 @@ export default function Window({ folderName, onAction }) {
               </div>
             </article>
           ) : (
-            <ul className="md:flex">
+            <ul className="flex flex-wrap justify-evenly gap-9">
               {thesisList.map((thisThesis) => (
                 <li
                   className="md:ml-8 md:text-wb-center md:flex-wrap"

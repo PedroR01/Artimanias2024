@@ -10,9 +10,11 @@
     },
     {
         "id": 1,
-        "obra": "Obra Manu",
+        "obra": "Voces del Espacio",
         "nombreApellido": "Manuel Martinez",
-        "parrafo1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quis mauris dignissim, congue ex a, iaculis est. Phasellus faucibus suscipit quam, nec ullamcorper enim mollis in. Phasellus rhoncus ligula nec magna scelerisque, sed finibus erat bibendum.",
+        "parrafo1": "Voces del Espacio es una obra que simula un videojuego arcade de disparos espacial, parecido a la obra \"Space Invaders\". El usuario tiene a disposición tres botones para mover la nave y disparar, esquivando y destruyendo enemigos para sumar puntos. Al final de la partida, llegará a la tierra y, si se encuentra entre las mejores 5 puntuaciones, verá su nombre en el inicio del juego.",
+        "parrafo2": "Para poder tener mejor puntuación, el juego dispone de una mecánica de mejoras de nave que se desbloquéan al gritar en un micrófono que está disponible en un casco de piloto espacial que se encuentra a un lado del arcade. Aquellos que griten más y constantemente podrán conseguir mejor puntuación y estar entre los 5 mejores, promoviendo la idea de \"pay to win\", representado el pago como la entrega de gritos a una pantalla, apelando a la humillación como medio para ganar sobre los demás.\n\n",
+        "video": "https://www.youtube.com/watch?v=uaM3HaqEdTo",
         "categoria": "Videojuegos"
     },
     {
@@ -21,6 +23,7 @@
         "nombreApellido": "Pedro Robinet",
         "parrafo1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quis mauris dignissim, congue ex a, iaculis est. Phasellus faucibus suscipit quam, nec ullamcorper enim mollis in. Phasellus rhoncus ligula nec magna scelerisque, sed finibus erat bibendum.",
         "parrafo2": "Etiam lacus orci, tincidunt a rutrum id, rhoncus in tellus. Nam hendrerit, massa at suscipit aliquet, ipsum velit pharetra turpis, vitae ultrices erat eros hendrerit ante. Integer tortor augue, tempor sed ex sit amet, ultrices dignissim metus. Cras vel turpis felis. Quisque egestas felis sed porttitor euismod. Fusce laoreet turpis ut aliquam mattis. Nulla eget elit sem. Suspendisse venenatis lorem et aliquet venenatis. Curabitur sollicitudin efficitur justo, vel dictum odio venenatis vitae. Donec vehicula tincidunt dolor, quis commodo tortor ornare vitae. Donec malesuada tellus euismod ornare fringilla. Pellentesque at erat volutpat, molestie eros sed, pulvinar nisl. Vestibulum quis elit at tortor fermentum tempor id at nisi. Suspendisse eleifend elit vel nibh aliquam, a finibus ipsum dictum.",
+        "video": "https://youtu.be/dQw4w9WgXcQ",
         "categoria": "Arte Electronico"
     },
     {
@@ -29,6 +32,7 @@
         "nombreApellido": "Barack Obama",
         "parrafo1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quis mauris dignissim, congue ex a, iaculis est. Phasellus faucibus suscipit quam, nec ullamcorper enim mollis in. Phasellus rhoncus ligula nec magna scelerisque, sed finibus erat bibendum.",
         "parrafo2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis leo congue, dignissim sem eget, interdum sem. Aenean sed tellus vel dolor fermentum consequat eget sed mauris. Curabitur at augue a ante ultrices sagittis vitae gravida sem. Pellentesque fringilla sem ac placerat malesuada. Etiam efficitur justo sed massa venenatis congue. In luctus vulputate tincidunt. Sed vulputate, sapien in ornare efficitur, leo lacus porttitor mauris, eu tempor nunc ante et nunc. Nulla lobortis sapien a libero consequat fermentum.",
+        "video": "https://youtu.be/dQw4w9WgXcQ",
         "categoria": "Realidad Aumentada"
     },
     {
@@ -36,6 +40,8 @@
         "obra": "Visuales",
         "nombreApellido": "Federico Yoma",
         "parrafo1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quis mauris dignissim, congue ex a, iaculis est. Phasellus faucibus suscipit quam, nec ullamcorper enim mollis in. Phasellus rhoncus ligula nec magna scelerisque, sed finibus erat bibendum.",
+        "parrafo2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis leo congue, dignissim sem eget, interdum sem. Aenean sed tellus vel dolor fermentum consequat eget sed mauris. Curabitur at augue a ante ultrices sagittis vitae gravida sem. Pellentesque fringilla sem ac placerat malesuada. Etiam efficitur justo sed massa venenatis congue. In luctus vulputate tincidunt. Sed vulputate, sapien in ornare efficitur, leo lacus porttitor mauris, eu tempor nunc ante et nunc. Nulla lobortis sapien a libero consequat fermentum.",
+        "video": "https://youtu.be/dQw4w9WgXcQ",
         "categoria": "Mapping"
     },
     {
@@ -44,6 +50,7 @@
         "nombreApellido": "Juana Perone",
         "parrafo1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quis mauris dignissim, congue ex a, iaculis est. Phasellus faucibus suscipit quam, nec ullamcorper enim mollis in. Phasellus rhoncus ligula nec magna scelerisque, sed finibus erat bibendum.",
         "parrafo2": "Etiam lacus orci, tincidunt a rutrum id, rhoncus in tellus. Nam hendrerit, massa at suscipit aliquet, ipsum velit pharetra turpis, vitae ultrices erat eros hendrerit ante. Integer tortor augue, tempor sed ex sit amet, ultrices dignissim metus. Cras vel turpis felis. Quisque egestas felis sed porttitor euismod. Fusce laoreet turpis ut aliquam mattis. Nulla eget elit sem. Suspendisse venenatis lorem et aliquet venenatis. Curabitur sollicitudin efficitur justo, vel dictum odio venenatis vitae. Donec vehicula tincidunt dolor, quis commodo tortor ornare vitae. Donec malesuada tellus euismod ornare fringilla. Pellentesque at erat volutpat, molestie eros sed, pulvinar nisl. Vestibulum quis elit at tortor fermentum tempor id at nisi. Suspendisse eleifend elit vel nibh aliquam, a finibus ipsum dictum.",
+        "video": "https://youtu.be/dQw4w9WgXcQ",
         "categoria": "Mapping"
     },
     {
@@ -52,13 +59,16 @@
         "nombreApellido": "Lucas Galoto",
         "parrafo1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quis mauris dignissim, congue ex a, iaculis est. Phasellus faucibus suscipit quam, nec ullamcorper enim mollis in. Phasellus rhoncus ligula nec magna scelerisque, sed finibus erat bibendum.",
         "parrafo2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis leo congue, dignissim sem eget, interdum sem. Aenean sed tellus vel dolor fermentum consequat eget sed mauris. Curabitur at augue a ante ultrices sagittis vitae gravida sem. Pellentesque fringilla sem ac placerat malesuada. Etiam efficitur justo sed massa venenatis congue. In luctus vulputate tincidunt. Sed vulputate, sapien in ornare efficitur, leo lacus porttitor mauris, eu tempor nunc ante et nunc. Nulla lobortis sapien a libero consequat fermentum.",
+        "video": "https://youtu.be/dQw4w9WgXcQ",
         "categoria": "Mapping"
     },
     {
         "id": 7,
-        "obra": "Fulano's obra",
+        "obra": "Fulano obra",
         "nombreApellido": "Fulano x",
         "parrafo1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quis mauris dignissim, congue ex a, iaculis est. Phasellus faucibus suscipit quam, nec ullamcorper enim mollis in. Phasellus rhoncus ligula nec magna scelerisque, sed finibus erat bibendum.",
+        "parrafo2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis leo congue, dignissim sem eget, interdum sem. Aenean sed tellus vel dolor fermentum consequat eget sed mauris. Curabitur at augue a ante ultrices sagittis vitae gravida sem. Pellentesque fringilla sem ac placerat malesuada. Etiam efficitur justo sed massa venenatis congue. In luctus vulputate tincidunt. Sed vulputate, sapien in ornare efficitur, leo lacus porttitor mauris, eu tempor nunc ante et nunc. Nulla lobortis sapien a libero consequat fermentum.",
+        "video": "https://youtu.be/dQw4w9WgXcQ",
         "categoria": "Mapping"
     },
     {
@@ -67,6 +77,7 @@
         "nombreApellido": "Diego Gimenez",
         "parrafo1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quis mauris dignissim, congue ex a, iaculis est. Phasellus faucibus suscipit quam, nec ullamcorper enim mollis in. Phasellus rhoncus ligula nec magna scelerisque, sed finibus erat bibendum.",
         "parrafo2": "Etiam lacus orci, tincidunt a rutrum id, rhoncus in tellus. Nam hendrerit, massa at suscipit aliquet, ipsum velit pharetra turpis, vitae ultrices erat eros hendrerit ante. Integer tortor augue, tempor sed ex sit amet, ultrices dignissim metus. Cras vel turpis felis. Quisque egestas felis sed porttitor euismod. Fusce laoreet turpis ut aliquam mattis. Nulla eget elit sem. Suspendisse venenatis lorem et aliquet venenatis. Curabitur sollicitudin efficitur justo, vel dictum odio venenatis vitae. Donec vehicula tincidunt dolor, quis commodo tortor ornare vitae. Donec malesuada tellus euismod ornare fringilla. Pellentesque at erat volutpat, molestie eros sed, pulvinar nisl. Vestibulum quis elit at tortor fermentum tempor id at nisi. Suspendisse eleifend elit vel nibh aliquam, a finibus ipsum dictum.",
+        "video": "https://youtu.be/dQw4w9WgXcQ",
         "categoria": "Videojuegos"
     }
 ]
