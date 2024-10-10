@@ -13,7 +13,8 @@
         "obra": "Obra Manu",
         "nombreApellido": "Manuel Martinez",
         "parrafo1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quis mauris dignissim, congue ex a, iaculis est. Phasellus faucibus suscipit quam, nec ullamcorper enim mollis in. Phasellus rhoncus ligula nec magna scelerisque, sed finibus erat bibendum.",
-        "categoria": "Videojuegos"
+        "categoria": "Videojuegos",
+        "video": "https://youtube.com/shorts/uaM3HaqEdTo"
     },
     {
         "id": 2,

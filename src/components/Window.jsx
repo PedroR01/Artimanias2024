@@ -137,6 +137,7 @@ export default function Window({ folderName, onAction }) {
               <p className="baloo-2-regular md:text-base mt-8">
                 {thesis.parrafo1}
               </p>
+              <br></br>
               <p className="baloo-2-regular md:text-base mb-8">
                 {thesis.parrafo2}
               </p>
