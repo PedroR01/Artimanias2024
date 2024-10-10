@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
-import ArrowLeftIcon from "@heroicons/react/24/outline/ArrowLeftIcon";
-import XIcon from "@heroicons/react/24/outline/XCircleIcon";
-import MinusIcon from "@heroicons/react/24/outline/MinusIcon";
+import leftArrowIcon from "../assets/img/left_arrow_icon.svg";
+import xIcon from "../assets/img/x_icon.svg";
+import minusIcon from "../assets/img/minus_icon.svg";
 import Folder from "./Folder";
 import jsonData from "../assets/data/data.json";
+import Slider from "./Slider";
 
 // Recibe el nombre de la carpeta que se abrio (folderName) y en base a eso muestra el contenido acorde
 // onAction es la funcion pasada por parametro y que se ejecuta al apretar algun boton de la ventaba abierta, además al hacer click
@@ -64,10 +65,10 @@ export default function Window({ folderName, onAction }) {
         role="dialog"
         aria-labelledby="modal-title"
         aria-modal="true"
-        className="bg-white w-full max-w-lg rounded-md shadow-lg overflow-hidden"
+        className="bg-white w-full max-w-lg rounded-md folder-window-shadow overflow-hidden border-2 border-black"
       >
         {/* Barra superior */}
-        <header className="flex items-center justify-between bg-[#FF73FF] text-black p-4">
+        <header className="flex items-center justify-between bg-[#FF73FF] text-black p-4 ">
           <button
             aria-label="Go Back"
             className="hover:text-gray-400"
@@ -81,9 +82,12 @@ export default function Window({ folderName, onAction }) {
               else onAction("close");
             }}
           >
-            <ArrowLeftIcon className="h-6 w-6" />
+            <img className="h-6 w-6" src={leftArrowIcon} alt="" />
           </button>
-          <h2 id="modal-title" className="text-lg font-medium">
+          <h2
+            id="modal-title"
+            className="text-lg font-medium bebas-neue-regular md:text-xl md:spa md:tracking-wider"
+          >
             {actualFolder}
           </h2>
           <div className="flex space-x-2">
@@ -98,7 +102,7 @@ export default function Window({ folderName, onAction }) {
                     : onAction("minimize")
               }
             >
-              <MinusIcon className="h-6 w-6" />
+              <img className="h-6 w-6" src={minusIcon} alt="" />
             </button>
             <button
               onClick={
@@ -109,30 +113,62 @@ export default function Window({ folderName, onAction }) {
               aria-label="Close"
               className="hover:text-gray-400"
             >
-              <XIcon className="h-6 w-6" />
+              <img className="h-6 w-6" src={xIcon} alt="" />
             </button>
           </div>
         </header>
 
         {/* Contenido */}
-        <main className="p-4 bg-[#FFFBF2]">
+        <main className="p-4 bg-[#FFFBF2] md:mx-8 md:max-h-[36rem] overflow-y-scroll">
           {thesis ? (
             <article>
-              <img src="" alt="imagen de la obra" />
-              <p>{thesis.parrafo1}</p>
-              <iframe
-                width="350"
-                height="400"
-                src={"http://www.youtube.com/embed/" + thesis.video.split("?v=")[1] + "?modestbranding=1"}
-                title={thesis.obra}
-                referrerpolicy="strict-origin-when-cross-origin"
-              ></iframe>
-              <p>{thesis.parrafo2}</p>
+              <h1 className="bebas-neue-regular md:text-4xl">{thesis.obra}</h1>
+              <h2 className="bebas-neue-regular md:text-lg">
+                {thesis.nombreApellido}
+              </h2>
+              <Slider
+                video={
+                  "http://www.youtube.com/embed/" +
+                  thesis.video.split("?v=")[1] +
+                  "?modestbranding=1"
+                }
+                obra={thesis.obra}
+              />
+              <p className="baloo-2-regular md:text-base mt-8">
+                {thesis.parrafo1}
+              </p>
+              <p className="baloo-2-regular md:text-base mb-8">
+                {thesis.parrafo2}
+              </p>
+              <div>
+                <h2 className="bebas-neue-regular md:text-xl">
+                  Más de {thesis.categoria}
+                </h2>
+                <ul className="md:flex">
+                  {thesisList.map((thisThesis) => (
+                    <li
+                      className="md:ml-8 md:text-wb-center md:flex-wrap"
+                      key={thisThesis.id}
+                    >
+                      <Folder
+                        title={thisThesis.obra}
+                        onFolderClick={() => {
+                          // Al abrir la carpeta, se guarda la misma con todo su contenido como objeto
+                          setThesis(thisThesis);
+                        }}
+                      />
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </article>
           ) : (
-            <ul>
+            <ul className="md:flex">
               {thesisList.map((thisThesis) => (
-                <li key={thisThesis.id}>
+                <li
+                  className="md:ml-8 md:text-wb-center md:flex-wrap"
+                  key={thisThesis.id}
+                >
                   <Folder
                     title={thisThesis.obra}
                     onFolderClick={() => {

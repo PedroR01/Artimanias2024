@@ -103,19 +103,33 @@ export default function Desktop() {
       <div className="relative flex">
         {/* Logo y personajes */}
         <div className="-z-10 h-screen flex items-center justify-center">
+          <img
+            className="absolute bottom-[0%] sm:bottom-[40%] left-0 sm:left-[40%] inset-0 m-auto size-2/4 sm:size-2/4"
+            src={logoArti}
+            alt=""
+          />
 
-          <img className="absolute bottom-[0%] sm:bottom-[40%] left-0 sm:left-[40%] inset-0 m-auto size-2/4 sm:size-2/4" src={logoArti} alt="" />
-  
-          <img className="absolute bottom-[32%] right-[38%] rotate-[-16deg] size-0 sm:size-1/6" src={cubo} alt=""/>
+          <img
+            className="absolute bottom-[32%] right-[38%] rotate-[-16deg] size-0 sm:size-1/6"
+            src={cubo}
+            alt=""
+          />
 
-          <img className="absolute bottom-[24%] right-[2%] size-0 sm:size-1/4 scale-x-[-1]" src={pjRa} alt="" />
+          <img
+            className="absolute bottom-[24%] right-[2%] size-0 sm:size-1/4 scale-x-[-1]"
+            src={pjRa}
+            alt=""
+          />
 
-          <img className="absolute bottom-[18%] right-[12%] size-0 sm:size-1/4" src={pjVj} alt="" />
-
+          <img
+            className="absolute bottom-[18%] right-[12%] size-0 sm:size-1/4"
+            src={pjVj}
+            alt=""
+          />
         </div>
 
         <section className="relative z-10">
-          <ul>
+          <ul className="md:ml-20">
             <li>
               <Folder
                 title={folders.RA}

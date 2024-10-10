@@ -2,6 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+.bebas-neue-regular {
+  font-family: "Bebas Neue", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.baloo-2-regular {
+  font-family: "Baloo 2", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
 body {
   background-color: #4097f6;
   background-image: url("./assets/img/polka_144.png");
@@ -15,8 +28,28 @@ h4 {
   font-size: 5vw;
 }
 
+@media screen and (min-width: 1800px) {
+  .menu {
+    right: 1.5rem;
+  }
+}
+
 @layer utilities {
   .text-wb-center {
     text-align: -webkit-center;
+  }
+  .h-wb-fill {
+    height: -webkit-fill-available;
+  }
+  .w-wb-fill {
+    width: -webkit-fill-available;
+  }
+  .folder-window-shadow {
+    --tw-shadow: 12px 11px 1px -3px rgb(0 0 0 / 1.1),
+      0 4px 11px -4px rgb(0 0 0 / 0.1);
+    --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color),
+      0 4px 6px -4px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+      var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
 }

@@ -19,7 +19,8 @@ export default function Folder({ title, fitIn, onFolderClick }) {
   let dimensions = "w-28 h-24 mt-10";
 
   if (fitIn === "nav") {
-    dimensions = "w-16 h-24 ";
+    dimensions =
+      "w-16 h-24 md:w-20 transition ease-in-out delay-150 hover:-translate-y-8 hover:scale-110 duration-300 xl:h-wb-fill xl:w-wb-fill";
   }
 
   return (
@@ -28,7 +29,7 @@ export default function Folder({ title, fitIn, onFolderClick }) {
         className={"relative ml-4 text-wb-center " + dimensions}
         onClick={() => onFolderClick()}
       >
-        <div className="">
+        <div className="md:w-20">
           <img className="w-fit h-fit" src={folder} alt="" />
           <img
             className="absolute w-1/2 h-16 left-1/4 top-[20%]"
@@ -38,7 +39,7 @@ export default function Folder({ title, fitIn, onFolderClick }) {
         </div>
       </button>
       {!fitIn && (
-        <h3 className="pl-5 font-bold tracking-wider font-mono w-min text-center">
+        <h3 className="pl-5 tracking-wider w-min text-center bebas-neue-regular md:text-xl">
           {title.toUpperCase()}
         </h3>
       )}
