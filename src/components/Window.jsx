@@ -75,7 +75,7 @@ export default function Window({ folderName, onAction }) {
         role="dialog"
         aria-labelledby="modal-title"
         aria-modal="true"
-        className="bg-white h-1/2 ml-4 mr-4 w-full max-w-lg rounded-md folder-window-shadow overflow-hidden border-2 border-black"
+        className="overflow-y-scroll bg-white h-1/2 ml-4 mr-4 w-full max-w-lg rounded-md folder-window-shadow overflow-hidden border-2 border-black md:h-3/4 md:overflow-hidden"
       >
         {/* Barra superior */}
         <header className="flex sticky top-0 z-10 items-center justify-between bg-[#FF73FF] text-black p-4 ">
