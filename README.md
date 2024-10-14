@@ -5,6 +5,7 @@
 - React
 - TailwindCSS (desarrollo)
 - NodeJS
+- gh-pages (Deploy React app with Github Pages)
 
 ## Recomendaciones
 
