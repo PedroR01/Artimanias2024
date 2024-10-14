@@ -1,7 +1,8 @@
 {
   "files": {
-    "main.css": "/Artimanias2024/static/css/main.fe5fd701.css",
-    "main.js": "/Artimanias2024/static/js/main.68eac0f7.js",
+    "main.css": "/Artimanias2024/static/css/main.5700e402.css",
+    "main.js": "/Artimanias2024/static/js/main.81eea91b.js",
+    "static/media/video.png": "/Artimanias2024/static/media/video.3a24550530b450da0f1f.png",
     "static/media/artimañas-info.png": "/Artimanias2024/static/media/artimañas-info.275c2d91f4c83abc9fc2.png",
     "static/media/logo_arti.svg": "/Artimanias2024/static/media/logo_arti.c110da5c505a537a8668aa9280bf7767.svg",
     "static/media/vj_icon.svg": "/Artimanias2024/static/media/vj_icon.c9ceb5751c58432d2d901d08cf9ee8f2.svg",
@@ -10,12 +11,16 @@
     "static/media/ae_icon.svg": "/Artimanias2024/static/media/ae_icon.000d7e23c6995e3d95972e7a9a390e2a.svg",
     "static/media/logo_nav.svg": "/Artimanias2024/static/media/logo_nav.953a93ab59b25a9986894a79c11c41d3.svg",
     "static/media/cubo_icon.svg": "/Artimanias2024/static/media/cubo_icon.2e9b77d09fa720c0936b5fa939cd0919.svg",
+    "static/media/left_arrow_icon.svg": "/Artimanias2024/static/media/left_arrow_icon.110773130000afc821ccfe9b2ac8da26.svg",
+    "static/media/x_icon.svg": "/Artimanias2024/static/media/x_icon.6560bc33d700957cd7916100441e1e09.svg",
+    "static/media/minus_icon.svg": "/Artimanias2024/static/media/minus_icon.e0992ebf33ac7dfffd6b5b7dadb354a9.svg",
     "index.html": "/Artimanias2024/index.html",
-    "main.fe5fd701.css.map": "/Artimanias2024/static/css/main.fe5fd701.css.map",
-    "main.68eac0f7.js.map": "/Artimanias2024/static/js/main.68eac0f7.js.map"
+    "static/media/sliderArrow.svg": "/Artimanias2024/static/media/sliderArrow.8bdd42aff210a68d56c13640f91eb684.svg",
+    "main.5700e402.css.map": "/Artimanias2024/static/css/main.5700e402.css.map",
+    "main.81eea91b.js.map": "/Artimanias2024/static/js/main.81eea91b.js.map"
   },
   "entrypoints": [
-    "static/css/main.fe5fd701.css",
-    "static/js/main.68eac0f7.js"
+    "static/css/main.5700e402.css",
+    "static/js/main.81eea91b.js"
   ]
 }
