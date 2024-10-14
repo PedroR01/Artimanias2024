@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import sliderArrow from "../assets/img/sliderArrow.svg";
+import imgVideo from "../assets/img/video.png";
 
 export default function Slider({ video, obra, imagenes }) {
   // Estado para mantener el índice actual del slider
@@ -7,8 +8,8 @@ export default function Slider({ video, obra, imagenes }) {
 
   // Array con las URLs de las imágenes y el video
   const slides = [
+    { type: "image", url: imgVideo },
     { type: "video", url: video },
-    { type: "image", url: "https://via.placeholder.com/800x400?text=Image+1" },
     { type: "image", url: "https://via.placeholder.com/800x400?text=Image+2" },
   ];
 
