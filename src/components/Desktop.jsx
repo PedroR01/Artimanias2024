@@ -3,15 +3,13 @@ import Navbar from "./Navbar";
 import Folder from "./Folder";
 import Window from "./Window";
 import Info from "./Info";
-import logoArti from "../assets/img/logo_arti.svg";
-import pjRa from "../assets/img/ra_icon.svg";
-import pjVj from "../assets/img/vj_icon.svg";
-import cubo from "../assets/img/cubo_icon.svg";
+import AuthorsList from "./AuthorsList";
 
 export default function Desktop() {
   const [whichOpen, setWhichOpen] = useState(null);
   const [foldersMinimized, setFoldersMinimized] = useState([]);
   const [infoOpen, setInfoOpen] = useState(false);
+  const [authorsOpen, setAuthorsOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
   // Detecta cambios en el tamaño de la pantalla
@@ -33,10 +31,14 @@ export default function Desktop() {
   }, []);
 
   const folders = {
-    RA: "Realidad Aumentada",
-    AE: "Arte Electronico",
-    VJ: "Videojuegos",
-    MP: "Mapping",
+    PA: "Procesos y aprendizaje",
+    RSI: "Redes sociales e internet",
+    FN: "Fantasía y narrativa",
+    CA: "Control y artificialidad",
+    SC: "Social y cultural",
+    NO: "Natural y lo orgánico",
+    IC: "Identidad y cuerpos",
+    ARTI: "Conocer Artimañas"
   };
 
   const openFolder = (folderName) => {
@@ -59,6 +61,10 @@ export default function Desktop() {
       // Si no, simplemente agrega la nueva carpeta minimizada
       return [...prevFolders, folderName];
     });
+  };
+
+  const handleNavToAuthors = () => {
+    setAuthorsOpen((prevAuthorsOpen) => !prevAuthorsOpen); // Alterna el estado de info
   };
 
   const handleNavToInfo = () => {
@@ -101,67 +107,81 @@ export default function Desktop() {
       )}
 
       <div className="relative flex">
-        {/* Logo y personajes */}
-        <div className="-z-10 h-screen flex items-center justify-center">
-          <img
-            className="absolute bottom-[0%] sm:bottom-[40%] left-0 sm:left-[40%] inset-0 m-auto size-2/4 sm:size-2/4"
-            src={logoArti}
-            alt=""
-          />
-
-          <img
-            className="absolute bottom-[32%] right-[38%] rotate-[-16deg] size-0 sm:size-1/6"
-            src={cubo}
-            alt=""
-          />
-
-          <img
-            className="absolute bottom-[24%] right-[2%] size-0 sm:size-1/4 scale-x-[-1]"
-            src={pjRa}
-            alt=""
-          />
-
-          <img
-            className="absolute bottom-[18%] right-[12%] size-0 sm:size-1/4"
-            src={pjVj}
-            alt=""
-          />
-        </div>
-
-        <section className="relative z-10">
-          <ul className="grid gap-4 ml-5 mt-24 md:ml-12">
+        <section className="relative w-full z-10">
+          <ul className="grid grid-cols-2 auto-rows-fr gap-4 items-center mt-8 md:ml-12">
             <li>
               <Folder
-                title={folders.RA}
-                onFolderClick={() => openFolder(folders.RA)}
+                title={folders.RSI}
+                titleBg={"bg-[#9EDEFC]"}
+                onFolderClick={() => openFolder(folders.RSI)}
               />
             </li>
             <li>
               <Folder
-                title={folders.AE}
-                onFolderClick={() => openFolder(folders.AE)}
+                title={folders.IC}
+                titleBg={"bg-[#D1C1B4]"}
+                onFolderClick={() => openFolder(folders.IC)}
               />
             </li>
             <li>
               <Folder
-                title={folders.VJ}
-                onFolderClick={() => openFolder(folders.VJ)}
+                title={folders.FN}
+                titleBg={"bg-[#FF73FF]"}
+                onFolderClick={() => openFolder(folders.FN)}
               />
             </li>
             <li>
               <Folder
-                title={folders.MP}
-                onFolderClick={() => openFolder(folders.MP)}
+                title={folders.NO}
+                titleBg={"bg-[#27AE5F]"}
+                onFolderClick={() => openFolder(folders.NO)}
+              />
+            </li>
+            <li>
+              <Folder
+                title={folders.CA}
+                titleBg={"bg-[#CBDF00]"}
+                onFolderClick={() => openFolder(folders.CA)}
+              />
+            </li>
+            <li>
+              <Folder
+                title={folders.SC}
+                titleBg={"bg-[#8477FE]"}
+                onFolderClick={() => openFolder(folders.SC)}
+              />
+            </li>
+            <li>
+              <Folder
+                title={folders.PA}
+                titleBg={"bg-[#FFDD6A]"}
+                onFolderClick={() => openFolder(folders.PA)}
+              />
+            </li>
+            <li className="absolute -bottom-24 right-9">
+              <Folder
+                title={folders.ARTI}
+                titleBg={"bg-[#F85031]"}
+                onFolderClick={() => openFolder(folders.ARTI)}
               />
             </li>
           </ul>
         </section>
       </div>
 
+      {authorsOpen && ( //Abrir pestaña info
+        <AuthorsList
+          onAction={(action) => {
+            if (action === "close") {
+              setAuthorsOpen(false);
+            }
+          }}
+        />
+      )}
       <Navbar
         minimized={foldersMinimized}
         navToDesk={handleNavToDesk} // Pasa el nombre de la carpeta clickeada
-        navToInfo={handleNavToInfo} // Pasa el estado del booleano del boton
+        navToAuthors={handleNavToAuthors} // Pasa el estado del booleano del boton
       />
     </>
   );

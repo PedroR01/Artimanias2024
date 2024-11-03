@@ -16,19 +16,27 @@ export default function Window({ folderName, onAction }) {
 
   // hardCoding: Esto se repite en desktop. Habria que hacer otro archivo donde se importen estos nombres o algo para usarlo direc.
   const folders = {
-    RA: "Realidad Aumentada",
-    AE: "Arte Electronico",
-    VJ: "Videojuegos",
-    MP: "Mapping",
+    PA: "Procesos y aprendizaje",
+    RSI: "Redes sociales e internet",
+    FN: "Fantasía y narrativa",
+    CA: "Control y artificialidad",
+    SC: "Social y cultural",
+    NO: "Natural y lo orgánico",
+    IC: "Identidad y cuerpos",
+    ARTI: "Conocer Artimañas"
   };
 
   // Si se abre una tesis minimizada es importante verificar esto para volver a obtener los datos de la misma
   useEffect(() => {
     if (
-      folderName !== folders.AE &&
-      folderName !== folders.RA &&
-      folderName !== folders.VJ &&
-      folderName !== folders.MP
+      folderName !== folders.PA &&
+      folderName !== folders.RSI &&
+      folderName !== folders.FN &&
+      folderName !== folders.CA &&
+      folderName !== folders.SC &&
+      folderName !== folders.NO &&
+      folderName !== folders.IC &&
+      folderName !== folders.ARTI
     ) {
       const thesisData = jsonData.find(
         (thisThesis) => thisThesis.obra === folderName,
@@ -42,15 +50,18 @@ export default function Window({ folderName, onAction }) {
       setActualFolder(thesis.obra);
     } // Si se abre una carpeta que no es una tesis, aquí se debe hacer un request a las diferentes tesis que deben mostrarse para poder abrir
     else if (
-      folderName === folders.AE ||
-      folderName === folders.RA ||
-      folderName === folders.VJ ||
-      folderName === folders.MP
+      folderName === folders.PA ||
+      folderName === folders.RSI ||
+      folderName === folders.FN ||
+      folderName === folders.CA ||
+      folderName === folders.SC ||
+      folderName === folders.NO ||
+      folderName === folders.IC ||
+      folderName === folders.ARTI
     ) {
       // Filter jsonData to match category to folder name
       const filteredItems = jsonData.filter(
-        (thisThesis) =>
-          thisThesis.categoria.toLowerCase() === folderName.toLowerCase(),
+        (thisThesis) => thisThesis.categoria.toLowerCase() === folderName.toLowerCase(),
       );
 
       console.log("Fetched data: ", jsonData); // Debug

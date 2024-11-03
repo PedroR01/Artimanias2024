@@ -1,19 +1,26 @@
 import React from "react";
 
 /* Images */
-import folder from "../assets/img/folder.png";
-import ra_folder from "../assets/img/ra_icon.svg";
-import ae_folder from "../assets/img/ae_icon.svg";
-import mp_folder from "../assets/img/mp_icon.svg";
-import vj_folder from "../assets/img/vj_icon.svg";
+import pa_folder from "../assets/img/pa_folder.svg";
+import rsi_folder from "../assets/img/rsi_folder.svg";
+import fn_folder from "../assets/img/fn_folder.svg";
+import ca_folder from "../assets/img/ca_folder.svg";
+import sc_folder from "../assets/img/sc_folder.svg";
+import no_folder from "../assets/img/no_folder.svg";
+import ic_folder from "../assets/img/ic_folder.svg";
+import artimanias_folder from "../assets/img/artimanias_folder.svg";
 
 // El parametro fitIn solo se usa cuando se necesita mostrar la carpeta con otras dimensiones en otro lugar de la pantalla que no sea el escritorio
-export default function Folder({ title, fitIn, onFolderClick }) {
+export default function Folder({ title, titleBg, fitIn, onFolderClick }) {
   const folderMap = {
-    realidadaumentada: ra_folder,
-    arteelectronico: ae_folder,
-    mapping: mp_folder,
-    videojuegos: vj_folder,
+    procesosyaprendizaje: pa_folder,
+    redessocialeseinternet: rsi_folder,
+    fantasíaynarrativa: fn_folder,
+    controlyartificialidad: ca_folder,
+    socialycultural: sc_folder,
+    naturalyloorgánico: no_folder,
+    identidadycuerpos: ic_folder,
+    conocerartimañas: artimanias_folder,
   };
 
   let dimensions = "w-28 h-24";
@@ -30,18 +37,17 @@ export default function Folder({ title, fitIn, onFolderClick }) {
         onClick={() => onFolderClick()}
       >
         <div className="md:w-20">
-          <img className="w-fit h-fit" src={folder} alt="" />
           <img
-            className="absolute w-1/2 h-16 left-1/4 top-[20%]"
+            className="absolute w-3/4 h-20 left-1/4 top-[20%]"
             src={folderMap[title.replace(/\s+/g, "").toLowerCase()]}
             alt=""
           />
         </div>
       </button>
-      {!fitIn && (
-        <h3 className="tracking-wider w-min text-center bebas-neue-regular md:text-xl">
-          {title.toUpperCase()}
-        </h3>
+      {!fitIn && (<div className={"border-2 border-black rounded-md justify-self-center w-fit px-4 " + titleBg}><h3 className="text-center w-max bebas-neue-regular md:text-xl">
+        {title.toUpperCase()}
+      </h3> </div>
+
       )}
     </div>
   );
