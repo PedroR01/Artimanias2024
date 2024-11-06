@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import sliderArrow from "../assets/img/sliderArrow.svg";
 import imgVideo from "../assets/img/video.png";
+import sliderArrow from "../assets/img/sliderArrow.svg";
 
 export default function Slider({ video, obra, imagenes }) {
   // Estado para mantener el índice actual del slider
@@ -34,7 +34,7 @@ export default function Slider({ video, obra, imagenes }) {
           style={{ transform: `translateX(-${currentSlide * 100}%)` }}
         >
           {slides.map((slide, index) => (
-            <div key={index} className="min-w-full border-2 border-black">
+            <div key={index} className="min-w-full">
               {slide.type === "image" ? (
                 <img
                   src={slide.url}
@@ -50,26 +50,25 @@ export default function Slider({ video, obra, imagenes }) {
                   referrerpolicy="strict-origin-when-cross-origin"
                 ></iframe>
               )}
+              {/* Botón para ir al slide anterior */}
+              <button
+                onClick={prevSlide}
+                className="absolute left-0 top-1/2 ml-5 transform -translate-y-1/2 -translate-x-4 transition ease-in-out delay-150 hover:-translate-x-6  duration-300"
+              >
+                <img src={sliderArrow} alt="" />
+              </button>
+
+              {/* Botón para ir al siguiente slide */}
+              <button
+                onClick={nextSlide}
+                className="absolute right-0 top-1/2 mr-5 transform -translate-y-1/2 translate-x-4 transition ease-in-out delay-150 hover:translate-x-6  duration-300"
+              >
+                <img className="rotate-180" src={sliderArrow} alt="" />
+              </button>
             </div>
           ))}
         </div>
       </div>
-
-      {/* Botón para ir al slide anterior */}
-      <button
-        onClick={prevSlide}
-        className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-4 transition ease-in-out delay-150 hover:-translate-x-6  duration-300"
-      >
-        <img className="rotate-180" src={sliderArrow} alt="" />
-      </button>
-
-      {/* Botón para ir al siguiente slide */}
-      <button
-        onClick={nextSlide}
-        className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-4 transition ease-in-out delay-150 hover:translate-x-6  duration-300"
-      >
-        <img src={sliderArrow} alt="" />
-      </button>
 
       {/* Indicadores de los slides */}
       <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">

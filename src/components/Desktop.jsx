@@ -108,11 +108,12 @@ export default function Desktop() {
 
       <div className="relative flex">
         <section className="relative w-full z-10">
-          <ul className="grid grid-cols-2 auto-rows-fr gap-4 items-center mt-8 md:ml-12">
+          <ul className="grid grid-cols-2 auto-rows-fr gap-4 items-center justify-items-center mt-8 md:ml-12 md:w-1/2 lg:w-2/6">
             <li>
               <Folder
                 title={folders.RSI}
                 titleBg={"bg-[#9EDEFC]"}
+                hoverBg={"hover:bg-[#9EDEFC]"}
                 onFolderClick={() => openFolder(folders.RSI)}
               />
             </li>
@@ -120,6 +121,7 @@ export default function Desktop() {
               <Folder
                 title={folders.IC}
                 titleBg={"bg-[#D1C1B4]"}
+                hoverBg={"hover:bg-[#D1C1B4]"}
                 onFolderClick={() => openFolder(folders.IC)}
               />
             </li>
@@ -127,6 +129,7 @@ export default function Desktop() {
               <Folder
                 title={folders.FN}
                 titleBg={"bg-[#FF73FF]"}
+                hoverBg={"hover:bg-[#FF73FF]"}
                 onFolderClick={() => openFolder(folders.FN)}
               />
             </li>
@@ -134,6 +137,7 @@ export default function Desktop() {
               <Folder
                 title={folders.NO}
                 titleBg={"bg-[#27AE5F]"}
+                hoverBg={"hover:bg-[#27AE5F]"}
                 onFolderClick={() => openFolder(folders.NO)}
               />
             </li>
@@ -141,6 +145,7 @@ export default function Desktop() {
               <Folder
                 title={folders.CA}
                 titleBg={"bg-[#CBDF00]"}
+                hoverBg={"hover:bg-[#CBDF00]"}
                 onFolderClick={() => openFolder(folders.CA)}
               />
             </li>
@@ -148,6 +153,7 @@ export default function Desktop() {
               <Folder
                 title={folders.SC}
                 titleBg={"bg-[#8477FE]"}
+                hoverBg={"hover:bg-[#8477FE]"}
                 onFolderClick={() => openFolder(folders.SC)}
               />
             </li>
@@ -155,6 +161,7 @@ export default function Desktop() {
               <Folder
                 title={folders.PA}
                 titleBg={"bg-[#FFDD6A]"}
+                hoverBg={"hover:bg-[#FFDD6A]"}
                 onFolderClick={() => openFolder(folders.PA)}
               />
             </li>
@@ -162,6 +169,7 @@ export default function Desktop() {
               <Folder
                 title={folders.ARTI}
                 titleBg={"bg-[#F85031]"}
+                hoverBg={"hover:bg-[#F85031]"}
                 onFolderClick={() => openFolder(folders.ARTI)}
               />
             </li>

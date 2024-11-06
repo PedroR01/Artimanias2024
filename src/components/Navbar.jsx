@@ -9,9 +9,9 @@ export default function Navbar({ minimized, navToDesk, navToAuthors }) {
   //xl:bottom-7
 
   return (
-    <nav className="fixed bottom-0 w-full border-t-2 border-black text-white z-10 bg-[#cddf00c5] shadow lg:h-20  xl:h-24">
-      <ul className="items-center flex container mx-auto h-16 lg:h-wb-fill nav-list">
-        <li className="h-full w-1/5 xl:w-24 ">
+    <nav className="fixed bottom-0 w-full border-t-2 border-black text-white z-10 bg-[#cddf00c5] shadow lg:h-20 ">
+      <ul className="items-center flex container h-16 lg:h-wb-fill nav-list">
+        <li className="h-full w-1/5 md:w-1/6 lg:w-32">
           <div className="h-wb-fill w-wb-fill text-center border-r-2 border-black bg-[#ff73ffc5] md:w-32  menu">
             <button
               className={
@@ -22,12 +22,12 @@ export default function Navbar({ minimized, navToDesk, navToAuthors }) {
               <img
                 src={logoNav}
                 alt=""
-                className="w-full h-3/4  xl:w-24 xl:p-3"
+                className="w-full h-3/4  xl:w-20 xl:p-3"
               />
             </button>
           </div>
         </li>
-        <li className="md:ml-6">
+        <li className="ml-3 lg:ml-0">
           <ul className="justify-between items-center flex container mx-auto">
             {minimized.map((folder) => (
               <li className="md:ml-3" key={folder}>

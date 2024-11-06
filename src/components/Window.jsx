@@ -2,9 +2,11 @@ import React, { useEffect, useState } from "react";
 import leftArrowIcon from "../assets/img/left_arrow_icon.svg";
 import xIcon from "../assets/img/x_icon.svg";
 import minusIcon from "../assets/img/minus_icon.svg";
+import downloadIcon from "../assets/img/downloadIcon.svg";
 import Folder from "./Folder";
 import jsonData from "../assets/data/data.json";
 import Slider from "./Slider";
+
 
 // Recibe el nombre de la carpeta que se abrio (folderName) y en base a eso muestra el contenido acorde
 // onAction es la funcion pasada por parametro y que se ejecuta al apretar algun boton de la ventaba abierta, además al hacer click
@@ -81,7 +83,7 @@ export default function Window({ folderName, onAction }) {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-gray-900 bg-opacity-50">
+    <div className="fixed inset-0 z-50 flex items-center justify-center">
       <section
         role="dialog"
         aria-labelledby="modal-title"
@@ -103,7 +105,7 @@ export default function Window({ folderName, onAction }) {
               else onAction("close");
             }}
           >
-            <img className="h-6 w-6" src={leftArrowIcon} alt="" />
+            <img className="w-4/5" src={leftArrowIcon} alt="" />
           </button>
           <h2
             id="modal-title"
@@ -123,7 +125,7 @@ export default function Window({ folderName, onAction }) {
                     : onAction("minimize")
               }
             >
-              <img className="h-6 w-6" src={minusIcon} alt="" />
+              <img className="w-4/5" src={minusIcon} alt="" />
             </button>
             <button
               onClick={
@@ -134,7 +136,7 @@ export default function Window({ folderName, onAction }) {
               aria-label="Close"
               className="hover:text-gray-400"
             >
-              <img className="h-6 w-6" src={xIcon} alt="" />
+              <img className="w-4/5" src={xIcon} alt="" />
             </button>
           </div>
         </header>
@@ -143,12 +145,6 @@ export default function Window({ folderName, onAction }) {
         <main className="p-4 bg-[#FFFBF2] md:mx-8 md:max-h-[36rem] overflow-y-scroll">
           {thesis ? (
             <article>
-              <h1 className="bebas-neue-regular text-2xl md:text-4xl">
-                {thesis.obra}
-              </h1>
-              <h2 className="bebas-neue-regular md:text-lg">
-                {thesis.nombreApellido}
-              </h2>
               <Slider
                 video={
                   "http://www.youtube.com/embed/" +
@@ -157,22 +153,34 @@ export default function Window({ folderName, onAction }) {
                 }
                 obra={thesis.obra}
               />
-              <p className="baloo-2-regular md:text-base mt-8">
+              <div className="flex mt-4">
+                <img src={require('../assets/img/Authors/' + thesis.nombreApellido.replace(/\s+/g, "").toLowerCase() + ".png")} alt="Foto autor" className="w-10" />
+                <h3 className="bebas-neue-regular mt-2 ml-4 md:text-lg">
+                  {thesis.nombreApellido}
+                </h3></div>
+
+              <h1 className="bebas-neue-regular text-2xl mt-4 md:text-4xl">
+                {thesis.obra}
+              </h1>
+              <p className="baloo-2-regular md:text-base mt-2">
                 {thesis.parrafo1}
               </p>
               <p className="baloo-2-regular md:text-base mb-8">
                 {thesis.parrafo2}
               </p>
+              <h3 className="font-bold">Investigación</h3>
+              <p className="mt-2">Nombre del documento</p>
               <button
-                className="bg-[#FF73FF] w-2/6 p-2 mb-5 rounded-md"
+                className="flex items-center justify-center border-2 border-black button-shadow w-full p-2 mb-5 rounded-md"
                 onClick={downloadImage}
               >
+                <img src={downloadIcon} alt="Download icon" />
                 PDF
               </button>
               <div>
-                <h2 className="bebas-neue-regular md:text-xl">
+                <h3 className="bebas-neue-regular md:text-xl">
                   Más de {thesis.categoria}
-                </h2>
+                </h3>
                 <ul className="flex flex-wrap justify-evenly gap-9">
                   {thesisList.map((thisThesis) => (
                     <li
