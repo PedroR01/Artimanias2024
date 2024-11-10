@@ -8,9 +8,14 @@ export default function AuthorsList({ onAction }) {
 
     useEffect(() => {
         const authorsData = jsonData.filter((thisAuthor) => thisAuthor.nombreApellido);
+        /*
         authorsData.forEach(author => {
             setAuthors((prevAuthors) => [...prevAuthors, author.nombreApellido]);
+
         });
+        */
+       setAuthors(authorsData);
+       console.log("Authors data: ", authorsData);
     }, []);
 
     return (
@@ -45,7 +50,7 @@ export default function AuthorsList({ onAction }) {
                             className="md:ml-8 md:text-wb-center md:flex-wrap"
                             key={index}
                         >
-                            <img src="" alt="Imagen Autor" />
+                            <img className="max-h-16" src={require('../assets/img/Authors/' + thisAuthor.nombreApellido.replace(/\s+/g, "").toLowerCase() + ".png")} alt="Imagen Autor" />
                             <span>{thisAuthor.nombreApellido}</span>
                         </li>
                     ))}
