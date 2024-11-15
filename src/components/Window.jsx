@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import leftArrowIcon from "../assets/img/left_arrow_icon.svg";
 import xIcon from "../assets/img/x_icon.svg";
 import minusIcon from "../assets/img/minus_icon.svg";
@@ -15,6 +15,11 @@ export default function Window({ folderName, onAction }) {
   const [thesisList, setThesisList] = useState([]);
   const [thesis, setThesis] = useState(null);
   const [actualFolder, setActualFolder] = useState(folderName);
+  const [seeMore, SetSeeMore] = useState(false);
+  const [headerBg, setHeaderBg] = useState("");
+
+  // Para referenciar el contenedor que se debe scrollear hacia arriba
+  const scrollContainerRef = useRef(null);
 
   // hardCoding: Esto se repite en desktop. Habria que hacer otro archivo donde se importen estos nombres o algo para usarlo direc.
   const folders = {
@@ -68,7 +73,31 @@ export default function Window({ folderName, onAction }) {
 
       console.log("Fetched data: ", jsonData); // Debug
       setThesisList(filteredItems);
+      if (folderName === folders.RSI) {
+        setHeaderBg("bg-[#9EDEFC]");
+      } else if (folderName === folders.IC) {
+        setHeaderBg("bg-[#D1C1B4]");
+      }
+      else if (folderName === folders.FN) {
+        setHeaderBg("bg-[#FF73FF]");
+      }
+      else if (folderName === folders.NO) {
+        setHeaderBg("bg-[#27AE5F]");
+      }
+      else if (folderName === folders.CA) {
+        setHeaderBg("bg-[#CBDF00]");
+      }
+      else if (folderName === folders.SC) {
+        setHeaderBg("bg-[#8477FE]");
+      }
+      else if (folderName === folders.PA) {
+        setHeaderBg("bg-[#FFDD6A]");
+      }
+      else if (folderName === folders.ARTI) {
+        setHeaderBg("bg-[#F85031]");
+      }
     }
+    scrollToTop();
   }, [thesis]);
   /* ------ */
 
@@ -82,19 +111,50 @@ export default function Window({ folderName, onAction }) {
     document.body.removeChild(link);
   };
 
+  // Animacion para scrollear de forma suave hacía arriba al cambiar la carpeta
+  const scrollToTopSmooth = () => {
+    const container = scrollContainerRef.current;
+    if (container) {
+      const scrollStart = container.scrollTop;
+      const scrollEnd = 0;
+      const duration = 500; // Duración de la animación en milisegundos
+      let startTime;
+
+      // Función para realizar el desplazamiento suave
+      const animateScroll = (time) => {
+        if (!startTime) startTime = time;
+        const timeElapsed = time - startTime;
+        const progress = Math.min(timeElapsed / duration, 1); // Normaliza el progreso
+        container.scrollTop = scrollStart + (scrollEnd - scrollStart) * progress;
+
+        if (timeElapsed < duration) {
+          requestAnimationFrame(animateScroll); // Sigue la animación
+        }
+      };
+
+      // Inicia la animación
+      requestAnimationFrame(animateScroll);
+    }
+  };
+
+  const scrollToTop = () => {
+    scrollToTopSmooth();
+  }
+
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center">
       <section
+        ref={scrollContainerRef}
         role="dialog"
         aria-labelledby="modal-title"
         aria-modal="true"
-        className="overflow-y-scroll bg-white h-1/2 ml-4 mr-4 w-full max-w-lg rounded-md folder-window-shadow overflow-hidden border-2 border-black md:h-3/4 md:overflow-hidden"
+        className="overflow-y-scroll bg-white h-[79%] ml-4 mr-4 w-full max-w-lg rounded-[15px] overflow-hidden border-2 border-black md:h-3/4 md:overflow-hidden"
       >
         {/* Barra superior */}
-        <header className="flex sticky top-0 z-10 items-center justify-between bg-[#FF73FF] text-black p-4 ">
+        <header className={"flex sticky top-0 z-10 items-center justify-between " + headerBg + " text-black p-4"}>
           <button
             aria-label="Go Back"
-            className="hover:text-gray-400"
+            className=" hover:text-gray-400"
             onClick={() => {
               // En el caso de que la ventana muestre una tesis
               if (thesis) {
@@ -109,7 +169,7 @@ export default function Window({ folderName, onAction }) {
           </button>
           <h2
             id="modal-title"
-            className="text-xl font-medium bebas-neue-regular md:text-xl md:spa md:tracking-wider"
+            className="text-xl font-medium baloo-2-bold text-center md:text-2xl md:spa md:tracking-wider"
           >
             {actualFolder}
           </h2>
@@ -155,19 +215,20 @@ export default function Window({ folderName, onAction }) {
               />
               <div className="flex mt-4">
                 <img src={require('../assets/img/Authors/' + thesis.nombreApellido.replace(/\s+/g, "").toLowerCase() + ".png")} alt="Foto autor" className="w-10" />
-                <h3 className="bebas-neue-regular mt-2 ml-4 md:text-lg">
+                <h3 className="baloo-2-regular mt-2 ml-4 md:text-lg">
                   {thesis.nombreApellido}
                 </h3></div>
 
-              <h1 className="bebas-neue-regular text-2xl mt-4 md:text-4xl">
+              <h1 className="baloo-2-regular text-2xl mt-4 md:text-4xl">
                 {thesis.obra}
               </h1>
               <p className="baloo-2-regular md:text-base mt-2">
-                {thesis.parrafo1}
+                {thesis.parrafo1 + " "}
+                {!seeMore && <button onClick={() => SetSeeMore(true)} className="baloo-2-bold md:text-base">Ver más...</button>}
               </p>
-              <p className="baloo-2-regular md:text-base mb-8">
+              {seeMore && <p className="baloo-2-regular md:text-base mb-8">
                 {thesis.parrafo2}
-              </p>
+              </p>}
               <h3 className="font-bold">Investigación</h3>
               <p className="mt-2">Nombre del documento</p>
               <button
@@ -178,24 +239,26 @@ export default function Window({ folderName, onAction }) {
                 PDF
               </button>
               <div>
-                <h3 className="bebas-neue-regular md:text-xl">
+                <h3 className="mt-10 baloo-2-bold md:text-xl">
                   Más de {thesis.categoria}
                 </h3>
                 <ul className="flex flex-wrap justify-evenly gap-9">
-                  {thesisList.map((thisThesis) => (
-                    <li
-                      className="md:ml-8 md:text-wb-center md:flex-wrap"
-                      key={thisThesis.id}
-                    >
-                      <Folder
-                        title={thisThesis.obra}
-                        onFolderClick={() => {
-                          // Al abrir la carpeta, se guarda la misma con todo su contenido como objeto
-                          setThesis(thisThesis);
-                        }}
-                      />
-                    </li>
-                  ))}
+                  {
+                    thesisList.filter((thisThesis) => thisThesis.obra !== thesis.obra).map((thisThesis) => (
+
+                      <li
+                        className="md:ml-8 md:text-wb-center md:flex-wrap"
+                        key={thisThesis.id}
+                      >
+                        <Folder
+                          title={thisThesis.obra}
+                          onFolderClick={() => {
+                            // Al abrir la carpeta, se guarda la misma con todo su contenido como objeto
+                            setThesis(thisThesis);
+                          }}
+                        />
+                      </li>
+                    ))}
                 </ul>
               </div>
             </article>

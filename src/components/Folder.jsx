@@ -11,7 +11,7 @@ import ic_folder from "../assets/img/ic_folder.svg";
 import artimanias_folder from "../assets/img/artimanias_folder.svg";
 
 // El parametro fitIn solo se usa cuando se necesita mostrar la carpeta con otras dimensiones en otro lugar de la pantalla que no sea el escritorio
-export default function Folder({ title, titleBg, hoverBg, fitIn, onFolderClick }) {
+export default function Folder({ title, isCategory, titleBg, hoverBg, fitIn, onFolderClick }) {
 
   const folderMap = {
     procesosyaprendizaje: pa_folder,
@@ -25,7 +25,13 @@ export default function Folder({ title, titleBg, hoverBg, fitIn, onFolderClick }
   };
 
   let dimensions = "w-28 h-24";
+  let titleBox = "";
+  let titleFont = " baloo-2-bold ";
 
+  if (isCategory) {
+    titleBox = " border-2 border-black rounded-md ";
+    titleFont = " bebas-neue-regular ";
+  }
 
   if (fitIn === "nav") {
     dimensions =
@@ -41,13 +47,12 @@ export default function Folder({ title, titleBg, hoverBg, fitIn, onFolderClick }
       >
         <div className="md:w-20">
           <img
-            className=" "
             src={folderMap[title.replace(/\s+/g, "").toLowerCase()]}
             alt=""
           />
         </div>
       </button>
-      {!fitIn && (<div className={"border-2 border-black rounded-md justify-self-center w-fit px-4 " + titleBg}><h3 className="text-center w-max bebas-neue-regular md:text-xl">
+      {!fitIn && (<div className={titleBox + "justify-self-center w-fit px-4 " + titleBg}><h3 className={titleFont + "text-center w-max md:text-xl"}>
         {title.toUpperCase()}
       </h3> </div>
 

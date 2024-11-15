@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import logoNav from "../assets/img/logo_nav.svg";
 import Folder from "./Folder";
 
@@ -9,10 +9,10 @@ export default function Navbar({ minimized, navToDesk, navToAuthors }) {
   //xl:bottom-7
 
   return (
-    <nav className="fixed bottom-0 w-full border-t-2 border-black text-white z-10 bg-[#cddf00c5] shadow lg:h-20 ">
+    <nav className="fixed bottom-0 w-full border-t-2 border-black text-white z-10 bg-[#CBDF00] shadow lg:h-20 ">
       <ul className="items-center flex container h-16 lg:h-wb-fill nav-list">
         <li className="h-full w-1/5 md:w-1/6 lg:w-32">
-          <div className="h-wb-fill w-wb-fill text-center border-r-2 border-black bg-[#ff73ffc5] md:w-32  menu">
+          <div className="h-wb-fill w-wb-fill text-center border-r-2 border-black bg-[#F85031] md:w-32  menu">
             <button
               className={
                 "h-wb-fill w-3/4 transition ease-in-out delay-150 hover:-translate-y-8 hover:scale-110 duration-300 xl:h-auto "

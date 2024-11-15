@@ -11,6 +11,7 @@ export default function Desktop() {
   const [infoOpen, setInfoOpen] = useState(false);
   const [authorsOpen, setAuthorsOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [windowHeaderBg, setWindowHeaderBg] = useState("");
 
   // Detecta cambios en el tamaño de la pantalla
   useEffect(() => {
@@ -41,8 +42,9 @@ export default function Desktop() {
     ARTI: "Conocer Artimañas"
   };
 
-  const openFolder = (folderName) => {
+  const openFolder = (folderName, headerBg) => {
     setWhichOpen(folderName); // Que carpeta/ventana se abre
+    setWindowHeaderBg(headerBg);
   };
 
   const handleNavToDesk = (folderName) => {
@@ -112,65 +114,73 @@ export default function Desktop() {
             <li>
               <Folder
                 title={folders.RSI}
+                isCategory={true}
                 titleBg={"bg-[#9EDEFC]"}
                 hoverBg={"hover:bg-[#9EDEFC]"}
-                onFolderClick={() => openFolder(folders.RSI)}
+                onFolderClick={() => openFolder(folders.RSI, "bg-[#9EDEFC]")}
               />
             </li>
             <li>
               <Folder
                 title={folders.IC}
+                isCategory={true}
                 titleBg={"bg-[#D1C1B4]"}
                 hoverBg={"hover:bg-[#D1C1B4]"}
-                onFolderClick={() => openFolder(folders.IC)}
+                onFolderClick={() => openFolder(folders.IC, "bg-[#D1C1B4]")}
               />
             </li>
             <li>
               <Folder
                 title={folders.FN}
+                isCategory={true}
                 titleBg={"bg-[#FF73FF]"}
                 hoverBg={"hover:bg-[#FF73FF]"}
-                onFolderClick={() => openFolder(folders.FN)}
+                onFolderClick={() => openFolder(folders.FN, "bg-[#FF73FF]")}
               />
             </li>
             <li>
               <Folder
                 title={folders.NO}
+                isCategory={true}
                 titleBg={"bg-[#27AE5F]"}
                 hoverBg={"hover:bg-[#27AE5F]"}
-                onFolderClick={() => openFolder(folders.NO)}
+                onFolderClick={() => openFolder(folders.NO, "bg-[#27AE5F]")}
               />
             </li>
             <li>
               <Folder
                 title={folders.CA}
+                isCategory={true}
                 titleBg={"bg-[#CBDF00]"}
                 hoverBg={"hover:bg-[#CBDF00]"}
-                onFolderClick={() => openFolder(folders.CA)}
+                onFolderClick={() => openFolder(folders.CA, "bg-[#CBDF00]")}
               />
             </li>
             <li>
               <Folder
                 title={folders.SC}
+                isCategory={true}
                 titleBg={"bg-[#8477FE]"}
                 hoverBg={"hover:bg-[#8477FE]"}
-                onFolderClick={() => openFolder(folders.SC)}
+                onFolderClick={() => openFolder(folders.SC, "bg-[#8477FE]")}
               />
             </li>
             <li>
               <Folder
                 title={folders.PA}
+                isCategory={true}
                 titleBg={"bg-[#FFDD6A]"}
                 hoverBg={"hover:bg-[#FFDD6A]"}
-                onFolderClick={() => openFolder(folders.PA)}
+                onFolderClick={() => openFolder(folders.PA, "bg-[#FFDD6A]")}
               />
             </li>
             <li className="absolute -bottom-24 right-9">
               <Folder
                 title={folders.ARTI}
+                isCategory={true}
                 titleBg={"bg-[#F85031]"}
                 hoverBg={"hover:bg-[#F85031]"}
-                onFolderClick={() => openFolder(folders.ARTI)}
+                onFolderClick={() => openFolder(folders.ARTI, "bg-[#F85031]")}
               />
             </li>
           </ul>
