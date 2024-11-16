@@ -6,7 +6,7 @@ import Window from "./Window";
 export default function AuthorsList({ onAction }) {
     const [authors, setAuthors] = useState([]);
     const [authorThesis, setAuthorThesis] = useState(null);
-    const [whichThesis, setWichThesis] = useState(null);
+    const [whichThesis, setwhichThesis] = useState(null);
 
     useEffect(() => {
         const authorsData = jsonData.filter((thisAuthor) => thisAuthor.nombreApellido);
@@ -16,7 +16,7 @@ export default function AuthorsList({ onAction }) {
     useEffect(() => {
         if (authorThesis !== null) {
             const thesisData = jsonData.find((thesis) => thesis.nombreApellido === authorThesis);
-            setWichThesis(thesisData);
+            setwhichThesis(thesisData);
         }
     }, [authorThesis]);
 

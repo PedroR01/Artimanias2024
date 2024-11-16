@@ -18,8 +18,8 @@ export default function Folder({ title, isCategory, titleBg, hoverBg, fitIn, onF
     redessocialeseinternet: rsi_folder,
     fantasíaynarrativa: fn_folder,
     controlyartificialidad: ca_folder,
-    socialycultural: sc_folder,
-    naturalyloorgánico: no_folder,
+    sociedadycultura: sc_folder,
+    naturalezayloorgánico: no_folder,
     identidadycuerpos: ic_folder,
     conocerartimañas: artimanias_folder,
   };

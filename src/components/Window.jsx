@@ -29,8 +29,8 @@ export default function Window({ folderName, onAction }) {
     RSI: "Redes sociales e internet",
     FN: "Fantasía y narrativa",
     CA: "Control y artificialidad",
-    SC: "Social y cultural",
-    NO: "Natural y lo orgánico",
+    SC: "Sociedad y cultura",
+    NO: "Naturaleza y lo orgánico",
     IC: "Identidad y cuerpos",
     ARTI: "Conocer Artimañas"
   };
