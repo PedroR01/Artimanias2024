@@ -4,6 +4,7 @@ import minusIcon from "../assets/img/minus_icon.svg";
 import infoImg from "../assets/img/artimañas-info.png";
 import Logo from "../assets/img/logo_arti.svg";
 
+
 export default function Info({ isKnowMore, onAction }) {
   const [knowMore, setKnowMore] = useState(isKnowMore);
 
