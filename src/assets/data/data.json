@@ -277,5 +277,41 @@
         "nombreApellido": "Malena Cocozzella",
         "video": "n/a",
         "categoria": "Control y Artificialidad"
+    },
+    {
+        "id": 99,
+        "obra": "Info Artimañas",
+        "nombreApellido": "",
+        "parrafo1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tincidunt orci eu nunc fringilla, et feugiat lorem ultricies. Cras eget elit metus. Cras et felis nibh. Donec ut tristique dui, ac semper mi. Donec elementum ipsum at erat dapibus, quis gravida nibh venenatis. In nec libero ut est ultricies mattis non ut leo. ",
+        "parrafo2": "",
+        "video": "",
+        "categoria": "Conocer Artimañas"
+    },
+    {
+        "id": 98,
+        "obra": "VideoArtimañas.mp4",
+        "nombreApellido": "",
+        "parrafo1": "",
+        "parrafo2": "",
+        "video": "dQw4w9WgXcQ",
+        "categoria": "Conocer Artimañas"
+    },
+    {
+        "id": 97,
+        "obra": "Nuestras Redes",
+        "nombreApellido": "",
+        "parrafo1": "",
+        "parrafo2": "",
+        "video": "",
+        "categoria": "Conocer Artimañas"
+    },
+    {
+        "id": 96,
+        "obra": "Álbum Artimañas",
+        "nombreApellido": "",
+        "parrafo1": "",
+        "parrafo2": "",
+        "video": "",
+        "categoria": "Conocer Artimañas"
     }
-]
+    ]
