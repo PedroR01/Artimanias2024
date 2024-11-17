@@ -1,31 +1,25 @@
 import React, { useEffect, useState } from "react";
-import xIcon from "../assets/img/x_icon.svg";
+import xIcon from "../assets/img/icons/x_icon.svg";
 import jsonData from "../assets/data/data.json";
 import Window from "./Window";
 
 export default function AuthorsList({ onAction }) {
     const [authors, setAuthors] = useState([]);
     const [authorThesis, setAuthorThesis] = useState(null);
-    const [whichThesis, setwhichThesis] = useState(null);
 
     useEffect(() => {
+        // Obtiene toda la info de los autores y sus obras.
         const authorsData = jsonData.filter((thisAuthor) => thisAuthor.nombreApellido);
         setAuthors(authorsData);
     }, []);
 
-    useEffect(() => {
-        if (authorThesis !== null) {
-            const thesisData = jsonData.find((thesis) => thesis.nombreApellido === authorThesis);
-            setwhichThesis(thesisData);
-        }
-    }, [authorThesis]);
-
+    // Guarda el autor clickeado para manejar la llamada a su obra
     const handleAuthorThesis = (author) => {
         setAuthorThesis(author);
     }
 
     return (
-        whichThesis === null ?
+        authorThesis === null ?
             (<section
                 className="fixed bottom-16 justify-center items-center overflow-y-scroll bg-white h-1/2 w-11/12 max-w-lg  rounded-t-3xl border-t-2 border-x-2 border-black z-10 md:h-3/4"
             >
@@ -58,7 +52,7 @@ export default function AuthorsList({ onAction }) {
                                 key={index}
                             >
                                 <button className="justify-items-center w-wb-fill" onClick={() => handleAuthorThesis(thisAuthor)}>
-                                    <img className="max-h-16" src={require('../assets/img/Authors/' + thisAuthor.nombreApellido.replace(/\s+/g, "").toLowerCase() + ".png")} alt="Imagen Autor" />
+                                    <img className="max-h-16" src={require('../assets/img/authors/' + thisAuthor.nombreApellido.replace(/\s+/g, "").toLowerCase() + ".png")} alt="Imagen Autor" />
                                     <span className="inline-flex text-center">{thisAuthor.nombreApellido}</span>
                                 </button>
                             </li>
@@ -66,7 +60,7 @@ export default function AuthorsList({ onAction }) {
                     </ul>
                 </main>
             </section>) : <Window
-                folderName={authorThesis}
+                folderName={authorThesis.obra}
                 onAction={() => {
                     setAuthorThesis(null);
                 }}

@@ -11,7 +11,6 @@ export default function Desktop() {
   const [infoOpen, setInfoOpen] = useState(false);
   const [authorsOpen, setAuthorsOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-  const [windowHeaderBg, setWindowHeaderBg] = useState("");
 
   // Detecta cambios en el tamaño de la pantalla
   useEffect(() => {
@@ -32,19 +31,18 @@ export default function Desktop() {
   }, []);
 
   const folders = {
-    PA: "Procesos y aprendizaje",
-    RSI: "Redes sociales e internet",
-    FN: "Fantasía y narrativa",
-    CA: "Control y artificialidad",
-    SC: "Sociedad y cultura",
-    NO: "Naturaleza y lo orgánico",
-    IC: "Identidad y cuerpos",
+    PA: "Procesos y Aprendizaje",
+    RSI: "Redes Sociales e Internet",
+    FN: "Fantasía y Narrativa",
+    CA: "Control y Artificialidad",
+    SC: "Sociedad y Cultura",
+    NO: "Naturaleza y Lo orgánico",
+    IC: "Identidad y Cuerpos",
     ARTI: "Conocer Artimañas"
   };
 
-  const openFolder = (folderName, headerBg) => {
+  const openFolder = (folderName) => {
     setWhichOpen(folderName); // Que carpeta/ventana se abre
-    setWindowHeaderBg(headerBg);
   };
 
   const handleNavToDesk = (folderName) => {
@@ -67,10 +65,6 @@ export default function Desktop() {
 
   const handleNavToAuthors = () => {
     setAuthorsOpen((prevAuthorsOpen) => !prevAuthorsOpen); // Alterna el estado de info
-  };
-
-  const handleNavToInfo = () => {
-    setInfoOpen((prevInfoOpen) => !prevInfoOpen); // Alterna el estado de info
   };
 
   return (
@@ -117,7 +111,7 @@ export default function Desktop() {
                 isCategory={true}
                 titleBg={"bg-[#9EDEFC]"}
                 hoverBg={"hover:bg-[#9EDEFC]"}
-                onFolderClick={() => openFolder(folders.RSI, "bg-[#9EDEFC]")}
+                onFolderClick={() => openFolder(folders.RSI)}
               />
             </li>
             <li>
@@ -126,7 +120,7 @@ export default function Desktop() {
                 isCategory={true}
                 titleBg={"bg-[#D1C1B4]"}
                 hoverBg={"hover:bg-[#D1C1B4]"}
-                onFolderClick={() => openFolder(folders.IC, "bg-[#D1C1B4]")}
+                onFolderClick={() => openFolder(folders.IC)}
               />
             </li>
             <li>
@@ -135,7 +129,7 @@ export default function Desktop() {
                 isCategory={true}
                 titleBg={"bg-[#FF73FF]"}
                 hoverBg={"hover:bg-[#FF73FF]"}
-                onFolderClick={() => openFolder(folders.FN, "bg-[#FF73FF]")}
+                onFolderClick={() => openFolder(folders.FN)}
               />
             </li>
             <li>
@@ -144,7 +138,7 @@ export default function Desktop() {
                 isCategory={true}
                 titleBg={"bg-[#27AE5F]"}
                 hoverBg={"hover:bg-[#27AE5F]"}
-                onFolderClick={() => openFolder(folders.NO, "bg-[#27AE5F]")}
+                onFolderClick={() => openFolder(folders.NO)}
               />
             </li>
             <li>
@@ -153,7 +147,7 @@ export default function Desktop() {
                 isCategory={true}
                 titleBg={"bg-[#CBDF00]"}
                 hoverBg={"hover:bg-[#CBDF00]"}
-                onFolderClick={() => openFolder(folders.CA, "bg-[#CBDF00]")}
+                onFolderClick={() => openFolder(folders.CA)}
               />
             </li>
             <li>
@@ -162,7 +156,7 @@ export default function Desktop() {
                 isCategory={true}
                 titleBg={"bg-[#8477FE]"}
                 hoverBg={"hover:bg-[#8477FE]"}
-                onFolderClick={() => openFolder(folders.SC, "bg-[#8477FE]")}
+                onFolderClick={() => openFolder(folders.SC)}
               />
             </li>
             <li>
@@ -171,7 +165,7 @@ export default function Desktop() {
                 isCategory={true}
                 titleBg={"bg-[#FFDD6A]"}
                 hoverBg={"hover:bg-[#FFDD6A]"}
-                onFolderClick={() => openFolder(folders.PA, "bg-[#FFDD6A]")}
+                onFolderClick={() => openFolder(folders.PA)}
               />
             </li>
             <li className="absolute -bottom-24 right-9">
@@ -180,7 +174,7 @@ export default function Desktop() {
                 isCategory={true}
                 titleBg={"bg-[#F85031]"}
                 hoverBg={"hover:bg-[#F85031]"}
-                onFolderClick={() => openFolder(folders.ARTI, "bg-[#F85031]")}
+                onFolderClick={() => openFolder(folders.ARTI)}
               />
             </li>
           </ul>
@@ -199,7 +193,7 @@ export default function Desktop() {
       <Navbar
         minimized={foldersMinimized}
         navToDesk={handleNavToDesk} // Pasa el nombre de la carpeta clickeada
-        navToAuthors={handleNavToAuthors} // Pasa el estado del booleano del boton
+        navToAuthors={handleNavToAuthors} // Pasa el estado del booleano del boton del menu de autores
       />
     </>
   );

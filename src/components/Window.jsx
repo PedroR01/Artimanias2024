@@ -1,13 +1,13 @@
 import React, { useEffect, useState, useRef } from "react";
-import leftArrowIcon from "../assets/img/left_arrow_icon.svg";
-import xIcon from "../assets/img/x_icon.svg";
-import minusIcon from "../assets/img/minus_icon.svg";
-import downloadIcon from "../assets/img/downloadIcon.svg";
-import folderImg from "../assets/img/artimanias_folder.svg";
+import leftArrowIcon from "../assets/img/icons/left_arrow_icon.svg";
+import xIcon from "../assets/img/icons/x_icon.svg";
+import minusIcon from "../assets/img/icons/minus_icon.svg";
+import downloadIcon from "../assets/img/icons/downloadIcon.svg";
+import folderImg from "../assets/img/folderCategory/artimanias_folder.svg";
 import Folder from "./Folder";
 import jsonData from "../assets/data/data.json";
 import Slider from "./Slider";
-import infoImg from "../assets/img/artimañas-info.png";
+import infoImg from "../assets/img/misc/artimañas-info.png";
 
 
 // Recibe el nombre de la carpeta que se abrio (folderName) y en base a eso muestra el contenido acorde
@@ -25,13 +25,13 @@ export default function Window({ folderName, onAction }) {
 
   // hardCoding: Esto se repite en desktop. Habria que hacer otro archivo donde se importen estos nombres o algo para usarlo direc.
   const folders = {
-    PA: "Procesos y aprendizaje",
-    RSI: "Redes sociales e internet",
-    FN: "Fantasía y narrativa",
-    CA: "Control y artificialidad",
-    SC: "Sociedad y cultura",
-    NO: "Naturaleza y lo orgánico",
-    IC: "Identidad y cuerpos",
+    PA: "Procesos y Aprendizaje",
+    RSI: "Redes Sociales e Internet",
+    FN: "Fantasía y Narrativa",
+    CA: "Control y Artificialidad",
+    SC: "Sociedad y Cultura",
+    NO: "Naturaleza y Lo orgánico",
+    IC: "Identidad y Cuerpos",
     ARTI: "Conocer Artimañas"
   };
 
@@ -55,52 +55,42 @@ export default function Window({ folderName, onAction }) {
   }, []);
 
   useEffect(() => {
-    if (thesis) {
-      setActualFolder(thesis.obra);
-    } // Si se abre una carpeta que no es una tesis, aquí se debe hacer un request a las diferentes tesis que deben mostrarse para poder abrir
-    else if (
-      folderName === folders.PA ||
-      folderName === folders.RSI ||
-      folderName === folders.FN ||
-      folderName === folders.CA ||
-      folderName === folders.SC ||
-      folderName === folders.NO ||
-      folderName === folders.IC ||
-      folderName === folders.ARTI
-    ) {
-      // Filter jsonData to match category to folder name
-      const filteredItems = jsonData.filter(
-        (thisThesis) => thisThesis.categoria.toLowerCase() === folderName.toLowerCase(),
-      );
 
-      console.log("Fetched data: ", jsonData); // Debug
-      setThesisList(filteredItems);
-      if (folderName === folders.RSI) {
-        setHeaderBg("bg-[#9EDEFC]");
-      } else if (folderName === folders.IC) {
-        setHeaderBg("bg-[#D1C1B4]");
-      }
-      else if (folderName === folders.FN) {
-        setHeaderBg("bg-[#FF73FF]");
-      }
-      else if (folderName === folders.NO) {
-        setHeaderBg("bg-[#27AE5F]");
-      }
-      else if (folderName === folders.CA) {
-        setHeaderBg("bg-[#CBDF00]");
-      }
-      else if (folderName === folders.SC) {
-        setHeaderBg("bg-[#8477FE]");
-      }
-      else if (folderName === folders.PA) {
-        setHeaderBg("bg-[#FFDD6A]");
-      }
-      else if (folderName === folders.ARTI) {
-        setHeaderBg("bg-[#F85031]");
-      }
-    }
+    if (thesis)
+      setActualFolder(thesis.obra);
+
+    // Filtra las obras del JSON para mostrar la lista completa si se abre la categoría, o en el caso de que se abra una tesis, para cargar las obras relacionadas.
+    const filteredItems = jsonData.filter(
+      (thisThesis) => {
+        if (thesis !== null)
+          return thisThesis.categoria.toLowerCase() === thesis.categoria.toLowerCase();
+        return thisThesis.categoria.toLowerCase() === actualFolder.toLowerCase();
+      },
+    );
+
+    setThesisList(filteredItems);
+
+    // Según la categoría o la categoria a la que pertenece la obra, es el color del Header
+    if (folderName === folders.RSI || (thesis !== null && thesis.categoria === folders.RSI))
+      setHeaderBg("bg-[#9EDEFC]");
+    else if (folderName === folders.IC || (thesis !== null && thesis.categoria === folders.IC))
+      setHeaderBg("bg-[#D1C1B4]");
+    else if (folderName === folders.FN || (thesis !== null && thesis.categoria === folders.FN))
+      setHeaderBg("bg-[#FF73FF]");
+    else if (folderName === folders.NO || (thesis !== null && thesis.categoria === folders.NO))
+      setHeaderBg("bg-[#27AE5F]");
+    else if (folderName === folders.CA || (thesis !== null && thesis.categoria === folders.CA))
+      setHeaderBg("bg-[#CBDF00]");
+    else if (folderName === folders.SC || (thesis !== null && thesis.categoria === folders.SC))
+      setHeaderBg("bg-[#8477FE]");
+    else if (folderName === folders.PA || (thesis !== null && thesis.categoria === folders.PA))
+      setHeaderBg("bg-[#FFDD6A]");
+    else if (folderName === folders.ARTI || (thesis !== null && thesis.categoria === folders.ARTI))
+      setHeaderBg("bg-[#F85031]");
+
     scrollToTop();
   }, [thesis]);
+
   /* ------ */
 
   const downloadImage = () => {
@@ -143,119 +133,119 @@ export default function Window({ folderName, onAction }) {
     scrollToTopSmooth();
   }
 
-  function InfoFolders (ids){ //Abrir una carpeta distinta según la id (para las carpetas de conocer atimañs)
-    if (ids === 99){
+  function InfoFolders(ids) { //Abrir una carpeta distinta según la id (para las carpetas de conocer atimañs)
+    if (ids === 99) {
       return (
-      <>
-      <img src={infoImg} alt="Imagen info lugar" className="p-2" />
-      <h1 className="baloo-2-regular text-lg mt-4 md:text-4xl">
-          ¿Qué es Artimañas 2024?
-        </h1>
-        <p className="baloo-2-regular md:text-base mt-2">
-          {thesis.parrafo1 + " "}
-        </p>
-      </>
-      );  
-    } else if (ids === 98){
+        <>
+          <img src={infoImg} alt="Imagen info lugar" className="p-2" />
+          <h1 className="baloo-2-regular text-lg mt-4 md:text-4xl">
+            ¿Qué es Artimañas 2024?
+          </h1>
+          <p className="baloo-2-regular md:text-base mt-2">
+            {thesis.parrafo1 + " "}
+          </p>
+        </>
+      );
+    } else if (ids === 98) {
       return (
         <article>
           <div className="ratio ratio-1x1">
-          <iframe className="w-full h-full"
-          src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=2nrG3TBCHvAQrrgg" 
-          title="YouTube video player" frameborder="0" 
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe className="w-full h-full"
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=2nrG3TBCHvAQrrgg"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
           </div>
           <h1 className="baloo-2-regular text-lg mt-4 md:text-4xl">
             Esto es Artimañas 2024
           </h1>
         </article>
       )
-    } else if (ids === 97){
+    } else if (ids === 97) {
       return (<ul className="flex flex-wrap justify-evenly gap-9">
-          <li
-           className="md:ml-8 md:text-wb-center md:flex-wrap"
-          >
-           <Folder
-           title={"Instagram"}
-           onFolderClick={() => {
-            window.open("https://www.instagram.com/festivalartimanas/", '_blank').focus();
-           }}
-           />
-          </li>
-        </ul>
+        <li
+          className="md:ml-8 md:text-wb-center md:flex-wrap"
+        >
+          <Folder
+            title={"Instagram"}
+            onFolderClick={() => {
+              window.open("https://www.instagram.com/festivalartimanas/", '_blank').focus();
+            }}
+          />
+        </li>
+      </ul>
       )
-    } else if (ids === 96){
+    } else if (ids === 96) {
       return (<ul className="flex flex-wrap justify-evenly gap-9">
-          <li
-           className="md:ml-8 md:text-wb-center md:flex-wrap"
-          >
-           <div className="text-wb-center cursor-pointer transition w-min hover:bg-opacity-25 hover:shadow-lg ">
-                <div className="md:w-20">
-                  <img
-                    src={folderImg}
-                    alt=""
-                  />
-                </div>
-              <div className="justify-self-center w-fit px-4 ">
-                <h3 className="baloo-2-regular text-center w-max md:text-xl">
-                  IMAGEN 1
-                </h3> 
-              </div>
+        <li
+          className="md:ml-8 md:text-wb-center md:flex-wrap"
+        >
+          <div className="text-wb-center cursor-pointer transition w-min hover:bg-opacity-25 hover:shadow-lg ">
+            <div className="md:w-20">
+              <img
+                src={folderImg}
+                alt=""
+              />
             </div>
-          </li>
-          <li
-           className="md:ml-8 md:text-wb-center md:flex-wrap"
-          >
-           <div className="text-wb-center cursor-pointer transition w-min hover:bg-opacity-25 hover:shadow-lg ">
-                <div className="md:w-20">
-                  <img
-                    src={folderImg}
-                    alt=""
-                  />
-                </div>
-              <div className="justify-self-center w-fit px-4 ">
-                <h3 className="baloo-2-regular text-center w-max md:text-xl">
-                  IMAGEN 2
-                </h3> 
-              </div>
+            <div className="justify-self-center w-fit px-4 ">
+              <h3 className="baloo-2-regular text-center w-max md:text-xl">
+                IMAGEN 1
+              </h3>
             </div>
-          </li>
-          <li
-           className="md:ml-8 md:text-wb-center md:flex-wrap"
-          >
-           <div className="text-wb-center cursor-pointer transition w-min hover:bg-opacity-25 hover:shadow-lg ">
-                <div className="md:w-20">
-                  <img
-                    src={folderImg}
-                    alt=""
-                  />
-                </div>
-              <div className="justify-self-center w-fit px-4 ">
-                <h3 className="baloo-2-regular text-center w-max md:text-xl">
-                  IMAGEN 3
-                </h3> 
-              </div>
+          </div>
+        </li>
+        <li
+          className="md:ml-8 md:text-wb-center md:flex-wrap"
+        >
+          <div className="text-wb-center cursor-pointer transition w-min hover:bg-opacity-25 hover:shadow-lg ">
+            <div className="md:w-20">
+              <img
+                src={folderImg}
+                alt=""
+              />
             </div>
-          </li>
-          <li
-           className="md:ml-8 md:text-wb-center md:flex-wrap"
-          >
-           <div className="text-wb-center cursor-pointer transition w-min hover:bg-opacity-25 hover:shadow-lg ">
-                <div className="md:w-20">
-                  <img
-                    src={folderImg}
-                    alt=""
-                  />
-                </div>
-              <div className="justify-self-center w-fit px-4 ">
-                <h3 className="baloo-2-regular text-center w-max md:text-xl">
-                  IMAGEN 4
-                </h3> 
-              </div>
+            <div className="justify-self-center w-fit px-4 ">
+              <h3 className="baloo-2-regular text-center w-max md:text-xl">
+                IMAGEN 2
+              </h3>
             </div>
-          </li>
-        </ul>
+          </div>
+        </li>
+        <li
+          className="md:ml-8 md:text-wb-center md:flex-wrap"
+        >
+          <div className="text-wb-center cursor-pointer transition w-min hover:bg-opacity-25 hover:shadow-lg ">
+            <div className="md:w-20">
+              <img
+                src={folderImg}
+                alt=""
+              />
+            </div>
+            <div className="justify-self-center w-fit px-4 ">
+              <h3 className="baloo-2-regular text-center w-max md:text-xl">
+                IMAGEN 3
+              </h3>
+            </div>
+          </div>
+        </li>
+        <li
+          className="md:ml-8 md:text-wb-center md:flex-wrap"
+        >
+          <div className="text-wb-center cursor-pointer transition w-min hover:bg-opacity-25 hover:shadow-lg ">
+            <div className="md:w-20">
+              <img
+                src={folderImg}
+                alt=""
+              />
+            </div>
+            <div className="justify-self-center w-fit px-4 ">
+              <h3 className="baloo-2-regular text-center w-max md:text-xl">
+                IMAGEN 4
+              </h3>
+            </div>
+          </div>
+        </li>
+      </ul>
       )
     } else {
       return (<article>
@@ -268,7 +258,7 @@ export default function Window({ folderName, onAction }) {
           obra={thesis.obra}
         />
         <div className="flex mt-4">
-          <img src={require('../assets/img/Authors/' + thesis.nombreApellido.replace(/\s+/g, "").toLowerCase() + ".png")} alt="Foto autor" className="w-10" />
+          <img src={require('../assets/img/authors/' + thesis.nombreApellido.replace(/\s+/g, "").toLowerCase() + ".png")} alt="Foto autor" className="w-10" />
           <h3 className="baloo-2-regular mt-2 ml-4 md:text-lg">
             {thesis.nombreApellido}
           </h3></div>
@@ -299,7 +289,6 @@ export default function Window({ folderName, onAction }) {
           <ul className="flex flex-wrap justify-evenly gap-9">
             {
               thesisList.filter((thisThesis) => thisThesis.obra !== thesis.obra).map((thisThesis) => (
-
                 <li
                   className="md:ml-8 md:text-wb-center md:flex-wrap"
                   key={thisThesis.id}
@@ -338,7 +327,7 @@ export default function Window({ folderName, onAction }) {
               // En el caso de que la ventana muestre una tesis
               if (thesis) {
                 // Vuelve a la carpeta de categorías, retoma el nombre de carpeta de la categoría
-                setActualFolder(folderName);
+                setActualFolder(thesis.categoria);
                 setThesis(null);
               } // Sino se cierra
               else onAction("close");
@@ -358,10 +347,12 @@ export default function Window({ folderName, onAction }) {
               className="hover:text-gray-400"
               onClick={
                 // Si es una ventana tesis, además envia el nombre de la misma para que se minimice correctamente en el escritorio
-                () =>
+                () => {
                   thesis
                     ? onAction("minimize", thesis.obra)
                     : onAction("minimize")
+                }
+
               }
             >
               <img className="w-4/5" src={minusIcon} alt="" />
@@ -382,9 +373,11 @@ export default function Window({ folderName, onAction }) {
 
         {/* Contenido */}
         <main className="p-4 bg-[#FFFBF2] md:mx-8 md:max-h-[36rem] overflow-y-scroll">
+          {/* Carpeta de la tesis */}
           {thesis ? (
             InfoFolders(thesis.id)
           ) : (
+            // Carpeta de la categoria con el listado de tesis
             <ul className="flex flex-wrap justify-evenly gap-9">
               {thesisList.map((thisThesis) => (
                 <li

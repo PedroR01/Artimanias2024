@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
-import xIcon from "../assets/img/x_icon.svg";
-import minusIcon from "../assets/img/minus_icon.svg";
-import infoImg from "../assets/img/artimañas-info.png";
-import Logo from "../assets/img/logo_arti.svg";
+import React, { useState } from "react";
+import xIcon from "../assets/img/icons/x_icon.svg";
+import minusIcon from "../assets/img/icons/minus_icon.svg";
+import infoImg from "../assets/img/misc/artimañas-info.png";
+import Logo from "../assets/img/misc/logo_arti.svg";
 
 
 export default function Info({ isKnowMore, onAction }) {

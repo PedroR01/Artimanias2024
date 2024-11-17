@@ -24,7 +24,7 @@
 
 body {
   background-color: #4097f6;
-  background-image: url("./assets/img/polka_144.png");
+  background-image: url("./assets/img/misc/polka_144.png");
   background-size: contain;
   background-position: center;
   background-repeat: repeat;
@@ -98,6 +98,12 @@ h4 {
       0 4px 6px -4px var(--tw-shadow-color);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
       var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+  .thesis-folder-shadow {
+    --tw-drop-shadow: drop-shadow(6px 6px 0px rgb(209, 193, 180));
+    filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast)
+      var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert)
+      var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
   }
   .button-shadow {
     --tw-shadow: 6px 5px 1px -3px rgb(0 0 0 / 1.1),

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import imgVideo from "../assets/img/video.png";
-import sliderArrow from "../assets/img/sliderArrow.svg";
+import imgVideo from "../assets/img/misc/video.png";
+import sliderArrow from "../assets/img/icons/sliderArrow.svg";
 
 export default function Slider({ video, obra, imagenes }) {
   // Estado para mantener el índice actual del slider

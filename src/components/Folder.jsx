@@ -1,35 +1,18 @@
-import React, { useEffect } from "react";
+import React from "react";
 
-/* Images */
-import pa_folder from "../assets/img/pa_folder.svg";
-import rsi_folder from "../assets/img/rsi_folder.svg";
-import fn_folder from "../assets/img/fn_folder.svg";
-import ca_folder from "../assets/img/ca_folder.svg";
-import sc_folder from "../assets/img/sc_folder.svg";
-import no_folder from "../assets/img/no_folder.svg";
-import ic_folder from "../assets/img/ic_folder.svg";
-import artimanias_folder from "../assets/img/artimanias_folder.svg";
+import folderImages from "../assets/scripts/folderImages"
 
 // El parametro fitIn solo se usa cuando se necesita mostrar la carpeta con otras dimensiones en otro lugar de la pantalla que no sea el escritorio
 export default function Folder({ title, isCategory, titleBg, hoverBg, fitIn, onFolderClick }) {
 
-  const folderMap = {
-    procesosyaprendizaje: pa_folder,
-    redessocialeseinternet: rsi_folder,
-    fantasíaynarrativa: fn_folder,
-    controlyartificialidad: ca_folder,
-    sociedadycultura: sc_folder,
-    naturalezayloorgánico: no_folder,
-    identidadycuerpos: ic_folder,
-    conocerartimañas: artimanias_folder,
-  };
-
   let dimensions = "w-28 h-24";
   let titleBox = "";
+  let folderShadow = " thesis-folder-shadow ";
   let titleFont = " baloo-2-bold ";
 
   if (isCategory) {
     titleBox = " border-2 border-black rounded-md ";
+    folderShadow = "";
     titleFont = " bebas-neue-regular ";
   }
 
@@ -45,9 +28,9 @@ export default function Folder({ title, isCategory, titleBg, hoverBg, fitIn, onF
         className={"relative text-wb-center " + dimensions}
         onClick={() => onFolderClick()}
       >
-        <div className="md:w-20">
+        <div className={"md:w-20" + folderShadow}>
           <img
-            src={folderMap[title.replace(/\s+/g, "").toLowerCase()]}
+            src={folderImages[title.replace(/[\s.]+/g, "").toLowerCase()]}
             alt=""
           />
         </div>
