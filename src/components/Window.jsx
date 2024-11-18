@@ -93,14 +93,15 @@ export default function Window({ folderName, onAction }) {
 
   /* ------ */
 
-  const downloadImage = () => {
-    const link = document.createElement("a");
-    link.href =
-      "https://drive.google.com/uc?export=download&id=1h77DQMMhs5GJeayOrQZGal-RF0M60Y9b";
-    link.setAttribute("download", "image.jpg"); // Puedes cambiar el nombre del archivo
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+  const downloadPDF = (pdfURL) => {
+    if (pdfURL){
+      const link = document.createElement("a");
+      link.href = pdfURL
+      //link.setAttribute("download", "image.jpg"); // Puedes cambiar el nombre del archivo
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+   }
   };
 
   // Animacion para scrollear de forma suave hacía arriba al cambiar la carpeta
@@ -268,16 +269,17 @@ export default function Window({ folderName, onAction }) {
         </h1>
         <p className="baloo-2-regular md:text-base mt-2">
           {thesis.parrafo1 + " "}
-          {!seeMore && <button onClick={() => SetSeeMore(true)} className="baloo-2-bold md:text-base">Ver más...</button>}
+          {!seeMore && <button onClick={() => SetSeeMore(true)} className="baloo-2-bold md:text-base mt-2.5 mb-2.5">Ver más...</button>}
         </p>
         {seeMore && <p className="baloo-2-regular md:text-base mb-8">
+        <br></br>
           {thesis.parrafo2}
         </p>}
         <h3 className="font-bold">Investigación</h3>
-        <p className="mt-2">Nombre del documento</p>
+        <p className="mt-2">{thesis.nombreApellido + " - Tesina"}</p>
         <button
           className="flex items-center justify-center border-2 border-black button-shadow w-full p-2 mb-5 rounded-md"
-          onClick={downloadImage}
+          onClick = {() => {downloadPDF(thesis.pdf)}}
         >
           <img src={downloadIcon} alt="Download icon" />
           PDF
