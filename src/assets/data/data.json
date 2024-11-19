@@ -327,6 +327,15 @@
         "categoria": "Fantasía y Narrativa"
     },
     {
+        "id": 36,
+        "obra": "Monstruos Urbanos",
+        "nombreApellido": "Francisco Crespo",
+        "parrafo1": "La posibilidad de ver los desechos electrónicos desde otra perspectiva. Desde estos talleres se buscó generar un espacio de formación e interacción familiar, con el foco puesto en la obsolescencia programada, los desechos electrónicos, su reciclado y posterior armado de piezas lúdicas o juguetes electrónicos.",
+        "parrafo2": "El objetivo del taller es brindar herramientas técnicas y creativas para el desarrollo de distintas posibilidades en el armado de dispositivos, que permitan explorar el mundo de la electrónica y el arte.",
+        "video": "n/a",
+        "categoria": "Procesos y Aprendizaje"
+    },
+    {
         "id": 99,
         "obra": "Info Artimañas",
         "nombreApellido": "",
