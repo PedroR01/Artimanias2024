@@ -44,6 +44,12 @@ import interferenciaCotidiana_folder from "../img/folderThesis/interferenciaCoti
 import redDeMentiras_folder from "../img/folderThesis/redDeMentiras_folder.png";
 import corporeas_folder from "../img/folderThesis/corporeas_folder.png";
 import fulgor_folder from "../img/folderThesis/fulgor_folder.png";
+import maquinasQuePierdenElTiempo_folder from "../img/folderThesis/maquinasQuePierdenElTiempo_folder.png";
+import cartoneros_folder from "../img/folderThesis/cartoneros_folder.png";
+import huellas_folder from "../img/folderThesis/huellas_folder.png";
+import suer7e_folder from "../img/folderThesis/suer7e_folder.png";
+import monstruosUrbanos_folder from "../img/folderThesis/monstruosUrbanos_folder.png";
+
 
 const folderImages = {
   // Categorias
@@ -93,6 +99,11 @@ const folderImages = {
   reddementiras: redDeMentiras_folder,
   corpóreas: corporeas_folder,
   fulgor: fulgor_folder,
+  máquinasquepierdeneltiempo: maquinasQuePierdenElTiempo_folder,
+  cartoneros: cartoneros_folder,
+  huellas: huellas_folder,
+  suer7e: suer7e_folder,
+  monstruosUrbanos: monstruosUrbanos_folder
 };
 
 export default folderImages;

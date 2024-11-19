@@ -3,7 +3,7 @@
         "id": 0,
         "obra": "Resampleados",
         "nombreApellido": "Ramiro Nicolás Gil",
-        "parrafo1": "Resampleados es una obra que busca acercar el concepto del \"sampling\" a sus usuarios, simulando un tocadiscos de vinilos. El usuario elije y combina distintos samples populares de la historia del hip hop y rap clásico, pudiendo hacer combinaciones entre ritmos y melodías, ambos trabajados para poder superponerse entre sí.",
+        "parrafo1": "Resampleados es una obra que busca acercar el concepto del \"sampling\" a sus usuarios, simulando un tocadiscos de vinilos. El usuario elige y combina distintos samples populares de la historia del hip hop y rap clásico, pudiendo hacer combinaciones entre ritmos y melodías, ambos trabajados para poder superponerse entre sí.",
         "parrafo2": "Cada vinilo posee la data de la canción origen del sample, como también de un caso principal donde fue sampleada, ambas con un codigo QR a Spotify para poder escuchar cada una en su respectivo contexto.",
         "video": "n/a",
         "pdf": "https://drive.google.com/file/d/1XS2Sd0yt9ZPmViPvDfDJrLr5HjkZbslK/view?usp=sharing",
@@ -32,7 +32,8 @@
         "id": 3,
         "obra": "reminiscencia.net",
         "nombreApellido": "Martina Pellegrino",
-        "parrafo1": "reminiscencia.net es una obra que ...",
+        "parrafo1": "reminiscencia.net surge como reivindicación del Internet antiguo, es una máquina del tiempo a un Internet caótico pero divertido y personal. La intención de la obra y de la investigación es de repensar al Internet y de considerarlo como una herramienta y práctica artística también en la actualidad. reminiscencia.net surge de la necesidad de crear una web personal plagada de imágenes y links que yo quiera ver, no que me son impuestos por una plataforma o un algoritmo.",
+        "parrafo2": "reminiscencia.net es un tótem realizado con chatarra electrónico-informática que muestra un sitio web creado y estructurado con herramientas y recursos estéticos propios de la web antigua que conviven con recursos propios de nuestra web actual. La interacción es posible a partir de una trackball y un botón que permiten navegar y clickear cualquier imagen del sitio web, haciendo que se abran diferentes pop-ups que muestran otros sitios con la estética particular del Internet antiguo. Este proyecto tiene la intención tanto de darle la posibilidad de exploración infinita a quien lo navegue, como de perderse en el caos visual y virtual al sumergirse por tiempo indefinido en cada detalle. ",
         "video": "n/a",
         "categoria": "Redes Sociales e Internet"
     },
@@ -128,6 +129,8 @@
         "id": 14,
         "obra": "Miradas desde el aula",
         "nombreApellido": "Mariel Anthonioz - Blanc",
+        "parrafo1": "\"Miradas desde el aula\" es una narrativa transmedia que busca ofrecer un espacio de participación democrática donde la comunidad docente pueda contar su propia historia. A través de una plataforma web y redes sociales, invita a los docentes a compartir sus reflexiones y experiencias, construyendo colectivamente una historia que espera reflejar la realidad cotidiana de las aulas y enriquecer el debate educativo desde una perspectiva cercana y real.",
+        "parrafo2": "Esta obra explora nuevas formas de participación porque la narrativa sólo cobra vida con la contribución activa de los docentes. Estas experiencias se transforman luego en producciones y contenido diverso (imágenes, videos, audios) que estarán disponibles para futuros usuarios, con el objetivo de invitarlos a reflexionar sobre la importancia de la tarea docente.",
         "video": "n/a",
         "categoria": "Procesos y Aprendizaje"
     },
@@ -147,6 +150,7 @@
         "parrafo1": "Las plataformas digitales sirven para una infinidad de cosas. Videos de animales, videos graciosos, tutoriales o sencillamente alguien mostrándose a sí mismo, nuestros algoritmos están plagados de información irrelevante.",
         "parrafo2": "Pero también hay un submundo de cosas que quizás se nos escapen, hay muchas personas que retratan los horrores que viven a diario y lo publican en redes para gritarle al mundo sus verdades. Dentro de ésta obra encontrarás solo una pequeñísima parte de ese submundo. Ésta busca generar un pequeño espacio de reflexión donde se mostrará lo que ocurre por debajo de nuestros algoritmos especializados para mostrarnos lo que \"queremos ver\".",
         "video": "n/a",
+        "pdf": "https://docs.google.com/document/d/1_cPV-P9wjAt8oODlgPWD8xChrQPYcgBtCxRg84ur-EI/edit?tab=t.0#heading=h.y8xyapukovqa",
         "categoria": "Redes Sociales e Internet"
     },
     {
@@ -162,6 +166,8 @@
         "id": 18,
         "obra": "En blanco",
         "nombreApellido": "Francisca Cocino",
+        "parrafo1": "En blanco es una obra multisensorial que combina el arte tradicional de los libros pop-up con las posibilidades tecnológicas del videomapping. Este libro de gran formato, con páginas completamente blancas, se despliega para revelar paisajes tridimensionales que cobran vida a través de la proyección. Cada página invita al espectador a interactuar con figuras de papel, desencadenando transformaciones visuales y narrativas que amplían la experiencia más allá de las formas físicas.",
+        "parrafo2": "La obra explora el diálogo entre lo analógico y lo digital, donde la materialidad del papel y la expansión visual del videomapping se complementan y enriquecen mutuamente. Este enfoque plantea una manera diferente de explorar la relación entre lo físico y lo virtual, ampliando las posibilidades creativas de ambos lenguajes y transformando nuestra percepción y experiencia estética.",
         "video": "n/a",
         "categoria": "Fantasía y Narrativa"
     },
@@ -223,7 +229,8 @@
         "id": 25,
         "obra": "La jugada del siglo",
         "nombreApellido": "Agustín Fabián Cavaliere",
-        "parrafo1": "La jugada del siglo consta de una instalación sonora e interactiva que busca generar en el usuario un entorno y contexto único en relación al fútbol, su fanatismo y euforia distintiva del país, desde silbidos hasta cánticos de cancha instrumentados, con un único objetivo... Convertir el gol que te lleve al título mundial.",
+        "parrafo1": "La jugada del siglo es una obra que busca representar la esencia del fútbol argentino, el fanatismo y la pasión que emergen del deporte, buscando poder sentir aquello que es inexplicable. Siendo interactiva y sonora, que invita al usuario a participar de manera directa, teniendo un único desafío, llegar a la meta y convertir el gol más importante de los últimos tiempos. ",
+        "parrafo2": "El usuario tendrá la posibilidad de convertirse en un jugador más de la cancha, que junto a los cánticos y el relato, se verá acompañado durante toda la experiencia de la jugada, combinando la multiplicidad de factores que se desprenden del deporte.",
         "video": "n/a",
         "categoria": "Sociedad y Cultura"
     },
@@ -241,7 +248,7 @@
         "obra": "Colores en codigo",
         "nombreApellido": "Pablo Manuel López",
         "parrafo1": "Colores en codigo es una obra que busca que aquellas personas/usuarios que nunca tuvieron una experiencia de resolucion de problemas en clave de acertijos como los presentes en videojuegos o salas de escape, los puedan experimentar en un cofre interactivo donde su recompensa radica en la obtencion de la experiencia de juego.",
-        "parrafo2": "El conocimiento previo forma parte de nuestro aprendizaje y cómo asimilamos acciones y problemas que se nos presentan en nuestro cotidiano. Colores en código es la oportunidad para aprender la relación inherente presente en los acertijos de causa-consecuencia, donde la resolución de un problema bien puede significar el surgimiento de otro hasta finalizar con el problema en cuestión o obtener la recompensa por el mismo.",
+        "parrafo2": "El conocimiento previo forma parte de nuestro aprendizaje y cómo asimilamos acciones y problemas que se nos presentan en nuestro cotidiano. Colores en código es la oportunidad para aprender la relación inherente presente en los acertijos de causa-consecuencia, donde la resolución de un problema bien puede significar el surgimiento de otro hasta finalizar con el problema en cuestión o obtener la recompensa por el mismo. ",
         "video": "n/a",
         "categoria": "Procesos y Aprendizaje"
     },
@@ -268,6 +275,7 @@
         "obra": "Corpóreas",
         "nombreApellido": "Serena Mc Govern Canadell",
         "parrafo1": "Corpóreas es una obra que busca compartir diferentes historias relacionadas con el cuerpo femenino, mostrando sus figuras como una obra de arte. El usuario debe elegir una de las esculturas dispuestas y colocarla sobre el pedestal; a partir de esto, se reproduce un audio que relata la historia de ese cuerpo. Estos relatos están acompañados de imágenes dispuestas en la pared y frases que completan el relato. La obra busca posicionar al usuario en un espacio de reflexión, donde se replantee el cuerpo femenino como algo más que un objeto estético.",
+        "parrafo2": "El cuerpo femenino, a lo largo del tiempo, ha sido condicionado y obligado a cumplir ciertas normas, además de ser narrado por voces ajenas a esos cuerpos. Por ello, la obra busca darles voz y la oportunidad de contar su propia narrativa a diferentes mujeres que habitan esos cuerpos, compartiendo sus experiencias, vivencias y la forma en que existen con ellos",
         "video": "n/a",
         "categoria": "Identidad y Cuerpos"
     },
@@ -275,14 +283,63 @@
         "id": 31,
         "obra": "Fulgor",
         "nombreApellido": "Malena Cocozzella",
+        "parrafo1": "“Fulgor” explora la tensión entre lo efímero y lo eterno en un mundo dominado por dispositivos digitales. Las flores, representación de lo natural y pasajero, se enfrentan al impacto de las decisiones humanas en un espacio interactivo. Cada acción del usuario activa un mecanismo que pone en peligro la vida de estas, dejando en evidencia cómo las interacciones aparentemente inofensivas pueden desencadenar consecuencias irreversibles. De esta manera, la instalación invita a reflexionar sobre el rol del individuo en un mundo que constantemente demanda atención y acción.",
+        "parrafo2": "La obra propone un espacio donde lo cotidiano se transforma en algo  significativo, invitando a repensar la relación entre nuestras acciones, el tiempo y la forma en que habitamos el mundo.",
         "video": "n/a",
         "categoria": "Control y Artificialidad"
+    },
+    {
+        "id": 32,
+        "obra": "Máquinas que pierden el tiempo",
+        "nombreApellido": "Diego Alejandro Jiménez Puentes",
+        "parrafo1": "Se decía que las máquinas nos reemplazarían en los trabajos más monótonos y aburridos, para que así nosotros nos pudiéramos dedicar a realizar las tareas más creativas y divertidas. Diseñar, dibujar, escribir, componer o simplemente... distraernos, perder el tiempo, como dicen. ¿Dónde quedó ese futuro? La obra es un videojuego, la hipérbole de un presente cercano donde una inteligencia artificial te reemplaza poco a poco como jugador, hasta terminar convirtiéndote en un espectador más del juego y la obra.",
+        "parrafo2": "Se trata de un “VampireSurvivos-like” con una estética levemente cyberpunk que busca rememorar la década de los 80s. El objetivo es sobrevivir a oleadas de robots mientras recibís mejoras, pero tu compañero, un pequeño robots con inteligencia artificial, conseguirá controlar cada vez más a tu personaje, hasta que ni siquiera puedas moverlo. Tras esto, la cámara se aleja y se te muestra que el juego que estabas jugando, es un videojuego dentro de la misma obra. Ahora estas en una pequeña habitación, viendo como el juego sigue ejecutándose, hasta que te llega un mensaje de tu pareja, el cual finaliza con “Este mensaje ha sido escrito por una IA”. Cuando decides responder, el mensaje se escribe solo y cierra de la misma forma. Ahora solo te queda ir a dormir o esperar que la IA de tu casa apague las luces.",
+        "video": "n/a",
+        "pdf": "https://drive.google.com/file/d/1hKRivIgG7KcLK-xSb4LAJghWeUm6hOVZ/view?usp=sharing",
+        "categoria": "Control y Artificialidad"
+    },
+    {
+        "id": 33,
+        "obra": "Cartoneros",
+        "nombreApellido": "Jorgelina Reynoso",
+        "parrafo1": "Cartoneros es una obra que invita a reflexionar sobre este oficio tan esencial como invisibilizado: la recolección de cartón. En la actualidad en Argentina, los cartoneros desempeñan un rol vital en el circuito del reciclaje y la sostenibilidad urbana. Sin embargo, su trabajo a menudo pasa desapercibido, o peor aún, es estigmatizado.",
+        "parrafo2": "Esta instalación busca tender un puente entre sus experiencias y el público, abriendo una ventana a sus vidas a través de relatos en primera persona. Sus testimonios nos hablan del esfuerzo físico y emocional que implica recorrer las calles, de las barreras sociales y económicas que enfrentan, pero también de sus sueños, sus esperanzas y la dignidad que encuentran al poder salir adelante trabajando en este oficio.",
+        "video": "n/a",
+        "pdf": "https://docs.google.com/document/d/1Z2mMzma_xW76bOAA1YqUBQYfETbI8jFsARI3HI5Ioyw/edit?usp=sharing",
+        "categoria": "Sociedad y Cultura"
+    },
+    {
+        "id": 34,
+        "obra": "Huellas",
+        "nombreApellido": "Sasha Marianela Walter",
+        "parrafo1": "Es una cueva de telas escritas por discursos machistas. El usuario puede ir leyendo y recorriendo según cuánto desee involucrarse. Son frases comunes, que al estar juntas en un mismo espacio, invitan a reflexionar porqué son comunes y que quizás tienen un grado de violencia que, de forma aislada pasan inadvertidas.",
+        "parrafo2": "Una vez que se llega al final del recorrido, la obra invita al usuario a detenerse a leer unos fragmentos recolectados de diferentes ámbitos. Si el usuario se mueve, estos textos se desvanecen según su posición, permitiendo ver algo más, algo desconocido. La persona puede comprometerse lo necesario para entender que existe algo diferente que está oculto detrás de estos discursos. Las manos representan una otredad que busca ser vista.",
+        "video": "n/a",
+        "categoria": "Identidad y Cuerpos"
+    },
+    {
+        "id": 35,
+        "obra": "Suer7e",
+        "nombreApellido": "Camila Cordoba",
+        "parrafo1": "Suer7e es una obra que sumerge al usuario en un viaje lumínico y sensorial, donde la frontera entre el juego y la realidad se desdibuja. Diseñada como un túnel de luces, esta instalación interactiva busca despertar conciencia sobre la ciberludopatía. Al ingresar, el usuario se convierte en una ficha viva, atrapada en un ciclo hipnótico donde las luces giran como una ruleta interminable. Con cada paso, se adentra más, perdiendo la noción de tiempo y espacio, hasta que la línea entre el jugador y el juego se diluye. ¿Es el usuario quien avanza o es el túnel quien lo reclama? La obra revela cómo, en la búsqueda del triunfo, la mente puede quedar atrapada en el brillo seductor del azar digital.",
+        "parrafo2": "En este juego inmersivo, el usuario es la ficha al posicionarse en el túnel. Las luces simulan el movimiento de una ruleta, que debe avanzar y detenerse, representando el acto de jugar y apostar. Dependiendo de dónde se detenga, el túnel responde con diferentes efectos visuales y sonoros que reflejan los posibles resultados y emociones asociadas al juego: la euforia de ganar o la desilusión de perder. El objetivo es lograr ganar 7 luces verdes para alcanzar el premio mayor, lo que lo impulsa a adentrarse cada vez más en el túnel. Mostrando cómo el tiempo y el espacio se desvanecen y el jugador se ve envuelto en la búsqueda insaciable del triunfo. La obra invita al espectador a reflexionar sobre la naturaleza adictiva de los juegos de azar y las profundas consecuencias de quedar atrapado en su trampa.",
+        "video": "n/a",
+        "categoria": "Fantasía y Narrativa"
+    },
+    {
+        "id": 36,
+        "obra": "Monstruos Urbanos",
+        "nombreApellido": "Francisco Crespo",
+        "parrafo1": "La posibilidad de ver los desechos electrónicos desde otra perspectiva. Desde estos talleres se buscó generar un espacio de formación e interacción familiar, con el foco puesto en la obsolescencia programada, los desechos electrónicos, su reciclado y posterior armado de piezas lúdicas o juguetes electrónicos.",
+        "parrafo2": "El objetivo del taller es brindar herramientas técnicas y creativas para el desarrollo de distintas posibilidades en el armado de dispositivos, que permitan explorar el mundo de la electrónica y el arte.",
+        "video": "n/a",
+        "categoria": "Procesos y Aprendizaje"
     },
     {
         "id": 99,
         "obra": "Info Artimañas",
         "nombreApellido": "",
-        "parrafo1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tincidunt orci eu nunc fringilla, et feugiat lorem ultricies. Cras eget elit metus. Cras et felis nibh. Donec ut tristique dui, ac semper mi. Donec elementum ipsum at erat dapibus, quis gravida nibh venenatis. In nec libero ut est ultricies mattis non ut leo. ",
+        "parrafo1": "Desde 2011 se realiza el festival Artimañas en donde el conjunto del alumnado de taller de Diseño Multimedial presentan sus trabajos finales de carrera. Artimañas invita a los espectadores a un recorrido de obras multimediales en las que cada estudiante plasma su visión y propone una mirada unica sobre temáticas relevantes de nuestra disciplina. Artimañas engloba diversas obras pertenecientes al ámbito de la Multimedia, entendiendo a la disciplina como un nuevo lenguaje y una nueva forma de narrar que utiliza la imagen, el sonido, el texto, y el diseño para construir experiencias interactivas e inmersivas. En esta edición, los trabajos exploran temas que van desde la identidad y la memoria hasta la interacción humana en un mundo cada vez más digitalizado. Cada estudiante construye desde la Multimedia una obra que refleja preocupaciones sociales y culturales, construidas mediante diferentes tecnologías, e invitando al público a dialogar, construyendo nuevas percepciones del mundo que nos rodea.",
         "parrafo2": "",
         "video": "",
         "categoria": "Conocer Artimañas"
