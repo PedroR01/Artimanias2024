@@ -3,7 +3,7 @@
         "id": 0,
         "obra": "Resampleados",
         "nombreApellido": "Ramiro Nicolás Gil",
-        "parrafo1": "Resampleados es una obra que busca acercar el concepto del \"sampling\" a sus usuarios, simulando un tocadiscos de vinilos. El usuario elije y combina distintos samples populares de la historia del hip hop y rap clásico, pudiendo hacer combinaciones entre ritmos y melodías, ambos trabajados para poder superponerse entre sí.",
+        "parrafo1": "Resampleados es una obra que busca acercar el concepto del \"sampling\" a sus usuarios, simulando un tocadiscos de vinilos. El usuario elige y combina distintos samples populares de la historia del hip hop y rap clásico, pudiendo hacer combinaciones entre ritmos y melodías, ambos trabajados para poder superponerse entre sí.",
         "parrafo2": "Cada vinilo posee la data de la canción origen del sample, como también de un caso principal donde fue sampleada, ambas con un codigo QR a Spotify para poder escuchar cada una en su respectivo contexto.",
         "video": "n/a",
         "pdf": "https://drive.google.com/file/d/1XS2Sd0yt9ZPmViPvDfDJrLr5HjkZbslK/view?usp=sharing",
@@ -283,6 +283,8 @@
         "id": 31,
         "obra": "Fulgor",
         "nombreApellido": "Malena Cocozzella",
+        "parrafo1": "“Fulgor” explora la tensión entre lo efímero y lo eterno en un mundo dominado por dispositivos digitales. Las flores, representación de lo natural y pasajero, se enfrentan al impacto de las decisiones humanas en un espacio interactivo. Cada acción del usuario activa un mecanismo que pone en peligro la vida de estas, dejando en evidencia cómo las interacciones aparentemente inofensivas pueden desencadenar consecuencias irreversibles. De esta manera, la instalación invita a reflexionar sobre el rol del individuo en un mundo que constantemente demanda atención y acción.",
+        "parrafo2": "La obra propone un espacio donde lo cotidiano se transforma en algo  significativo, invitando a repensar la relación entre nuestras acciones, el tiempo y la forma en que habitamos el mundo.",
         "video": "n/a",
         "categoria": "Control y Artificialidad"
     },
