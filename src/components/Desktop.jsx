@@ -53,8 +53,8 @@ export default function Desktop() {
     if (foldersMinimized.includes(folderName)) return;
 
     setFoldersMinimized((prevFolders) => {
-      // Si es móvil y ya hay 3 carpetas minimizadas, aplica LIFO (Last In First Out). Max 6 carpetas minimizadas si es ver. desktop
-      if ((isMobile && prevFolders.length >= 3) || prevFolders.length >= 6) {
+      // Si es móvil y ya hay 4 carpetas minimizadas, aplica LIFO (Last In First Out). Max 6 carpetas minimizadas si es ver. desktop
+      if ((isMobile && prevFolders.length >= 4) || prevFolders.length >= 6) {
         return [...prevFolders.slice(1), folderName]; // Elimina la primera y agrega la nueva
       }
 

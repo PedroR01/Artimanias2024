@@ -23,7 +23,7 @@ export default function Folder({ title, isCategory, titleBg, hoverBg, fitIn, onF
 
 
   return (
-    <div className={"text-wb-center cursor-pointer transition w-min hover:bg-opacity-25 hover:shadow-lg " + hoverBg} >
+    <div className={"text-wb-center cursor-pointer transition  hover:bg-opacity-25 hover:shadow-lg " + hoverBg} >
       <button
         className={"relative text-wb-center " + dimensions}
         onClick={() => onFolderClick()}
@@ -35,7 +35,7 @@ export default function Folder({ title, isCategory, titleBg, hoverBg, fitIn, onF
           />
         </div>
       </button>
-      {!fitIn && (<div className={titleBox + "justify-self-center w-fit px-4 " + titleBg}><h3 className={titleFont + "text-center w-max md:text-xl"}>
+      {!fitIn && (<div className={titleBox + "justify-self-center w-fit px-4 " + titleBg}><h3 className={titleFont + "w-wb-fill text-center text-sm  md:text-base"}>
         {title.toUpperCase()}
       </h3> </div>
 

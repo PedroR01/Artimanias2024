@@ -91,6 +91,27 @@ h4 {
   .w-wb-fill {
     width: -webkit-fill-available;
   }
+
+  .thesis-folder-rgap {
+    row-gap: 1.25rem;
+  }
+
+  .authors-list-rgap {
+    row-gap: 1.75rem;
+  }
+
+  .hide-scroll::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* 
+En caso de incompatibilidad en ocultar barra de navegacion en otros navegadores 
+
+.hide-scroll{
+-ms-overflow-style: none; // IE and Edge 
+scrollbar-width: none; // Firefox 
+}
+*/
   .folder-window-shadow {
     --tw-shadow: 12px 11px 1px -3px rgb(0 0 0 / 1.1),
       0 4px 11px -4px rgb(0 0 0 / 0.1);
@@ -106,8 +127,8 @@ h4 {
       var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
   }
   .button-shadow {
-    --tw-shadow: 6px 5px 1px -3px rgb(0 0 0 / 1.1),
-      0 4px 11px -4px rgb(0 0 0 / 0.1);
+    --tw-shadow: 4px 4px 0px -1px rgb(0 0 0 / 1.1),
+      0 4px 11px 3px rgb(0 0 0 / 0.1);
     --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color),
       0 4px 6px -4px var(--tw-shadow-color);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),

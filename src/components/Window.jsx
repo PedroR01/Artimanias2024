@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
-import leftArrowIcon from "../assets/img/icons/left_arrow_icon.svg";
-import xIcon from "../assets/img/icons/x_icon.svg";
-import minusIcon from "../assets/img/icons/minus_icon.svg";
+import closeIcon from "../assets/img/icons/close_icon.svg";
+import minimizeIcon from "../assets/img/icons/minimize_icon.svg";
+import backArrow from "../assets/img/icons/back_arrow.svg";
 import downloadIcon from "../assets/img/icons/downloadIcon.svg";
 import folderImg from "../assets/img/folderCategory/artimanias_folder.svg";
 import Folder from "./Folder";
@@ -19,6 +19,10 @@ export default function Window({ folderName, onAction }) {
   const [actualFolder, setActualFolder] = useState(folderName);
   const [seeMore, SetSeeMore] = useState(false);
   const [headerBg, setHeaderBg] = useState("");
+
+  // Estados para las animaciones al abrir y minimizar
+  const [windowExpanded, setWindowExpanded] = useState(false);
+  const [windowMinimized, setWindowMinimized] = useState(false);
 
   // Para referenciar el contenedor que se debe scrollear hacia arriba
   const scrollContainerRef = useRef(null);
@@ -52,6 +56,7 @@ export default function Window({ folderName, onAction }) {
       );
       setThesis(thesisData);
     }
+    openWindowAnimation();
   }, []);
 
   useEffect(() => {
@@ -93,6 +98,22 @@ export default function Window({ folderName, onAction }) {
 
   /* ------ */
 
+  // Dispara la animación al abrirse la carpeta
+  const openWindowAnimation = () => {
+    setWindowExpanded(true);
+  };
+
+  // Maneja los estados para las animaciones al minimizar
+  const handleMinimize = () => {
+    setWindowMinimized(true);
+    setWindowExpanded(false);
+    setTimeout(() => {
+      thesis
+        ? onAction("minimize", thesis.obra)
+        : onAction("minimize")
+    }, 700);
+  }
+
   const downloadImage = () => {
     const link = document.createElement("a");
     link.href =
@@ -109,6 +130,8 @@ export default function Window({ folderName, onAction }) {
     if (container) {
       const scrollStart = container.scrollTop;
       const scrollEnd = 0;
+      console.log(scrollStart);
+
       const duration = 500; // Duración de la animación en milisegundos
       let startTime;
 
@@ -276,21 +299,21 @@ export default function Window({ folderName, onAction }) {
         <h3 className="font-bold">Investigación</h3>
         <p className="mt-2">Nombre del documento</p>
         <button
-          className="flex items-center justify-center border-2 border-black button-shadow w-full p-2 mb-5 rounded-md"
+          className="flex items-center justify-center bebas-neue-regular text-base gap-2 border-2 border-black button-shadow w-full p-2 mb-5 rounded-md transition duration-300 ease-in-out hover:bg-[#D1C1B4] hover:button-shadow active:bg-[#FFDD6A] hover:shadow-md active:shadow-none"
           onClick={downloadImage}
         >
           <img src={downloadIcon} alt="Download icon" />
-          PDF
+          DESCARGAR
         </button>
         <div>
           <h3 className="mt-10 baloo-2-bold md:text-xl">
             Más de {thesis.categoria}
           </h3>
-          <ul className="flex flex-wrap justify-evenly gap-9">
+          <ul className="flex flex-wrap thesis-folder-rgap">
             {
               thesisList.filter((thisThesis) => thisThesis.obra !== thesis.obra).map((thisThesis) => (
                 <li
-                  className="md:ml-8 md:text-wb-center md:flex-wrap"
+                  className="w-1/2 justify-items-center  md:text-wb-center md:flex-wrap"
                   key={thisThesis.id}
                 >
                   <Folder
@@ -312,17 +335,20 @@ export default function Window({ folderName, onAction }) {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center">
       <section
-        ref={scrollContainerRef}
+        className={`w-full overflow-y-scroll transform  h-[79%] ml-4 mr-4  max-w-lg rounded-[15px] hide-scroll border-2 border-black transition-all duration-700 ease-in-out ${windowExpanded ? "h-[79%] w-full scale-100" : "scale-0"} ${!windowMinimized ? "" : "translate-y-[70%] md:-translate-x-[110%]"}`}
         role="dialog"
         aria-labelledby="modal-title"
         aria-modal="true"
-        className="overflow-y-scroll bg-white h-[79%] ml-4 mr-4 w-full max-w-lg rounded-[15px] overflow-hidden border-2 border-black md:h-3/4 md:overflow-hidden"
       >
         {/* Barra superior */}
-        <header className={"flex sticky top-0 z-10 items-center justify-between " + headerBg + " text-black p-4"}>
+        <header className={"flex sticky top-0 z-50 items-center justify-between " + headerBg + " text-black p-4"}>
           <button
             aria-label="Go Back"
-            className=" hover:text-gray-400"
+            className="w-9 h-9 flex items-center justify-center rounded-full bg-[#FFFBF2]
+             border-2 border-black button-shadow 
+             transition duration-300 ease-in-out 
+             hover:bg-[#D1C1B4] hover:button-shadow active:bg-[#FFDD6A] 
+             hover:shadow-lg active:shadow-none"
             onClick={() => {
               // En el caso de que la ventana muestre una tesis
               if (thesis) {
@@ -333,55 +359,60 @@ export default function Window({ folderName, onAction }) {
               else onAction("close");
             }}
           >
-            <img className="w-4/5" src={leftArrowIcon} alt="" />
+            <img className="w-[25%]" src={backArrow} alt="Icon" />
           </button>
           <h2
             id="modal-title"
-            className="text-xl font-medium baloo-2-bold text-center md:text-2xl md:spa md:tracking-wider"
+            className="text-base font-medium baloo-2-bold text-center md:text-xl md:spa md:tracking-wider"
           >
             {actualFolder}
           </h2>
           <div className="flex space-x-2">
             <button
               aria-label="Minimize"
-              className="hover:text-gray-400"
+              className="w-9 h-9 flex items-center justify-center rounded-full bg-[#FFFBF2]
+               border-2 border-black button-shadow 
+               transition duration-300 ease-in-out 
+               hover:bg-[#D1C1B4] hover:button-shadow active:bg-[#FFDD6A] 
+               hover:shadow-lg active:shadow-none"
               onClick={
                 // Si es una ventana tesis, además envia el nombre de la misma para que se minimice correctamente en el escritorio
-                () => {
-                  thesis
-                    ? onAction("minimize", thesis.obra)
-                    : onAction("minimize")
-                }
-
+                handleMinimize
               }
             >
-              <img className="w-4/5" src={minusIcon} alt="" />
+              <img className="w-3/5" src={minimizeIcon} alt="" />
             </button>
             <button
+              aria-label="Close"
+              className="w-9 h-9 flex items-center justify-center rounded-full bg-[#FFFBF2]
+             border-2 border-black button-shadow 
+             transition duration-300 ease-in-out 
+             hover:bg-[#D1C1B4] hover:button-shadow active:bg-[#FFDD6A] 
+             hover:shadow-lg active:shadow-none"
               onClick={
                 // Misma logica que en el caso de minimizar
                 () =>
                   thesis ? onAction("close", thesis.obra) : onAction("close")
               }
-              aria-label="Close"
-              className="hover:text-gray-400"
             >
-              <img className="w-4/5" src={xIcon} alt="" />
+              <img className="w-3/5" src={closeIcon} alt="" />
             </button>
           </div>
         </header>
 
         {/* Contenido */}
-        <main className="p-4 bg-[#FFFBF2] md:mx-8 md:max-h-[36rem] overflow-y-scroll">
+        <main
+          ref={scrollContainerRef}
+          className="p-4 h-full bg-[#FFFBF2] md:h-[90%] overflow-y-scroll hide-scroll">
           {/* Carpeta de la tesis */}
           {thesis ? (
             InfoFolders(thesis.id)
           ) : (
             // Carpeta de la categoria con el listado de tesis
-            <ul className="flex flex-wrap justify-evenly gap-9">
+            <ul className="flex flex-wrap thesis-folder-rgap">
               {thesisList.map((thisThesis) => (
                 <li
-                  className="md:ml-8 md:text-wb-center md:flex-wrap"
+                  className="w-1/2 justify-items-center  md:text-wb-center md:flex-wrap"
                   key={thisThesis.id}
                 >
                   <Folder
