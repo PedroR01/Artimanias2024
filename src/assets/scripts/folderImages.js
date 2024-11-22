@@ -49,6 +49,7 @@ import cartoneros_folder from "../img/folderThesis/cartoneros_folder.png";
 import huellas_folder from "../img/folderThesis/huellas_folder.png";
 import suer7e_folder from "../img/folderThesis/suer7e_folder.png";
 import monstruosUrbanos_folder from "../img/folderThesis/monstruosUrbanos_folder.png";
+import ruidos_folder from "../img/folderThesis/ruidos_folder.png";
 
 
 const folderImages = {
@@ -103,7 +104,8 @@ const folderImages = {
   cartoneros: cartoneros_folder,
   huellas: huellas_folder,
   suer7e: suer7e_folder,
-  monstruosUrbanos: monstruosUrbanos_folder
+  monstruosUrbanos: monstruosUrbanos_folder,
+  ruidos: ruidos_folder
 };
 
 export default folderImages;

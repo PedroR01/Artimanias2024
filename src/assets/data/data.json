@@ -16,6 +16,7 @@
         "parrafo1": "Voces del Espacio es una obra que simula un videojuego arcade de disparos espacial, parecido a la obra \"Space Invaders\". El usuario tiene a disposición tres botones para mover la nave y disparar, esquivando y destruyendo enemigos para sumar puntos. Al final de la partida, llegará a la tierra y, si se encuentra entre las mejores 5 puntuaciones, verá su nombre en el inicio del juego.",
         "parrafo2": "Para poder tener mejor puntuación, el juego dispone de una mecánica de mejoras de nave que se desbloquéan al gritar en un micrófono que está disponible en un casco de piloto espacial que se encuentra a un lado del arcade. Aquellos que griten más y constantemente podrán conseguir mejor puntuación y estar entre los 5 mejores, promoviendo la idea de \"pay to win\", representado el pago como la entrega de gritos a una pantalla, apelando a la humillación como medio para ganar sobre los demás.",
         "video": "https://www.youtube.com/watch?v=krAg6mgLD6c",
+        "pdf": "https://drive.google.com/file/d/1DBJOll-_m_gRtgtBKOPJK76LZPpqlQ4n/view?usp=drive_link",
         "categoria": "Redes Sociales e Internet"
     },
     {
@@ -33,7 +34,8 @@
         "nombreApellido": "Martina Pellegrino",
         "parrafo1": "reminiscencia.net surge como reivindicación del Internet antiguo, es una máquina del tiempo a un Internet caótico pero divertido y personal. La intención de la obra y de la investigación es de repensar al Internet y de considerarlo como una herramienta y práctica artística también en la actualidad. reminiscencia.net surge de la necesidad de crear una web personal plagada de imágenes y links que yo quiera ver, no que me son impuestos por una plataforma o un algoritmo.",
         "parrafo2": "reminiscencia.net es un tótem realizado con chatarra electrónico-informática que muestra un sitio web creado y estructurado con herramientas y recursos estéticos propios de la web antigua que conviven con recursos propios de nuestra web actual. La interacción es posible a partir de una trackball y un botón que permiten navegar y clickear cualquier imagen del sitio web, haciendo que se abran diferentes pop-ups que muestran otros sitios con la estética particular del Internet antiguo. Este proyecto tiene la intención tanto de darle la posibilidad de exploración infinita a quien lo navegue, como de perderse en el caos visual y virtual al sumergirse por tiempo indefinido en cada detalle. ",
-        "video": "n/a",
+        "video": "https://www.youtube.com/watch?v=8g3l6xq0i3k",
+        "pdf": "https://drive.google.com/file/d/1gM8SA9PG-q1S22icx16xO0lVdESiexOV/view?usp=drive_link",
         "categoria": "Redes Sociales e Internet"
     },
     {
@@ -52,6 +54,7 @@
         "parrafo1": "SINESTESIA le ofrece a los usuarios una experiencia inmersiva de caracter contemplativo. La obra transporta a los usuarios a un entorno donde la música y las visuales audio-reactivas generan una percepción distinta del espacio y del tiempo.",
         "parrafo2": "Se busca simular la sensacion de estar presentes en un show musical en vivo a traves de visuales audioreactivas proyectadas sobre las caras del cubo. Se busca crear un ambiente en el que entren en juego las emociones (asombro, felicidad, tristeza) de los espectadores, una parte fundamental de la experiencia.",
         "video": "https://www.youtube.com/watch?v=3Cm9mfX710o",
+        "pdf": "https://drive.google.com/file/d/1cA-Opx-dKfMHrVGep9Y2ERZ_ZmPU0wC-/view?usp=drive_link",
         "categoria": "Procesos y Aprendizaje"
     },
     {
@@ -144,6 +147,7 @@
         "parrafo1": "Liminal invita al usuario a apropiarse del proceso de creación de un videomapping, desde la disposición del “lienzo” hasta la configuración de sus proyecciones. La experiencia consta de una serie de cubos blancos que se pueden disponer libremente para construir una estructura, la cual servirá como soporte para aplicar las visuales desde la mesa de edición.",
         "parrafo2": "A través de los controles de la mesa de edición, el usuario puede agregar pantallas, modificar el color, velocidad, tamaño, animación y, lo más importante, la perspectiva de las proyecciones. Cada ajuste permite explorar nuevas combinaciones, ofreciendo una amplia libertad creativa. La obra busca acercar al público al mundo del videomapping y explorar su potencial expresivo en tiempo real.",
         "video": "https://www.youtube.com/watch?v=61E4_UxdJ6c",
+        "pdf": "https://drive.google.com/file/d/1V0AY3lCwERCnXvMoja7XUxllv0ldfKHE/view?usp=drive_link",
         "categoria": "Procesos y Aprendizaje"
     },
     {
@@ -253,6 +257,7 @@
         "parrafo1": "Colores en codigo es una obra que busca que aquellas personas/usuarios que nunca tuvieron una experiencia de resolucion de problemas en clave de acertijos como los presentes en videojuegos o salas de escape, los puedan experimentar en un cofre interactivo donde su recompensa radica en la obtencion de la experiencia de juego.",
         "parrafo2": "El conocimiento previo forma parte de nuestro aprendizaje y cómo asimilamos acciones y problemas que se nos presentan en nuestro cotidiano. Colores en código es la oportunidad para aprender la relación inherente presente en los acertijos de causa-consecuencia, donde la resolución de un problema bien puede significar el surgimiento de otro hasta finalizar con el problema en cuestión o obtener la recompensa por el mismo. ",
         "video": "n/a",
+        "pdf": "https://drive.google.com/file/d/1XUz2HGuBnS5UGTiFfI33Z1xpkuQhFwNU/view?usp=drive_link",
         "categoria": "Procesos y Aprendizaje"
     },
     {
@@ -336,6 +341,15 @@
         "parrafo2": "El objetivo del taller es brindar herramientas técnicas y creativas para el desarrollo de distintas posibilidades en el armado de dispositivos, que permitan explorar el mundo de la electrónica y el arte.",
         "video": "n/a",
         "categoria": "Procesos y Aprendizaje"
+    },
+    {
+        "id": 37,
+        "obra": "Ruido(s)",
+        "nombreApellido": "Juana Perone",
+        "parrafo1": "Ruido(s) es una performance interactiva que atraviesa temas en relación al arte y la cultura argentina, vinculados con las tecnologías digitales y las redes sociales. La obra consiste en el enfrentamiento de los discursos de odio el X y un recorte de producciones audiovisuales relevantes que son el reflejo de nuestra identidad cultural y soberanía. En escena se ven desplegadas una serie de telas con una doble proyección ",
+        "parrafo2": "La performance invita a los usuarios a responder una serie de preguntas que aparecen en la interfaz y que sus respuestas aparezcan en tiempo real en las proyecciones de la obra, alterando e interviniendo en la construcción de sentido y la narrativa de la historia.",
+        "video": "n/a",
+        "categoria": "Sociedad y Cultura"
     },
     {
         "id": 99,
