@@ -118,8 +118,8 @@ export default function Desktop() {
               <Folder
                 title={folders.IC}
                 isCategory={true}
-                titleBg={"bg-[#D1C1B4]"}
-                hoverBg={"hover:bg-[#D1C1B4]"}
+                titleBg={"bg-[#FF73FF]"}
+                hoverBg={"hover:bg-[#FF73FF]"}
                 onFolderClick={() => openFolder(folders.IC)}
               />
             </li>
@@ -127,8 +127,8 @@ export default function Desktop() {
               <Folder
                 title={folders.FN}
                 isCategory={true}
-                titleBg={"bg-[#FF73FF]"}
-                hoverBg={"hover:bg-[#FF73FF]"}
+                titleBg={"bg-[#CBDF00]"}
+                hoverBg={"hover:bg-[#CBDF00]"}
                 onFolderClick={() => openFolder(folders.FN)}
               />
             </li>
@@ -145,8 +145,8 @@ export default function Desktop() {
               <Folder
                 title={folders.CA}
                 isCategory={true}
-                titleBg={"bg-[#CBDF00]"}
-                hoverBg={"hover:bg-[#CBDF00]"}
+                titleBg={"bg-[#F85031]"}
+                hoverBg={"hover:bg-[#F85031]"}
                 onFolderClick={() => openFolder(folders.CA)}
               />
             </li>
@@ -172,8 +172,8 @@ export default function Desktop() {
               <Folder
                 title={folders.ARTI}
                 isCategory={true}
-                titleBg={"bg-[#F85031]"}
-                hoverBg={"hover:bg-[#F85031]"}
+                titleBg={"bg-[#E2A1FF]"}
+                hoverBg={"hover:bg-[#E2A1FF]"}
                 onFolderClick={() => openFolder(folders.ARTI)}
               />
             </li>

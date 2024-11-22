@@ -13,6 +13,8 @@ export default function AuthorsList({ onAction }) {
     useEffect(() => {
         // Obtiene toda la info de los autores y sus obras.
         const authorsData = jsonData.filter((thisAuthor) => thisAuthor.nombreApellido);
+        authorsData.sort((authorA, authorB) => (authorA.nombreApellido.localeCompare(authorB.nombreApellido)));
+        console.log(authorsData);
         setAuthors(authorsData);
         windowAnimation();
 
@@ -65,17 +67,20 @@ export default function AuthorsList({ onAction }) {
                         </button>
                     </div>
                 </header>
-                <main className="p-4 bg-[#FFFBF2] h-[90%] md:h-[91%] overflow-y-scroll  custom-scrollbar">
+                <main className="px-4 pt-4 pb-8 bg-[#FFFBF2] h-[90%] md:h-[91%] overflow-y-scroll  custom-scrollbar">
                     <ul className="flex flex-wrap authors-list-rgap justify-between">
                         {authors.map((thisAuthor, index) => (
                             <li
-                                className="justify-items-center w-1/2 md:text-wb-center md:flex-wrap"
+                                className="justify-items-center text-center w-1/2 pt-2 rounded-lg transition duration-300 ease-in-out 
+ hover:bg-[#D1C1B4] hover:folder-window-shadow md:text-wb-center md:flex-wrap"
                                 key={index}
                             >
-                                <button className="justify-items-center w-wb-fill" onClick={() => handleAuthorThesis(thisAuthor)}>
-                                    <img className="max-h-16" src={require('../assets/img/authors/' + thisAuthor.nombreApellido.replace(/\s+/g, "").toLowerCase() + ".png")} alt="Imagen Autor" />
-                                    <span className="inline-flex text-center">{thisAuthor.nombreApellido}</span>
+                                <button className="justify-items-center w-24 rounded-full border-2 border-black button-shadow transition duration-300 ease-in-out 
+  hover:button-shadow 
+ hover:shadow-lg active:shadow-none md:w-24" onClick={() => handleAuthorThesis(thisAuthor)}>
+                                    <img src={require('../assets/img/authors/' + thisAuthor.nombreApellido.replace(/\s+/g, "").toLowerCase() + ".png")} alt="Imagen Autor" />
                                 </button>
+                                <span className="flex text-center baloo-2-bold">{thisAuthor.nombreApellido}</span>
                             </li>
                         ))}
                     </ul>

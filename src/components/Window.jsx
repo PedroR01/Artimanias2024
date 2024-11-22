@@ -91,7 +91,7 @@ export default function Window({ folderName, onAction }) {
     else if (folderName === folders.PA || (thesis !== null && thesis.categoria === folders.PA))
       setHeaderBg("bg-[#FFDD6A]");
     else if (folderName === folders.ARTI || (thesis !== null && thesis.categoria === folders.ARTI))
-      setHeaderBg("bg-[#F85031]");
+      setHeaderBg("bg-[#E2A1FF]");
 
     scrollToTop();
   }, [thesis]);
