@@ -68,13 +68,7 @@ export default function Slider({ video, obra, imagenes }) {
                   className="w-full h-auto"
                 />
               ) : (
-                <iframe
-                  controls
-                  className="w-full h-full"
-                  src={slide.url}
-                  title={obra}
-                  referrerpolicy="strict-origin-when-cross-origin"
-                ></iframe>
+                <div className="w-full h-full"><lite-youtube videoid={slide.url}></lite-youtube> </div>
               )}
             </div>
           ))}

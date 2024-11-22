@@ -115,10 +115,16 @@ export default function Window({ folderName, onAction }) {
   }
 
   const downloadPDF = (pdfURL) => {
+    const extractDriveFileId = (driveLink) => {
+      const regex = /\/d\/([a-zA-Z0-9_-]+)\//;
+      const match = driveLink.match(regex);
+      return match ? match[1] : null; // Devuelve el ID si hay coincidencia, o null si no lo hay
+    }
     if (pdfURL) {
+      const downloadUrl = `https://drive.google.com/uc?export=download&id=${extractDriveFileId(pdfURL)}`;
       const link = document.createElement("a");
-      link.href = pdfURL
-      //link.setAttribute("download", "image.jpg"); // Puedes cambiar el nombre del archivo
+      link.href = downloadUrl
+      link.setAttribute("download", thesis.nombreApellido + "_investigación");
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
@@ -275,9 +281,7 @@ export default function Window({ folderName, onAction }) {
       return (<article>
         <Slider
           video={
-            "http://www.youtube.com/embed/" +
-            thesis.video.split("?v=")[1] +
-            "?modestbranding=1"
+            thesis.video.split("?v=")[1]
           }
           obra={thesis.obra}
         />
