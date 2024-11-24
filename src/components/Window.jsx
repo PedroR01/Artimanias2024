@@ -203,6 +203,16 @@ export default function Window({ folderName, onAction }) {
             }}
           />
         </li>
+        <li
+          className="md:ml-8 md:text-wb-center md:flex-wrap"
+        >
+          <Folder
+            title={"Facebook"}
+            onFolderClick={() => {
+              window.open("https://www.facebook.com/share/17fWXz1uSN/", '_blank').focus();
+            }}
+          />
+        </li>
       </ul>
       )
     } else if (ids === 96) {
