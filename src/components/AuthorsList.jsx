@@ -40,7 +40,7 @@ export default function AuthorsList({ onAction }) {
     return (
         authorThesis === null ?
             (<section
-                className={`fixed bottom-16 justify-center items-center overflow-y-scroll bg-white rounded-t-3xl border-t-2 border-x-2 border-black z-10 hide-scroll  transition-all duration-700 ease-in-out ${windowExpanded ? "h-[72%] w-11/12 md:w-[27%]" : "h-0 w-11/12 md:w-[27%]"}`}
+                className={`fixed bottom-16 justify-center items-center overflow-y-scroll bg-white rounded-t-3xl border-t-2 border-x-2 border-black z-10 hide-scroll  transition-all duration-700 ease-in-out md:w-[40%] ${windowExpanded ? "h-[72%] w-11/12 md:w-[40%]" : "h-0 w-11/12 md:w-[40%]"}`}
             >
                 {/* Barra superior */}
                 <header className="flex sticky top-0 z-10 items-center justify-between border-b-[1px] border-black bg-[#F85031] text-black p-4 ">
@@ -87,7 +87,8 @@ export default function AuthorsList({ onAction }) {
                 </main>
             </section>) : <Window
                 folderName={authorThesis.obra}
-                onAction={() => {
+                onAction={(action) => {
+                    onAction(action, authorThesis.obra);
                     setAuthorThesis(null);
                 }}
             />

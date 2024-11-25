@@ -1,16 +1,14 @@
 import React, { useState } from "react";
-import imgVideo from "../assets/img/misc/video.png";
 import sliderArrow from "../assets/img/icons/back_arrow.svg";
 
-export default function Slider({ video, obra, imagenes }) {
+export default function Slider({ video, imagen }) {
   // Estado para mantener el índice actual del slider
   const [currentSlide, setCurrentSlide] = useState(0);
 
   // Array con las URLs de las imágenes y el video
   const slides = [
-    { type: "image", url: imgVideo },
+    { type: "image", url: imagen },
     { type: "video", url: video },
-    { type: "image", url: "https://via.placeholder.com/800x400?text=Image+2" },
   ];
 
   // Función para avanzar al siguiente slide
@@ -65,7 +63,7 @@ export default function Slider({ video, obra, imagenes }) {
                 <img
                   src={slide.url}
                   alt={`Slide ${index}`}
-                  className="w-full h-auto"
+                  className="w-full h-[11.25rem] md:h-[16.75rem]"
                 />
               ) : (
                 <div className="w-full h-full"><lite-youtube videoid={slide.url}></lite-youtube> </div>

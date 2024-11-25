@@ -29,7 +29,7 @@ export default function Navbar({ minimized, navToDesk, navToAuthors }) {
         <li className="ml-3 lg:ml-0">
           <ul className="justify-between items-center flex container mx-auto">
             {minimized.map((folder) => (
-              <li className="md:ml-3" key={folder}>
+              <li className="max-w-16 md:ml-3" key={folder}>
                 <Folder
                   title={folder}
                   fitIn={"nav"}

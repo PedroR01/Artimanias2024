@@ -102,10 +102,10 @@ export default function Desktop() {
         />
       )}
 
-      <div className="relative flex">
+      <div className="relative flex h-screen pb-24">
         <section className="relative w-full z-10">
-          <ul className="grid grid-cols-2 auto-rows-fr gap-4 items-center justify-items-center mt-8 md:ml-12 md:w-1/2 lg:w-2/6">
-            <li>
+          <ul className="grid grid-cols-responsive gap-4 h-4/5 pb-8 items-center justify-items-center mt-4 md:mt-8 md:w-3/4 lg:w-3/6 xl:w-2/6">
+            <li className={"flex justify-center items-center "}>
               <Folder
                 title={folders.RSI}
                 isCategory={true}
@@ -114,7 +114,7 @@ export default function Desktop() {
                 onFolderClick={() => openFolder(folders.RSI)}
               />
             </li>
-            <li>
+            <li className={"flex justify-center items-center "}>
               <Folder
                 title={folders.IC}
                 isCategory={true}
@@ -123,7 +123,7 @@ export default function Desktop() {
                 onFolderClick={() => openFolder(folders.IC)}
               />
             </li>
-            <li>
+            <li className={"flex justify-center items-center "}>
               <Folder
                 title={folders.FN}
                 isCategory={true}
@@ -132,7 +132,7 @@ export default function Desktop() {
                 onFolderClick={() => openFolder(folders.FN)}
               />
             </li>
-            <li>
+            <li className={"flex justify-center items-center "}>
               <Folder
                 title={folders.NO}
                 isCategory={true}
@@ -141,7 +141,7 @@ export default function Desktop() {
                 onFolderClick={() => openFolder(folders.NO)}
               />
             </li>
-            <li>
+            <li className={"flex justify-center items-center "}>
               <Folder
                 title={folders.CA}
                 isCategory={true}
@@ -150,7 +150,7 @@ export default function Desktop() {
                 onFolderClick={() => openFolder(folders.CA)}
               />
             </li>
-            <li>
+            <li className={"flex justify-center items-center "}>
               <Folder
                 title={folders.SC}
                 isCategory={true}
@@ -159,7 +159,7 @@ export default function Desktop() {
                 onFolderClick={() => openFolder(folders.SC)}
               />
             </li>
-            <li>
+            <li className={"flex justify-center items-center "}>
               <Folder
                 title={folders.PA}
                 isCategory={true}
@@ -168,7 +168,7 @@ export default function Desktop() {
                 onFolderClick={() => openFolder(folders.PA)}
               />
             </li>
-            <li className="absolute -bottom-24 right-9">
+            <li className="absolute bottom-0 right-9">
               <Folder
                 title={folders.ARTI}
                 isCategory={true}
@@ -183,10 +183,19 @@ export default function Desktop() {
 
       {authorsOpen && ( //Abrir pestaña info
         <AuthorsList
-          onAction={(action) => {
+          onAction={(action, whichFolder) => {
+            let folderName = whichOpen;
+            if (whichFolder) folderName = whichFolder;
             if (action === "close") {
-              setAuthorsOpen(false);
+              if (foldersMinimized.includes(folderName)) {
+                setFoldersMinimized((prevFolders) =>
+                  prevFolders.filter((folder) => folder !== folderName),
+                );
+              }
+            } else if (action === "minimize") {
+              handleMinimized(folderName); // Minimiza la ventana
             }
+            setWhichOpen(null);
           }}
         />
       )}

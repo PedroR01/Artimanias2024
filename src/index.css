@@ -81,6 +81,16 @@ h4 {
   }
 }
 
+.grid-cols-responsive {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+@media screen and (max-height: 700px) {
+  .grid-cols-responsive {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
 @layer utilities {
   .text-wb-center {
     text-align: -webkit-center;

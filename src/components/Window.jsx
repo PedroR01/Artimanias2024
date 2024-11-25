@@ -8,6 +8,7 @@ import Folder from "./Folder";
 import jsonData from "../assets/data/data.json";
 import Slider from "./Slider";
 import infoImg from "../assets/img/misc/artimañas-info.png";
+import folderImages from "../assets/scripts/folderImages"
 
 
 // Recibe el nombre de la carpeta que se abrio (folderName) y en base a eso muestra el contenido acorde
@@ -79,13 +80,13 @@ export default function Window({ folderName, onAction }) {
     if (folderName === folders.RSI || (thesis !== null && thesis.categoria === folders.RSI))
       setHeaderBg("bg-[#9EDEFC]");
     else if (folderName === folders.IC || (thesis !== null && thesis.categoria === folders.IC))
-      setHeaderBg("bg-[#D1C1B4]");
-    else if (folderName === folders.FN || (thesis !== null && thesis.categoria === folders.FN))
       setHeaderBg("bg-[#FF73FF]");
+    else if (folderName === folders.FN || (thesis !== null && thesis.categoria === folders.FN))
+      setHeaderBg("bg-[#CBDF00]");
     else if (folderName === folders.NO || (thesis !== null && thesis.categoria === folders.NO))
       setHeaderBg("bg-[#27AE5F]");
     else if (folderName === folders.CA || (thesis !== null && thesis.categoria === folders.CA))
-      setHeaderBg("bg-[#CBDF00]");
+      setHeaderBg("bg-[#F85031]");
     else if (folderName === folders.SC || (thesis !== null && thesis.categoria === folders.SC))
       setHeaderBg("bg-[#8477FE]");
     else if (folderName === folders.PA || (thesis !== null && thesis.categoria === folders.PA))
@@ -167,7 +168,7 @@ export default function Window({ folderName, onAction }) {
     if (ids === 99) {
       return (
         <>
-          <img src={infoImg} alt="Imagen info lugar" className="p-2" />
+          <img src={infoImg} alt="Imagen info lugar" className="p-2 max-h-96" />
           <h1 className="baloo-2-regular text-lg mt-4 md:text-4xl">
             ¿Qué es Artimañas 2024?
           </h1>
@@ -179,12 +180,8 @@ export default function Window({ folderName, onAction }) {
     } else if (ids === 98) {
       return (
         <article>
-          <div className="ratio ratio-1x1">
-            <iframe className="w-full h-full"
-              src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=2nrG3TBCHvAQrrgg"
-              title="YouTube video player" frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <div className="border-2 h-96">
+            {/* <lite-youtube videoid={slide.url}></lite-youtube> */}
           </div>
           <h1 className="baloo-2-regular text-lg mt-4 md:text-4xl">
             Esto es Artimañas 2024
@@ -288,12 +285,12 @@ export default function Window({ folderName, onAction }) {
       </ul>
       )
     } else {
-      return (<article>
+      return (<article className="h-[33rem]">
         <Slider
           video={
             thesis.video.split("?v=")[1]
           }
-          obra={thesis.obra}
+          imagen={folderImages[thesis.obra.replace(/[\s.]+/g, "").toLowerCase()]}
         />
         <div className="flex mt-4">
           <img src={require('../assets/img/authors/' + thesis.nombreApellido.replace(/\s+/g, "").toLowerCase() + ".png")} alt="Foto autor" className="w-10" />
@@ -325,7 +322,7 @@ export default function Window({ folderName, onAction }) {
           <h3 className="mt-10 baloo-2-bold md:text-xl">
             Más de {thesis.categoria}
           </h3>
-          <ul className="flex flex-wrap thesis-folder-rgap">
+          <ul className="flex flex-wrap thesis-folder-rgap py-8">
             {
               thesisList.filter((thisThesis) => thisThesis.obra !== thesis.obra).map((thisThesis) => (
                 <li
@@ -351,7 +348,7 @@ export default function Window({ folderName, onAction }) {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center">
       <section
-        className={`w-full overflow-y-scroll transform  h-[79%] ml-4 mr-4  max-w-lg rounded-[15px] hide-scroll border-2 border-black transition-all duration-700 ease-in-out ${windowExpanded ? "h-[79%] w-full scale-100" : "scale-0"} ${!windowMinimized ? "" : "translate-y-[70%] md:-translate-x-[110%]"}`}
+        className={`w-full overflow-y-scroll transform  max-h-[79%] ml-4 mr-4  max-w-lg rounded-[15px] hide-scroll border-2 border-black transition-all duration-700 ease-in-out ${windowExpanded ? "max-h-[79%] w-full scale-100" : "scale-0"} ${!windowMinimized ? "" : "translate-y-[70%] md:-translate-x-[110%]"}`}
         role="dialog"
         aria-labelledby="modal-title"
         aria-modal="true"
@@ -419,16 +416,16 @@ export default function Window({ folderName, onAction }) {
         {/* Contenido */}
         <main
           ref={scrollContainerRef}
-          className="p-4 h-full bg-[#FFFBF2] md:h-[90%] overflow-y-scroll hide-scroll">
+          className="p-4 h-full bg-[#FFFBF2] overflow-y-scroll">
           {/* Carpeta de la tesis */}
           {thesis ? (
             InfoFolders(thesis.id)
           ) : (
             // Carpeta de la categoria con el listado de tesis
-            <ul className="flex flex-wrap thesis-folder-rgap">
+            <ul className="grid grid-cols-2 items-center justify-items-center thesis-folder-rgap">
               {thesisList.map((thisThesis) => (
                 <li
-                  className="w-1/2 justify-items-center  md:text-wb-center md:flex-wrap"
+                  className="justify-items-center  md:text-wb-center"
                   key={thisThesis.id}
                 >
                   <Folder

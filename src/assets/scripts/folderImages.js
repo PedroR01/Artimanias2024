@@ -32,7 +32,7 @@ import liminal_folder from "../img/folderThesis/liminal_folder.png";
 import loQueOcultaLaInformacion_folder from "../img/folderThesis/loQueOcultaLaInformacion_folder.png";
 import laPiel_folder from "../img/folderThesis/laPiel_folder.png";
 import enBlanco_folder from "../img/folderThesis/enBlanco_folder.png";
-import miPuebloLltf_folder from "../img/folderThesis/miPuebloLltf_folder.png";
+import miPueblogltf_folder from "../img/folderThesis/miPueblogltf_folder.png";
 import floratioExMechanica_folder from "../img/folderThesis/floratioExMechanica_folder.png";
 import anfibia_folder from "../img/folderThesis/anfibia_folder.png";
 import identidadVisualDelYo_folder from "../img/folderThesis/identidadVisualDelYo_folder.png";
@@ -51,7 +51,6 @@ import huellas_folder from "../img/folderThesis/huellas_folder.png";
 import suer7e_folder from "../img/folderThesis/suer7e_folder.png";
 import monstruosUrbanos_folder from "../img/folderThesis/monstruosUrbanos_folder.png";
 import ruidos_folder from "../img/folderThesis/ruidos_folder.png";
-
 
 const folderImages = {
   // Categorias
@@ -90,7 +89,7 @@ const folderImages = {
   loqueocultalainformación: loQueOcultaLaInformacion_folder,
   lapiel: laPiel_folder,
   enblanco: enBlanco_folder,
-  mipueblogltf: miPuebloLltf_folder,
+  mipueblogltf: miPueblogltf_folder,
   floratioexmechanica: floratioExMechanica_folder,
   anfibia: anfibia_folder,
   identidadvisualdelyo: identidadVisualDelYo_folder,
@@ -107,8 +106,8 @@ const folderImages = {
   cartoneros: cartoneros_folder,
   huellas: huellas_folder,
   suer7e: suer7e_folder,
-  monstruosUrbanos: monstruosUrbanos_folder,
-  ruidos: ruidos_folder
+  monstruosurbanos: monstruosUrbanos_folder,
+  ruidos: ruidos_folder,
 };
 
 export default folderImages;
