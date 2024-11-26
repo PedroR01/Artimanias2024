@@ -60,11 +60,18 @@ export default function Slider({ video, imagen }) {
           {slides.map((slide, index) => (
             <div key={index} className="min-w-full">
               {slide.type === "image" ? (
-                <img
-                  src={slide.url}
-                  alt={`Slide ${index}`}
-                  className="w-full h-[11.25rem] md:h-[16.75rem]"
-                />
+                <div className="relative">
+                  <img
+                    src={slide.url}
+                    alt={`Slide ${index}`}
+                    className="absolute w-full h-[11.25rem] md:h-[16.75rem] object-contain"
+                  />
+                  <img
+                    src={slide.url}
+                    alt={`Slide ${index}`}
+                    className="-z-10 absolute w-full h-[11.25rem] md:h-[16.75rem] object-cover blur-sm"
+                  />
+                </div>
               ) : (
                 <div className="w-full h-full"><lite-youtube videoid={slide.url}></lite-youtube> </div>
               )}
