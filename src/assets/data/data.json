@@ -40,15 +40,6 @@
         "categoria": "Redes Sociales e Internet"
     },
     {
-        "id": 4,
-        "obra": "Abismo",
-        "nombreApellido": "Agustín Buzzalino",
-        "parrafo1": "Abismo es una obra que busca generar emociones en sus usuarios. Partiendo desde la ansiedad el usuario tiene que tratar de controlar lo que va sucediendo dentro de la obra para que esta permanezca en un estado de calma. Con esta premisa se despiertan otros tipos de emociones como el FOMO, la emoción y la sorpresa expresadas a travez de las distintas formas de interacción.",
-        "parrafo2": "Muchas veces tratamos de controlar nuestras emociones, sobre todo aquellas que nos perjudican en el día a día o que nos ponen en situaciones que no queremos. En abismo el usuario si así lo desea puede encontrar la forma de generar un balance, así como también generar un estado de aceleración e incomodidad que puede ser hasta adictivo.",
-        "video": "n/a",
-        "categoria": "Redes Sociales e Internet"
-    },
-    {
         "id": 5,
         "obra": "SINESTESIA",
         "nombreApellido": "Federico Yoma",
@@ -84,17 +75,9 @@
         "nombreApellido": "Agustina Araneda Coman",
         "parrafo1": "Memoria Solar invita al espectador a sumergirse en un ritual multimedia de luz y memoria. Inspirada en la conexión ancestral entre la humanidad y el sol, este proyecto plantea un sitio que funciona como un recuerdo atemporal.",
         "parrafo2": "En el corazón de esta obra se encuentra un altar, donde través de la posibilidad de hacer una ofrenda, se abre una conexión con el espectador, quien es invitado a darle vida a una \"memoria solar\" simbólica. Este espacio es un momento de calma y observación. Celebra el acto de recordar y honra los lazos que unen al ser humano con sus propias historias.",
-        "video": "n/a",
+        "video": "https://www.youtube.com/watch?v=bpWZVEPFRZI",
+        "pdf": "https://drive.google.com/file/d/10jn0cWojO1GgK388uQISvIWBcyyusQ3J/view?usp=drive_link",
         "categoria": "Fantasía y Narrativa"
-    },
-    {
-        "id": 9,
-        "obra": "Ventana 1976",
-        "nombreApellido": "Leandro Berman",
-        "parrafo1": "\n\"Ventana 1976\"  es una  obra instalación que ofrece experimentar, a través de la ubicación en el espacio,  dos puntos de vista principales (tanto desde la cercanía,  como desde la altura que ofrece el segundo piso del edificio de  sede Fonseca de la Facultad de Artes:), una doble lectura del dispositivo emplazado en el patio de dicha facultad.",
-        "parrafo2": "El número 76 en representación al año del último golpe de Estado en Argentina,  donde los centros clandestinos de detención y exterminio fueron dispositivos estratégicamente distribuidos a lo largo y ancho del territorio, condición que permitió  diseminar el terror y el miedo, factores necesarios que posibilitaron el terrorismo de estado.",
-        "video": "n/a",
-        "categoria": "Sociedad y Cultura"
     },
     {
         "id": 10,
@@ -112,7 +95,8 @@
         "nombreApellido": "Melisa Díaz",
         "parrafo1": "¿Qué son las constelaciones sino mas que una pura ilusión de perspectivas? Ilusión de perspectivas es una obra interactiva que simula un telescopio, el cual permite crear constelaciones únicas, como las personas que las crean.",
         "parrafo2": "Las constelaciones que formen las personas utilizando el telescopio serán proyectadas como un conjunto, exponiendo todas las constelaciones que vayan creando los usuarios en un cielo. De esta manera, la obra busca conectar con la diferenacia, estableciendo que todas las personas podemos crear cosas únicas.",
-        "video": "n/a",
+        "video": "https://www.youtube.com/watch?v=3ocIrHgxYBc",
+        "pdf": "https://drive.google.com/file/d/1I2Q-5jkWNLUPWIeYr5MX0SSxu6-RDDzy/view?usp=drive_link",
         "categoria": "Fantasía y Narrativa"
     },
     {
@@ -122,15 +106,7 @@
         "parrafo1": "Templo Marino es una obra multisensorial inspirada en los arrecifes de coral. Nos invita a sumergirnos en un mundo subacuatico y explorar sus secretos a traves de los sentidos como: la vista, el tacto, el olfato y el oido.",
         "parrafo2": "El arte multisensorial es un tipo de arte que escapa de lo contemplativo. Anima al usuario a no conformarse con lo que ve a simple vista, sino que tenga la libetad de indagar la obra utilizando todos o la mayoria de los sentidos. Templo marino consta de aromas, texturas, sonidos y luces; que deberan ser hallados por el usuario para descubrir la vida marina que se encuentra escondida entre los corales.",
         "video": "https://www.youtube.com/watch?v=uk1tUkJkUEM",
-        "categoria": "Naturaleza y Lo orgánico"
-    },
-    {
-        "id": 13,
-        "obra": "Sintonia de la respiración",
-        "nombreApellido": "Juan Manuel Arancibia",
-        "parrafo1": "Sintonia de respiración es una experiencia interactiva que plantea un corazon artificial latiente, el cual a través del tacto del usuario y unos auriculares podra escuchar una variación de una tecnica de respiración conocida en la meditacion budista.",
-        "parrafo2": "El sistema tiene un enfoque individual, el cual se centra en la inmersión y la reflexión de uno mismo.",
-        "video": "n/a",
+        "pdf": "https://drive.google.com/file/d/1UWahDPghX06UDxgLRIC0sinG7ZTtii7W/view?usp=drive_link",
         "categoria": "Naturaleza y Lo orgánico"
     },
     {
@@ -140,6 +116,7 @@
         "parrafo1": "\"Miradas desde el aula\" es una narrativa transmedia que busca ofrecer un espacio de participación democrática donde la comunidad docente pueda contar su propia historia. A través de una plataforma web y redes sociales, invita a los docentes a compartir sus reflexiones y experiencias, construyendo colectivamente una historia que espera reflejar la realidad cotidiana de las aulas y enriquecer el debate educativo desde una perspectiva cercana y real.",
         "parrafo2": "Esta obra explora nuevas formas de participación porque la narrativa sólo cobra vida con la contribución activa de los docentes. Estas experiencias se transforman luego en producciones y contenido diverso (imágenes, videos, audios) que estarán disponibles para futuros usuarios, con el objetivo de invitarlos a reflexionar sobre la importancia de la tarea docente.",
         "video": "https://www.youtube.com/watch?v=WLXOFDSnOKQ",
+        "pdf": "https://drive.google.com/file/d/1aLj0NID6VLoTTVfItNDL_S-XW1w-kQft/view?usp=drive_link",
         "categoria": "Procesos y Aprendizaje"
     },
     {
@@ -158,7 +135,8 @@
         "nombreApellido": "Sánchez Andrés Agustín",
         "parrafo1": "Las plataformas digitales sirven para una infinidad de cosas. Videos de animales, videos graciosos, tutoriales o sencillamente alguien mostrándose a sí mismo, nuestros algoritmos están plagados de información irrelevante.",
         "parrafo2": "Pero también hay un submundo de cosas que quizás se nos escapen, hay muchas personas que retratan los horrores que viven a diario y lo publican en redes para gritarle al mundo sus verdades. Dentro de ésta obra encontrarás solo una pequeñísima parte de ese submundo. Ésta busca generar un pequeño espacio de reflexión donde se mostrará lo que ocurre por debajo de nuestros algoritmos especializados para mostrarnos lo que \"queremos ver\".",
-        "video": "n/a",
+        "video": "https://www.youtube.com/watch?v=0JDB17bGuGs",
+        "pdf": "https://drive.google.com/file/d/1k4-D4rPgASaKKc2CAyf8UhuJ_Ve5rsXH/view?usp=drive_link",
         "categoria": "Redes Sociales e Internet"
     },
     {
@@ -178,6 +156,7 @@
         "parrafo1": "En blanco es una obra multisensorial que combina el arte tradicional de los libros pop-up con las posibilidades tecnológicas del videomapping. Este libro de gran formato, con páginas completamente blancas, se despliega para revelar paisajes tridimensionales que cobran vida a través de la proyección. Cada página invita al espectador a interactuar con figuras de papel, desencadenando transformaciones visuales y narrativas que amplían la experiencia más allá de las formas físicas.",
         "parrafo2": "La obra explora el diálogo entre lo analógico y lo digital, donde la materialidad del papel y la expansión visual del videomapping se complementan y enriquecen mutuamente. Este enfoque plantea una manera diferente de explorar la relación entre lo físico y lo virtual, ampliando las posibilidades creativas de ambos lenguajes y transformando nuestra percepción y experiencia estética.",
         "video": "https://www.youtube.com/watch?v=aP_9sJTrfYQ",
+        "pdf": "https://drive.google.com/file/d/1ZspkKgVdr5HohLMmt3iPi4GtZduc8Q1u/view?usp=drive_link",
         "categoria": "Fantasía y Narrativa"
     },
     {
@@ -189,15 +168,6 @@
         "video": "https://www.youtube.com/watch?v=tMfD-OucViY",
         "pdf": "https://drive.google.com/file/d/1eAHQx-w9ni6ca73QHRZY0smrja25vkPx/view?usp=drive_link",
         "categoria": "Sociedad y Cultura"
-    },
-    {
-        "id": 20,
-        "obra": "Floratio Ex Mechanica",
-        "nombreApellido": "Flavia Bravo",
-        "parrafo1": "En 'Floratio Ex Mechanica' se abre una puerta hacia lo performativo del arte y la creación de universos posibles desde la bioinspiración.\nLa obra invita, desde el arte electrónico interactivo, a transformar la expresión cinética y visual de una flor en respuesta inmediata a las palabras pronunciadas por los espectadores.",
-        "parrafo2": "Se propone un juego cinético y visual de los pétalos y pistilos de la flor, que crea instantes donde lo reactivo posee reminiscencias de la ciencia ficción. En ese breve momento relacional, la flor y el ser humano se encuentran: ella despliega su movimiento, mientras la persona juega por un rato a ser Dios.",
-        "video": "n/a",
-        "categoria": "Naturaleza y Lo orgánico"
     },
     {
         "id": 21,
@@ -215,17 +185,9 @@
         "nombreApellido": "Evelyn Orellana Sánchez",
         "parrafo1": "\"Identidad Visual del Yo\" es una obra interactiva que explora la representación dinámica de la identidad digital a través de la captura facial en tiempo real. Utilizando tecnologías como TouchDesigner y MediaPipe, la obra permite a los usuarios ver cómo sus expresiones faciales se transforman en visuales abstractas compuestas por partículas y colores.",
         "parrafo2": "Estas visuales reflejan la fluidez y constante transformación de la identidad digital, cuestionando la autenticidad y autoimagen en la era de las plataformas digitales. A través de la interacción directa, los usuarios co-crean su propia representación visual, generando una experiencia única y personalizada que destaca cómo la tecnología moldea nuestra percepción de nosotros mismos en el entorno digital.",
-        "video": "n/a",
+        "video": "https://www.youtube.com/watch?v=qgCl7sWKLzk",
+        "pdf": "https://drive.google.com/file/d/1E9DtFD5xHuO2zPmdpvLtl_RZ3usdX4HR/view?usp=drive_link",
         "categoria": "Identidad y Cuerpos"
-    },
-    {
-        "id": 23,
-        "obra": "Un canto de auxilio",
-        "nombreApellido": "Jazmín Gonzalez",
-        "parrafo1": "Un canto de Auxilio es una obra de denuncia interactiva, que busca invitar al usuario a tomar acción ante al peligro que se enfrentan las Ballenas Francaustrales nativas del Mar Argentino.",
-        "parrafo2": "En esta obra se le propone al usuario tomar el lugar de un cetáceo e imitar su canto tan particular para salvar a Berta, la ballena que integra dicha obra. Rodeada de corales realizados con plastico reciclado, visualizando la contaminacion actual del mar Argentino, a su vez estos corales son luminicos que cambian de color para dar indicios si el canto realizado es el correcto.",
-        "video": "n/a",
-        "categoria": "Naturaleza y Lo orgánico"
     },
     {
         "id": 24,
@@ -233,7 +195,7 @@
         "nombreApellido": "Lucrecia Khoury",
         "parrafo1": "Electromorfos es una obra que invita a explorar y cuestionar el poder, control y cuerpos, en una época donde los límites entre lo humano y la tecnología se encuentran cada vez más difusas. Los usuarios tienen la  posibilidad de controlar la tecnología representada por una marioneta, pero en realidad: ¿Quién tiene realmente el control?",
         "parrafo2": "La obra plantea una interacción bilateral, donde los roles de poder se invierten. A través de técnicas de electroestimulación, la marioneta toma el control del cuerpo del usuario, transformando esta relación en un juego de intercambio de poder y control del movimiento. La obra enfrenta la percepción de autonomía, proponiendo una experiencia de interacción bidireccional, donde el cuerpo humano se convierte en una extensión de la marioneta en un ciclo de influencia mutua.",
-        "video": "n/a",
+        "video": "https://www.youtube.com/watch?v=eSwL35--35I",
         "pdf": "https://drive.google.com/file/d/1g6Ma8ELJ-Xh1Fe7uly0otlP9QGWJ90Qn/view?usp=drive_link",
         "categoria": "Control y Artificialidad"
     },
@@ -243,7 +205,8 @@
         "nombreApellido": "Agustín Fabián Cavaliere",
         "parrafo1": "La jugada del siglo es una obra que busca representar la esencia del fútbol argentino, el fanatismo y la pasión que emergen del deporte, buscando poder sentir aquello que es inexplicable. Siendo interactiva y sonora, que invita al usuario a participar de manera directa, teniendo un único desafío, llegar a la meta y convertir el gol más importante de los últimos tiempos. ",
         "parrafo2": "El usuario tendrá la posibilidad de convertirse en un jugador más de la cancha, que junto a los cánticos y el relato, se verá acompañado durante toda la experiencia de la jugada, combinando la multiplicidad de factores que se desprenden del deporte.",
-        "video": "n/a",
+        "video": "https://www.youtube.com/watch?v=QrKhMhHWqNo",
+        "pdf": "https://drive.google.com/file/d/136jk1knMFJjfgRB9GJKWMsF1Rb-Xinb7/view?usp=drive_link",
         "categoria": "Sociedad y Cultura"
     },
     {
@@ -253,6 +216,7 @@
         "parrafo1": "Guardián del Bosque es una obra que nos invita a descubrir un mundo mágico y especial, un universo en el que hongos luminosos que conviven con gran vegetación envuelven a un duende guardián solitario, quien está a la espera de cualquiera que quiera interrumpir su espacio tranquilo y sereno.",
         "parrafo2": "Su calma permanece íntegra mientras nadie se acerca, pero cambia cuando percibe una presencia intrusa, de esta manera reacciona a través de movimientos de su cuerpo en respuesta defensiva.",
         "video": "https://www.youtube.com/watch?v=9Rx0N3G2liw",
+        "pdf": "https://drive.google.com/file/d/1R0WTJ90yO0RGZulVFv9ZWskv-erFr57D/view?usp=drive_link",
         "categoria": "Fantasía y Narrativa"
     },
     {
@@ -261,7 +225,7 @@
         "nombreApellido": "Pablo Manuel López",
         "parrafo1": "Colores en codigo es una obra que busca que aquellas personas/usuarios que nunca tuvieron una experiencia de resolucion de problemas en clave de acertijos como los presentes en videojuegos o salas de escape, los puedan experimentar en un cofre interactivo donde su recompensa radica en la obtencion de la experiencia de juego.",
         "parrafo2": "El conocimiento previo forma parte de nuestro aprendizaje y cómo asimilamos acciones y problemas que se nos presentan en nuestro cotidiano. Colores en código es la oportunidad para aprender la relación inherente presente en los acertijos de causa-consecuencia, donde la resolución de un problema bien puede significar el surgimiento de otro hasta finalizar con el problema en cuestión o obtener la recompensa por el mismo. ",
-        "video": "n/a",
+        "video": "https://www.youtube.com/watch?v=eGyWm6ei-tQ",
         "pdf": "https://drive.google.com/file/d/1XUz2HGuBnS5UGTiFfI33Z1xpkuQhFwNU/view?usp=drive_link",
         "categoria": "Procesos y Aprendizaje"
     },
@@ -271,7 +235,8 @@
         "nombreApellido": "Melina Landivar",
         "parrafo1": "Interferencia Cotidiana es una instalación interactiva que explora el concepto de comunicación y desconexión en un contexto donde la tecnología media las interacciones entre personas. A través de una cabina telefónica, la obra invita al espectador a reflexionar sobre cómo, a pesar de que la tecnología está diseñada para facilitar la conexión, puede generar barreras y distorsiones en las relaciones interpersonales.",
         "parrafo2": "La obra busca simbolizar la tensión entre la cercanía aparente que ofrece la tecnología y la desconexión emocional que esta misma puede provocar. A través de la interacción con elementos de la cabina, como cables y sonidos de interferencia, se representa cómo las herramientas tecnológicas, en su afán de acercar a las personas, a menudo terminan creando un espacio de desconexión.",
-        "video": "n/a",
+        "video": "https://www.youtube.com/watch?v=984dHitpzx4",
+        "pdf": "https://drive.google.com/file/d/1jYw6cyuMN5mF7DZe0Euvk2e2ZKTAgtsq/view?usp=drive_link",
         "categoria": "Redes Sociales e Internet"
     },
     {
@@ -301,6 +266,7 @@
         "parrafo1": "\"Fulgor\" explora la tensión entre lo efímero y lo eterno en un mundo dominado por dispositivos digitales. Las flores, representación de lo natural y pasajero, se enfrentan al impacto de las decisiones humanas en un espacio interactivo. Cada acción del usuario activa un mecanismo que pone en peligro la vida de estas, dejando en evidencia cómo las interacciones aparentemente inofensivas pueden desencadenar consecuencias irreversibles. De esta manera, la instalación invita a reflexionar sobre el rol del individuo en un mundo que constantemente demanda atención y acción.",
         "parrafo2": "La obra propone un espacio donde lo cotidiano se transforma en algo  significativo, invitando a repensar la relación entre nuestras acciones, el tiempo y la forma en que habitamos el mundo.",
         "video": "https://www.youtube.com/watch?v=RwfGORB9hZY",
+        "pdf": "https://drive.google.com/file/d/196uqPXaAR7H8AxfKoVqVDFyWhwxm8XOq/view?usp=drive_link",
         "categoria": "Control y Artificialidad"
     },
     {
@@ -309,7 +275,7 @@
         "nombreApellido": "Diego Alejandro Jiménez Puentes",
         "parrafo1": "Se decía que las máquinas nos reemplazarían en los trabajos más monótonos y aburridos, para que así nosotros nos pudiéramos dedicar a realizar las tareas más creativas y divertidas. Diseñar, dibujar, escribir, componer o simplemente... distraernos, perder el tiempo, como dicen. ¿Dónde quedó ese futuro? La obra es un videojuego, la hipérbole de un presente cercano donde una inteligencia artificial te reemplaza poco a poco como jugador, hasta terminar convirtiéndote en un espectador más del juego y la obra.",
         "parrafo2": "Se trata de un “VampireSurvivos-like” con una estética levemente cyberpunk que busca rememorar la década de los 80s. El objetivo es sobrevivir a oleadas de robots mientras recibís mejoras, pero tu compañero, un pequeño robots con inteligencia artificial, conseguirá controlar cada vez más a tu personaje, hasta que ni siquiera puedas moverlo. Tras esto, la cámara se aleja y se te muestra que el juego que estabas jugando, es un videojuego dentro de la misma obra. Ahora estas en una pequeña habitación, viendo como el juego sigue ejecutándose, hasta que te llega un mensaje de tu pareja, el cual finaliza con “Este mensaje ha sido escrito por una IA”. Cuando decides responder, el mensaje se escribe solo y cierra de la misma forma. Ahora solo te queda ir a dormir o esperar que la IA de tu casa apague las luces.",
-        "video": "n/a",
+        "video": "https://www.youtube.com/watch?v=q3I8UoAm3qk",
         "pdf": "https://drive.google.com/file/d/1CDZVxBMvVHAq4J49DdPnLTgfBEDZwozb/view?usp=drive_link",
         "categoria": "Control y Artificialidad"
     },
@@ -319,7 +285,8 @@
         "nombreApellido": "Jorgelina Reynoso",
         "parrafo1": "Cartoneros es una obra que invita a reflexionar sobre este oficio tan esencial como invisibilizado: la recolección de cartón. En la actualidad en Argentina, los cartoneros desempeñan un rol vital en el circuito del reciclaje y la sostenibilidad urbana. Sin embargo, su trabajo a menudo pasa desapercibido, o peor aún, es estigmatizado.",
         "parrafo2": "Esta instalación busca tender un puente entre sus experiencias y el público, abriendo una ventana a sus vidas a través de relatos en primera persona. Sus testimonios nos hablan del esfuerzo físico y emocional que implica recorrer las calles, de las barreras sociales y económicas que enfrentan, pero también de sus sueños, sus esperanzas y la dignidad que encuentran al poder salir adelante trabajando en este oficio.",
-        "video": "n/a",
+        "video": "https://www.youtube.com/watch?v=TpCw75AdFEU",
+        "pdf": "https://drive.google.com/file/d/1nqoh7JpsMxh8odJVVbJy7ztac6anVDrA/view?usp=drive_link",
         "categoria": "Sociedad y Cultura"
     },
     {
@@ -329,6 +296,7 @@
         "parrafo1": "Es una cueva de telas escritas por discursos machistas. El usuario puede ir leyendo y recorriendo según cuánto desee involucrarse. Son frases comunes, que al estar juntas en un mismo espacio, invitan a reflexionar porqué son comunes y que quizás tienen un grado de violencia que, de forma aislada pasan inadvertidas.",
         "parrafo2": "Una vez que se llega al final del recorrido, la obra invita al usuario a detenerse a leer unos fragmentos recolectados de diferentes ámbitos. Si el usuario se mueve, estos textos se desvanecen según su posición, permitiendo ver algo más, algo desconocido. La persona puede comprometerse lo necesario para entender que existe algo diferente que está oculto detrás de estos discursos. Las manos representan una otredad que busca ser vista.",
         "video": "https://www.youtube.com/watch?v=z-QPpYlZkJQ",
+        "pdf": "https://drive.google.com/file/d/1iKT4yQ59XX5a_6CHHoqrL8oDvlhIqdS3/view?usp=drive_link",
         "categoria": "Identidad y Cuerpos"
     },
     {
@@ -338,25 +306,8 @@
         "parrafo1": "Suer7e es una obra que sumerge al usuario en un viaje lumínico y sensorial, donde la frontera entre el juego y la realidad se desdibuja. Diseñada como un túnel de luces, esta instalación interactiva busca despertar conciencia sobre la ciberludopatía. Al ingresar, el usuario se convierte en una ficha viva, atrapada en un ciclo hipnótico donde las luces giran como una ruleta interminable. Con cada paso, se adentra más, perdiendo la noción de tiempo y espacio, hasta que la línea entre el jugador y el juego se diluye. ¿Es el usuario quien avanza o es el túnel quien lo reclama? La obra revela cómo, en la búsqueda del triunfo, la mente puede quedar atrapada en el brillo seductor del azar digital.",
         "parrafo2": "En este juego inmersivo, el usuario es la ficha al posicionarse en el túnel. Las luces simulan el movimiento de una ruleta, que debe avanzar y detenerse, representando el acto de jugar y apostar. Dependiendo de dónde se detenga, el túnel responde con diferentes efectos visuales y sonoros que reflejan los posibles resultados y emociones asociadas al juego: la euforia de ganar o la desilusión de perder. El objetivo es lograr ganar 7 luces verdes para alcanzar el premio mayor, lo que lo impulsa a adentrarse cada vez más en el túnel. Mostrando cómo el tiempo y el espacio se desvanecen y el jugador se ve envuelto en la búsqueda insaciable del triunfo. La obra invita al espectador a reflexionar sobre la naturaleza adictiva de los juegos de azar y las profundas consecuencias de quedar atrapado en su trampa.",
         "video": "https://www.youtube.com/watch?v=wMgbf_2qHQ0",
+        "pdf": "https://drive.google.com/file/d/1-dJFJrN5LdDlC7dnFpyATK2sphwohbvv/view?usp=drive_link",
         "categoria": "Fantasía y Narrativa"
-    },
-    {
-        "id": 36,
-        "obra": "Monstruos Urbanos",
-        "nombreApellido": "Francisco Crespo",
-        "parrafo1": "La posibilidad de ver los desechos electrónicos desde otra perspectiva. Desde estos talleres se buscó generar un espacio de formación e interacción familiar, con el foco puesto en la obsolescencia programada, los desechos electrónicos, su reciclado y posterior armado de piezas lúdicas o juguetes electrónicos.",
-        "parrafo2": "El objetivo del taller es brindar herramientas técnicas y creativas para el desarrollo de distintas posibilidades en el armado de dispositivos, que permitan explorar el mundo de la electrónica y el arte.",
-        "video": "n/a",
-        "categoria": "Procesos y Aprendizaje"
-    },
-    {
-        "id": 37,
-        "obra": "Ruido(s)",
-        "nombreApellido": "Juana Perone",
-        "parrafo1": "Ruido(s) es una performance interactiva que atraviesa temas en relación al arte y la cultura argentina, vinculados con las tecnologías digitales y las redes sociales. La obra consiste en el enfrentamiento de los discursos de odio el X y un recorte de producciones audiovisuales relevantes que son el reflejo de nuestra identidad cultural y soberanía. En escena se ven desplegadas una serie de telas con una doble proyección ",
-        "parrafo2": "La performance invita a los usuarios a responder una serie de preguntas que aparecen en la interfaz y que sus respuestas aparezcan en tiempo real en las proyecciones de la obra, alterando e interviniendo en la construcción de sentido y la narrativa de la historia.",
-        "video": "n/a",
-        "categoria": "Sociedad y Cultura"
     },
     {
         "id": 99,
