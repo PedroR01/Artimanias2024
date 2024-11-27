@@ -11,6 +11,8 @@ import info_folder from "../img/folderCategory/info_folder.png";
 import social_folder from "../img/folderCategory/social_folder.svg";
 import video from "../img/folderCategory/video.svg";
 import logoArti from "../img/misc/logo_nav.svg";
+import logoInstagram from "../img/icons/instagram.svg";
+import logoYoutube from "../img/icons/youtube.svg";
 
 // Imagenes de obras
 import resampleados_folder from "../img/folderThesis/resampleados_folder.png";
@@ -66,8 +68,8 @@ const folderImages = {
   videoartimañasmp4: video,
   infoartimañas: info_folder,
   álbumartimañas: social_folder,
-  facebook: logoArti,
-  instagram: logoArti,
+  instagram: logoInstagram,
+  youtube: logoYoutube,
 
   // Obras
   resampleados: resampleados_folder,

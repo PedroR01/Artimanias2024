@@ -177,17 +177,6 @@ export default function Window({ folderName, onAction }) {
           </p>
         </>
       );
-    } else if (ids === 98) {
-      return (
-        <article>
-          <div className="border-2 h-96">
-            {/* <lite-youtube videoid={slide.url}></lite-youtube> */}
-          </div>
-          <h1 className="baloo-2-regular text-lg mt-4 md:text-4xl">
-            Esto es Artimañas 2024
-          </h1>
-        </article>
-      )
     } else if (ids === 97) {
       return (<ul className="flex flex-wrap justify-evenly gap-9">
         <li
@@ -204,83 +193,11 @@ export default function Window({ folderName, onAction }) {
           className="md:ml-8 md:text-wb-center md:flex-wrap"
         >
           <Folder
-            title={"Facebook"}
+            title={"Youtube"}
             onFolderClick={() => {
-              window.open("https://www.facebook.com/share/17fWXz1uSN/", '_blank').focus();
+              window.open("https://www.youtube.com/@tpfFDA/videos", '_blank').focus();
             }}
           />
-        </li>
-      </ul>
-      )
-    } else if (ids === 96) {
-      return (<ul className="flex flex-wrap justify-evenly gap-9">
-        <li
-          className="md:ml-8 md:text-wb-center md:flex-wrap"
-        >
-          <div className="text-wb-center cursor-pointer transition w-min hover:bg-opacity-25 hover:shadow-lg ">
-            <div className="md:w-20">
-              <img
-                src={folderImg}
-                alt=""
-              />
-            </div>
-            <div className="justify-self-center w-fit px-4 ">
-              <h3 className="baloo-2-regular text-center w-max md:text-xl">
-                IMAGEN 1
-              </h3>
-            </div>
-          </div>
-        </li>
-        <li
-          className="md:ml-8 md:text-wb-center md:flex-wrap"
-        >
-          <div className="text-wb-center cursor-pointer transition w-min hover:bg-opacity-25 hover:shadow-lg ">
-            <div className="md:w-20">
-              <img
-                src={folderImg}
-                alt=""
-              />
-            </div>
-            <div className="justify-self-center w-fit px-4 ">
-              <h3 className="baloo-2-regular text-center w-max md:text-xl">
-                IMAGEN 2
-              </h3>
-            </div>
-          </div>
-        </li>
-        <li
-          className="md:ml-8 md:text-wb-center md:flex-wrap"
-        >
-          <div className="text-wb-center cursor-pointer transition w-min hover:bg-opacity-25 hover:shadow-lg ">
-            <div className="md:w-20">
-              <img
-                src={folderImg}
-                alt=""
-              />
-            </div>
-            <div className="justify-self-center w-fit px-4 ">
-              <h3 className="baloo-2-regular text-center w-max md:text-xl">
-                IMAGEN 3
-              </h3>
-            </div>
-          </div>
-        </li>
-        <li
-          className="md:ml-8 md:text-wb-center md:flex-wrap"
-        >
-          <div className="text-wb-center cursor-pointer transition w-min hover:bg-opacity-25 hover:shadow-lg ">
-            <div className="md:w-20">
-              <img
-                src={folderImg}
-                alt=""
-              />
-            </div>
-            <div className="justify-self-center w-fit px-4 ">
-              <h3 className="baloo-2-regular text-center w-max md:text-xl">
-                IMAGEN 4
-              </h3>
-            </div>
-          </div>
         </li>
       </ul>
       )
@@ -312,10 +229,20 @@ export default function Window({ folderName, onAction }) {
         <h3 className="font-bold">Investigación</h3>
         <p className="mt-2">{thesis.nombreApellido + " - Tesina"}</p>
         <button
-          className="flex items-center justify-center bebas-neue-regular text-base gap-2 border-2 border-black button-shadow w-full p-2 mb-5 rounded-md transition duration-300 ease-in-out hover:bg-[#D1C1B4] hover:button-shadow active:bg-[#FFDD6A] hover:shadow-md active:shadow-none"
-          onClick={() => { downloadPDF(thesis.pdf) }}
+          className={`flex w-full p-2 mb-5 rounded-md items-center justify-center bebas-neue-regular text-base gap-2 border-2 border-black ${thesis.pdf
+              ? "button-shadow transition duration-300 ease-in-out hover:bg-[#D1C1B4] hover:button-shadow active:bg-[#FFDD6A] hover:shadow-md active:shadow-none"
+              : "bg-gray-400 text-gray-600 cursor-not-allowed"
+            }`}
+          onClick={() => {
+            if (thesis.pdf) downloadPDF(thesis.pdf);
+          }}
+          disabled={!thesis.pdf}
         >
-          <img src={downloadIcon} alt="Download icon" />
+          <img
+            src={downloadIcon}
+            alt="Download icon"
+            className={`${!thesis.pdf ? "opacity-50" : ""}`}
+          />
           DESCARGAR
         </button>
         <div>

@@ -26,7 +26,7 @@ export default function Slider({ video, imagen }) {
   return (
     <div className="relative w-full max-w-3xl mx-auto">
       {/* Botón para ir al slide anterior */}
-      <button
+      {video ? (<button
         aria-label="Previous"
         className="flex absolute w-9 h-9 left-0 top-1/2 z-10 ml-5 items-center justify-center rounded-full bg-[#FFFBF2]
              border-2 border-black button-shadow 
@@ -36,10 +36,10 @@ export default function Slider({ video, imagen }) {
         onClick={prevSlide}
       >
         <img className="w-[25%]" src={sliderArrow} alt="Icon" />
-      </button>
+      </button>) : null}
 
       {/* Botón para ir al siguiente slide */}
-      <button
+      {video ? (<button
         aria-label="Previous"
         className="flex absolute w-9 h-9 right-0 top-1/2 z-10 mr-5 items-center justify-center rounded-full bg-[#FFFBF2]
              border-2 border-black button-shadow 
@@ -49,7 +49,7 @@ export default function Slider({ video, imagen }) {
         onClick={nextSlide}
       >
         <img className="w-[25%] rotate-180" src={sliderArrow} alt="Icon" />
-      </button>
+      </button>) : null}
       {/* Contenedor del slider */}
       <div className="overflow-hidden rounded-lg shadow-lg">
         <div

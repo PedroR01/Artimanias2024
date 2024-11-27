@@ -38,6 +38,7 @@ export default function Folder({ title, isCategory, titleBg, hoverBg, fitIn, onF
       >
         <div className={"w-9/12 md:w-11/12 " + folderShadow + thesisFolderStyle}>
           <img
+            className=""
             src={folderImages[title.replace(/[\s.()]+/g, "").toLowerCase()]}
             alt=""
           />
