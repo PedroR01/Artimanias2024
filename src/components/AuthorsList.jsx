@@ -14,10 +14,8 @@ export default function AuthorsList({ onAction }) {
         // Obtiene toda la info de los autores y sus obras.
         const authorsData = jsonData.filter((thisAuthor) => thisAuthor.nombreApellido);
         authorsData.sort((authorA, authorB) => (authorA.nombreApellido.localeCompare(authorB.nombreApellido)));
-        console.log(authorsData);
         setAuthors(authorsData);
         windowAnimation();
-
     }, []);
 
     // Dispara la animación al abrirse la carpeta

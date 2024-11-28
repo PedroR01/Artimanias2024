@@ -10,7 +10,6 @@ import artimanias_folder from "../img/folderCategory/artimanias_folder.svg";
 import info_folder from "../img/folderCategory/info_folder.png";
 import social_folder from "../img/folderCategory/social_folder.svg";
 import video from "../img/folderCategory/video.svg";
-import logoArti from "../img/misc/logo_nav.svg";
 import logoInstagram from "../img/icons/instagram.svg";
 import logoYoutube from "../img/icons/youtube.svg";
 

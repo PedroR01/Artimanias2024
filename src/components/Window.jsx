@@ -138,7 +138,6 @@ export default function Window({ folderName, onAction }) {
     if (container) {
       const scrollStart = container.scrollTop;
       const scrollEnd = 0;
-      console.log(scrollStart);
 
       const duration = 500; // Duración de la animación en milisegundos
       let startTime;
@@ -207,7 +206,7 @@ export default function Window({ folderName, onAction }) {
           video={
             thesis.video.split("?v=")[1]
           }
-          imagen={folderImages[thesis.obra.replace(/[\s.]+/g, "").toLowerCase()]}
+          imagen={folderImages[thesis.obra.replace(/[\s.()]+/g, "").toLowerCase()]}
         />
         <div className="flex mt-4">
           <img src={require('../assets/img/authors/' + thesis.nombreApellido.replace(/\s+/g, "").toLowerCase() + ".png")} alt="Foto autor" className="w-10" />
@@ -230,8 +229,8 @@ export default function Window({ folderName, onAction }) {
         <p className="mt-2">{thesis.nombreApellido + " - Tesina"}</p>
         <button
           className={`flex w-full p-2 mb-5 rounded-md items-center justify-center bebas-neue-regular text-base gap-2 border-2 border-black ${thesis.pdf
-              ? "button-shadow transition duration-300 ease-in-out hover:bg-[#D1C1B4] hover:button-shadow active:bg-[#FFDD6A] hover:shadow-md active:shadow-none"
-              : "bg-gray-400 text-gray-600 cursor-not-allowed"
+            ? "button-shadow transition duration-300 ease-in-out hover:bg-[#D1C1B4] hover:button-shadow active:bg-[#FFDD6A] hover:shadow-md active:shadow-none"
+            : "bg-gray-400 text-gray-600 cursor-not-allowed"
             }`}
           onClick={() => {
             if (thesis.pdf) downloadPDF(thesis.pdf);
